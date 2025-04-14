@@ -1,0 +1,156 @@
+.storeCardSelect {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.4);
+	z-index: 1002;
+
+	.storeCardSelectContent {
+		padding: 0 22px;
+		height: calc(100% - 60px);
+
+		.listWrap {
+			width: 100%;
+			height: calc(100% - 80px);
+
+			.listContent {
+				width: 100%;
+				height: 100%;
+
+				.listItem {
+					margin-bottom: 15px;
+					position: relative;
+					width: 100%;
+					height: 160px;
+					overflow: hidden;
+					cursor: pointer;
+					background-color: #576198;
+					border-radius: 5px;
+
+					&:nth-child(3n+1) {
+						background-image: linear-gradient(-45deg, #AFC0ED 0%, #BFD4F7 100%);
+					}
+
+					&:nth-child(3n+2) {
+						background-image: linear-gradient(-45deg, #EAADC3 0%, #F8BACE 100%);
+					}
+
+					&:nth-child(3n+3) {
+						background-image: linear-gradient(-45deg, #EEBFA8 0%, #F6D0BD 100%);
+					}
+
+					&.isDefault {
+						height: 140px;
+					}
+
+					.checkBox {
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 60px;
+						height: 70px;
+						color: #ffffff;
+						padding-left: 25px;
+						font-size: 28px;
+						text-align: center;
+						background-color: rgba(var(--main-theme-color), 1);
+						clip-path: polygon(100% 0, 150% 100%, 0 0);
+
+						.check {
+							width: 18px;
+							height: 18px;
+							border: 1rx solid #DCDCDC;
+							background-color: #ffffff;
+							border-radius: 50%;
+							overflow: hidden;
+
+							&.isCheck {
+								border: 1px solid rgba(var(--main-theme-color), 1);
+
+								&::after {
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									width: 100%;
+									height: 100%;
+									color: #ffffff;
+									background-color: rgba(var(--main-theme-color), 1);
+									content: "✔";
+									font-size: 12px;
+								}
+							}
+
+							&.disabled {
+								cursor: not-allowed;
+							}
+						}
+					}
+
+					.infoWrap {
+						padding: 20px;
+
+						.cardName {
+							color: #ffffff;
+							font-size: 18px;
+							line-height: 32px;
+						}
+
+						.priceWrap {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							margin-bottom: 15px;
+							color: #ffffff;
+							font-size: 20px;
+
+							.symbol {
+								font-size: 14px;
+								margin-right: 4px;
+							}
+
+							.priceValue {
+								font-weight: bold;
+							}
+						}
+
+						.cardPriceInfo {
+							display: flex;
+							align-items: center;
+							color: #dcdcdc;
+							font-size: 14px;
+							line-height: 32px;
+
+							.item {
+								padding-right: 20px;
+							}
+						}
+
+						.infoRow {
+							color: #ffffff;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+
+		.btnWrap {
+			margin-top: 20px;
+			text-align: center;
+
+			.btnSure {
+				display: inline-block;
+				width: 120px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #ffffff;
+				background-color: rgba(var(--main-theme-color), 1);
+				border-radius: 20px;
+				cursor: pointer;
+			}
+		}
+	}
+}

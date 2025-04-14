@@ -1,0 +1,35 @@
+
+
+.dialog-content{
+    width: 100%;
+    height: 520px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    position: relative;
+    .searchInput{
+        height: 40px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 0 0 0;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        z-index: 9999;
+        .el-input__icon{
+            cursor: pointer;
+        }
+    }
+    .Map{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        a{
+            img{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,281 @@
+html,
+body,
+#app {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #eeeeee;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+}
+
+div {
+    /*火狐*/
+    // -moz-user-select: none;
+    /*webkit浏览器*/
+    // -webkit-user-select: none;
+    /*IE10*/
+    // -ms-user-select: none;
+    /*早期浏览器*/
+    // -khtml-user-select: none;
+    // user-select: none;
+
+    &.is-disabled {
+        pointer-events: none;
+    }
+}
+
+.line-2 {
+    display: -webkit-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.el-tabs {
+
+    .el-tabs__item {
+    
+        &.is-active {
+            color: rgba(var(--main-theme-color), 1);
+        }
+    
+        &:hover {
+            color: rgba(var(--main-theme-color), 1);
+            cursor: pointer;
+        }
+    }
+
+    .el-tabs__active-bar {
+        background-color: rgba(var(--main-theme-color), 1);
+    }
+}
+
+
+/* 在线订单 */
+.orderList {
+    .el-tabs__item {
+        padding: 0 30rx;
+        font-size: 14px;
+        height: 60rx;
+        line-height: 60rx;
+        padding-right: 15rx !important;
+    }
+
+    .el-tabs__item.is-disabled {
+        color: #C0C4CC;
+        cursor: default;
+    }
+
+    .el-tabs__active-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2rx;
+        background-color: rgba(var(--main-theme-color), 1);
+        z-index: 1;
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        list-style: none;
+    }
+
+    .el-tabs__header.is-top {
+        background: #fff;
+        padding: 0 20rx;
+    }
+
+    .el-tabs__nav-wrap::after {
+        background-color: #fff;
+    }
+
+    .is-dot {
+        top: 24px;
+        width: 10px;
+        height: 10rx;
+        right: -2px !important;
+    }
+
+    &.sv_p_name {
+        cursor: pointer;
+
+        &.onLineOrder {
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+
+// 设置订单表单操作按钮颜色
+.orderTable {
+    .el-button--text {
+        color: #0088DD;
+
+        &:hover {
+            color: #63c1dd;
+            text-decoration: underline;
+        }
+    }
+    .cs_table .cs_tbody .cs_tr {
+        height: auto;
+
+        .cs_td {
+            height: 64px;
+            line-height: 16px;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+    }
+    .cs_table .cs_tr .cs_td .cs_cell{
+        min-width: 60px;
+    }
+}
+
+.el-scrollbar {
+    .el-scrollbar__view {
+        width: 100%;
+        height: 100%;
+    }
+
+    .el-scrollbar__bar {
+        &.is-vertical {
+            z-index: 5;
+        }
+    }
+}
+
+/* 设置table header的背景颜色 */
+.logistics,
+.returnGoods {
+    .el-button--text {
+        color: #0088DD;
+
+        &:hover {
+            color: #63c1dd;
+            text-decoration: underline;
+        }
+    }
+
+    .el-table__header th,
+    .logistics .el-table__header tr {
+        padding: 20px 0;
+        background-color: #F7F7F7;
+        color: black;
+    }
+
+    .el-table__row {
+        background-color: #F7F7F7;
+    }
+}
+
+.el-drawer {
+    outline: none;
+}
+
+.el-input {
+
+    .el-input__suffix {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// .el-form-item.is-required:not(.is-no-asterisk)>.el-form-item__label:before {
+//     position: absolute;
+//     left: -8px;
+//     top: -1px;
+// }
+
+.el-input-group--append {
+    .el-input__inner {
+        border-right: 0;
+    }
+}
+
+.el-table--small {
+    font-size: 14px;
+}
+
+.el-table__expand-icon {
+    .el-icon-arrow-right:before {
+        content: "\e6d9";
+    }
+}
+
+.el-table__expand-icon--expanded {
+    transform: none;
+
+    .el-icon-arrow-right:before {
+        content: "\e6d8";
+    }
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: rgba(var(--main-theme-color), 1);
+    border-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner::after {
+    -webkit-transform: rotate(45deg) scaleY(1);
+    transform: rotate(45deg) scaleY(1);
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+
+//#region 线上订单样式
+.onlineOrder {
+    .el-input__inner {
+        width: 310rx;
+        height: 38rx;
+        line-height: 24rx;
+        background: rgba(247, 247, 247, 1);
+        border-radius: 19rx;
+    }
+
+    .el-input__icon {
+        line-height: 38rx;
+    }
+
+    .el-input__suffix {
+        font-size: 17px;
+        top: 0px;
+        right: 6px;
+    }
+}
+
+.el-input__inner:focus {
+    outline: none;
+    border-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pagination__sizes .el-input .el-input__inner:hover {
+    border-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pagination.is-background .btn-prev:disabled,
+.el-pagination.is-background .btn-next:disabled {
+    color: #C0C4CC;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: rgba(var(--main-theme-color), 1);
+    color: #FFFFFF;
+}
+
+.el-pagination button:hover {
+    color: rgba(var(--main-theme-color), 1);
+}

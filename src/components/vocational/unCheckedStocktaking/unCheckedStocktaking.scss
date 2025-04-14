@@ -1,0 +1,45 @@
+/* 未盘商品弹出 */
+    .unCheckedStocktaking{
+        .searchInput{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .tablePagin{
+            padding: 0 15rx;
+            width: 100%;
+            height: 620px;
+            overflow: hidden;
+        }
+        .myTable{
+            margin-top: 10rx;
+            width: calc(100%);
+            height: calc(100% - 170px);
+            display: flex;
+        }
+        .pageWrap{
+            margin-top: 10rx;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 30px 0 0;
+        }
+        .foot{
+            margin-top: 20rx;
+            display: flex;
+            justify-content: center;
+
+            .btnItem {
+                margin-right: 40px;
+            }
+        }
+    }
+    .pswWrap{
+        .pswContent{
+            margin-top: 20rx;
+            padding: 0 60rx;
+            .btnWrap{
+                margin-top: 60rx;
+                padding-bottom: 30rx;
+                text-align: center;
+            }
+        }
+    }

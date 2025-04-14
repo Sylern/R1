@@ -1,0 +1,649 @@
+.reservation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 500;
+
+    .contentWrap {
+        padding: 0 50px;
+        display: flex;
+        height: calc(100% - 60px);
+        background-color: #ffffff;
+        border-radius: 10px;
+
+        .leftWrap {
+            width: 400px;
+            height: 100%;
+
+            .tableInfo {
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 80px;
+                border-radius: 10px;
+                border: 1px solid rgba(var(--main-theme-color), 1);
+                background-color: #F8F9FF;
+
+                .name {
+                    font-size: 28px;
+                    color: #000000;
+                    font-weight: normal;
+                }
+
+                .area {
+                    color: #666666;
+                    font-size: 16px;
+                }
+            }
+
+            .infoLine {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                height: 48px;
+                border-radius: 10px;
+                background-color: #F4F6F9;
+
+                .key {
+                    padding-left: 20px;
+                    width: 100px;
+                    height: 46rx;
+                    line-height: 46rx;
+                    background-color: #F4F6F9;
+                }
+
+                /deep/.el-input {
+                    height: 46rx;
+
+                    &.remark {
+                        .el-input__inner {
+                            padding: 0 20px;
+                        }
+                    }
+
+                    &.right .el-input__inner {
+                        text-align: right;
+                    }
+
+                    .el-input__inner {
+                        height: 100%;
+                        border: none;
+                        background-color: #F4F6F9;
+                        font-size: 16px;
+                    }
+
+                    .el-input-group__prepend {
+                        padding: 0 20px;
+                        color: #333333;
+                        border: none;
+                        font-size: 16px;
+                    }
+                }
+
+                /deep/.el-select {
+                    width: calc(100% - 100px);
+                    height: 46rx;
+                    text-align: right;
+
+                    .el-select__tags,
+                    .el-select__input {
+                        height: 100%;
+                    }
+
+                    .el-input__inner {
+                        text-align: right;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .timeInfo {
+                padding: 0 2px;
+                margin-top: 10px;
+                height: 215px;
+                border: 1px solid #EEEEEE;
+                border-radius: 10px;
+
+                .dateWrap {
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    border-bottom: 1px solid #EEEEEE;
+
+                    .btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                        font-size: 24px;
+                        color: #000000;
+
+                        &.disabled {
+                            color: #cccccc;
+                            cursor: not-allowed;
+                        }
+                    }
+
+                    .dateText {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex: 1;
+                        // width: calc(100% - 100px);
+
+                        .text {
+                            font-weight: normal;
+                            font-size: 16px;
+                            color: #000000;
+                        }
+
+                        .dateFlag {
+                            margin-left: 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 38px;
+                            height: 22px;
+                            color: #ffffff;
+                            font-size: 12px;
+                            background-color: rgba(var(--main-theme-color), 1);
+                            border-radius: 10px 10px 10px 0px;
+                        }
+
+                    }
+                }
+
+                .timeControl {
+                    height: calc(100% - 50px);
+
+                    .timeSelect {
+                        padding: 0 30px;
+                        height: 90px;
+                        display: flex;
+                        align-items: center;
+
+                        .timeBox {
+                            width: 100px;
+
+                            .time {
+                                position: relative;
+                                font-size: 24px;
+                                font-weight: bold;
+                                color: #000000;
+
+                                &.canset {
+                                    cursor: pointer;
+
+                                    .el-date-editor {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        opacity: 0;
+
+                                        /deep/.el-input__inner {
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                .icon {
+                                    margin-left: 5px;
+                                    font-size: 16px;
+                                    color: rgba(var(--main-theme-color), 1);
+                                }
+                            }
+
+                            .text {
+                                color: #666666;
+                                font-size: 12px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .spaceBox {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: calc(100% - 200px);
+
+                            .line {
+                                height: 2px;
+                                width: 30px;
+                                background-color: #666666;
+                            }
+                        }
+                    }
+
+                    .timeLine {
+                        position: relative;
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .timeLineItem {
+                            position: relative;
+                            width: 14px;
+
+                            .line {
+                                height: 2px;
+                                background-color: #CFD2D8;
+                                border-left: 1px solid #ffffff;
+                            }
+
+                            .text {
+                                margin-left: -5px;
+                                color: #A5A8AF;
+                                transform: scale(0.6);
+                            }
+
+                            .timeLineSelect {
+                                position: absolute;
+                                top: 0;
+                                height: 2px;
+                                background-color: #38D91A;
+                            }
+                        }
+                    }
+
+                    .tipsWrap {
+                        margin-top: 20px;
+                        padding: 0 30px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+
+                        .tipsItem {
+                            display: flex;
+                            align-items: center;
+                            padding-right: 20px;
+
+                            .dot {
+                                margin-right: 2px;
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background-color: #CFD2D8;
+
+                                &.isSet {
+                                    background-color: #38D91A;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .remarkInfo {
+                margin-top: 10px;
+                height: 140px;
+                border-radius: 10px;
+                background-color: #F4F6F9;
+
+                .remark {
+                    height: 100%;
+
+                    /deep/.el-textarea__inner {
+                        padding: 10px;
+                        height: 100%;
+                        border: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .rightWrap {
+            position: relative;
+            padding-left: 60px;
+            width: calc(100% - 400px);
+            height: 100%;
+
+            .searchMember {
+                /deep/.el-input__inner {
+                    height: 48px;
+                    line-height: 28px;
+                    background-color: #F4F6F9;
+                    border: none;
+                }
+
+                /deep/.el-input-group__append {
+                    border: none;
+                    color: rgba(var(--main-theme-color), 1);
+                }
+            }
+
+            .memberInfo {
+                margin-top: 10px;
+                border-radius: 6px;
+                height: 120px;
+                overflow: hidden;
+                border: 1px solid #F4F6F9;
+
+                .userInfo {
+                    padding: 12px 12px 12px 17px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    background-color: #F4F6F9;
+
+                    .left {
+                        display: flex;
+                        align-items: center;
+
+                        .logo {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #ffffff;
+                            width: 42px;
+                            height: 42px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+
+                        .nameWrap {
+                            margin-left: 8px;
+
+                            .name {
+                                color: #000000;
+                                font-size: 18px;
+                            }
+
+                            .flag {
+                                padding: 0 4px;
+                                margin-left: 4px;
+                                color: #E79520;
+                                font-size: 12px;
+                                border-radius: 3px;
+                                border: 1px solid #E0912E;
+                                background-color: #FFF4E1;
+                            }
+                        }
+
+                        .telephone {
+                            margin-top: 2px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .right {
+                        display: flex;
+
+                        .btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 46px;
+                            height: 26px;
+                            font-size: 12px;
+                            border-radius: 3px;
+                            background-color: #FFFFFF;
+                            cursor: pointer;
+
+                            &:active {
+                                background-color: rgba(#FFFFFF, 0.8);
+                            }
+                        }
+
+                        .btnClear {
+                            margin-right: 5px;
+                            color: #000000;
+                            border: 1px solid #D2D2D2;
+                        }
+
+                        .btnRecharge {
+                            color: rgba(var(--main-theme-color), 1);
+                            border: 1px solid rgba(var(--main-theme-color), 1);
+                        }
+                    }
+                }
+
+                .userRights {
+                    display: flex;
+                    justify-content: space-between;
+                    height: calc(100% - 58px);
+                    width: 100%;
+                    padding: 10px 48px;
+                    background-color: #ffffff;
+                    border: 1px solid #F4F6F9;
+
+                    .item {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        &.discount {
+                            cursor: pointer;
+                        }
+
+                        .key {
+                            font-size: 13px;
+                        }
+
+                        .value {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+
+            .dealMoney {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                height: 50px;
+                border-radius: 10px;
+                border: 1px solid #EEEEEE;
+
+                .key {
+                    width: 70px;
+                    line-height: 50px;
+                    text-align: center;
+                    color: #000000;
+                    font-weight: 400;
+                    background-color: #F4F6F9;
+                }
+
+                .value {
+                    width: calc(100% - 90px);
+                    text-align: right;
+                    font-size: 24px;
+                    color: #000000;
+                    font-weight: bold;
+                }
+
+                .payInputItem {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+
+                .moneyEdit {
+                    padding: 0 2px;
+                    color: rgba(var(--main-theme-color), 1);
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+            }
+
+            .receivableMoney {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 50px;
+
+                .key {
+                    width: 70px;
+                    line-height: 50px;
+                    text-align: center;
+                    color: #000000;
+                    font-weight: 400;
+                }
+
+                .value {
+                    width: calc(100% - 90px);
+                    text-align: right;
+                    font-size: 24px;
+                    color: #000000;
+                    font-weight: bold;
+                }
+
+                .payInputItem {
+                    width: calc(50% - 5px);
+                    display: flex;
+                    align-items: center;
+                    border-radius: 10px;
+                    border: 1px solid #EEEEEE;
+
+                    .highLight {
+                        color: #FF3131;
+                    }
+
+                    .moneyEdit {
+                        padding: 0 2px;
+                        color: rgba(var(--main-theme-color), 1);
+                        font-size: 18px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .pointWrap {
+                padding-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .useWrap {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .left {
+                        .pointCheckBox {
+                            margin-right: 10px;
+                        }
+
+                        .inputPoint {
+                            margin: 0 5px;
+                            width: 70px;
+                            height: 28px;
+
+                            /deep/.el-input__inner {
+                                height: 28px;
+                                line-height: 18px;
+                                padding: 0 5px;
+                                background-color: #F4F6F9;
+                                text-align: center;
+                            }
+                        }
+
+                        .updatePoint {
+                            padding-left: 10px;
+                            font-size: 12px;
+                            color: rgba(var(--main-theme-color), 1);
+                            cursor: pointer;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                .pointChangeBtn {
+                    padding: 5px 10px;
+                    color: #ffffff;
+                    background-color: rgba(var(--main-theme-color), 1);
+                    border-radius: 6px;
+                    cursor: pointer;
+
+                    &:active {
+                        background-color: rgba(var(--main-theme-color), 0.8);
+                    }
+                }
+            }
+
+            .discountWrap {
+                padding-top: 10px;
+                right: 105px;
+                line-height: 40px;
+                display: flex;
+                color: #333333;
+                align-items: center;
+                justify-content: space-between;
+
+                .btn {
+                    position: relative;
+                    color: rgba(var(--main-theme-color), 1);
+                    cursor: pointer;
+                    z-index: 5;
+                }
+            }
+
+            /deep/.payTypeList {
+                margin-top: -40px;
+                max-height: calc(160px + 70rx);
+
+                .listWrap {
+                    max-height: calc(160px + 20rx);
+
+                    .item {
+                        height: 80px;
+
+                        .img {
+                            width: 45px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+
+            .btnWrap {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+
+                .btn {
+                    margin: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: calc(50% - 10px);
+                    height: 50px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(var(--main-theme-color), 1);
+                    cursor: pointer;
+
+                    &.check {
+                        color: #ffffff;
+                        background-color: rgba(var(--main-theme-color), 1);
+                    }
+
+                    &.checkPay {
+                        width: calc(100% - 10px);
+                    }
+
+                    &.disabled {
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+}

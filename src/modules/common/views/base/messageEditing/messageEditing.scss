@@ -1,0 +1,148 @@
+.messageEditing-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f7f8fa;
+    .title {
+        width: 100%;
+        line-height: 60rx;
+        font-size: 14rx;
+        padding-left: 18rx;
+        color: #000000;
+        font-weight: 400;
+        background-color: #ffffff;
+        border-left: 1px solid #ebedf0;
+    }
+    .contentWrap {
+        width: 100%;
+        height: calc(100% - 80rx);
+        padding: 16rx 4rx 0 16rx;
+        margin: 10rx 0 0 10rx;
+        display: flex;
+        .cw_left {
+            width: calc(60% - 15rx);
+            height: 100%;
+            background-color: #ffffff;
+            margin: 0 15rx 0 0;
+            padding: 15rx 0 0 0;
+            .editor {
+                margin: 0 20rx;
+                width: calc(100% - 40rx);
+                // height: calc(100% - 180rx);
+            }
+        }
+        .cw_right {
+            width: 40%;
+            height: 100%;
+            background-color: #ffffff;
+            padding: 0 40rx 0 0;
+            .nav {
+                padding: 15rx 0rx 0 20rx;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                font-size: 15rx;
+                
+                .dd {
+                    height: 35rx;
+                    line-height: 35rx;
+                    cursor: pointer;
+                    &.active {
+                        border-bottom: 2px solid rgba(var(--main-theme-color), 1);
+                        color: rgba(var(--main-theme-color), 1);
+                    }
+                }
+            }
+            .titleBar {
+                border: 1px solid #ebedf0;
+                height: 50rx;
+                line-height: 50rx;
+                font-size: 14rx;
+                display: flex;
+                margin: 20rx 20rx 0 40rx;
+                border-radius: 8rx;
+                .dd {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    &.active {
+                        background-color: rgba(39, 179, 147, 1);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .table {
+                margin: 0 0 0 40rx;
+                height: calc(100% - 180rx);
+                .dl {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 80rx;
+                    border-bottom: 1px solid #ebedf0;
+                    margin: 0 40rx 0 0;
+                    .dl_left {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex: 1;
+                        .dl_title {
+                            font-size: 15rx;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            box-sizing: border-box;
+                            cursor: pointer;
+                        }
+                        .dl_time {
+                            font-size: 13rx;
+                            margin: 4rx 0 0 0;
+                            color: #9a9a9a;
+                        }
+                    }
+                    .dl_right {
+                        // width: 200rx;
+                        margin: 0 0 0 20rx;
+                        .edit {
+                            height: 36rx;
+                            line-height: 36rx;
+                            color: #27b393;
+                            margin: 0 15rx 0 0;
+                            border: 1px solid #27b393;
+                            padding: 0 25rx;
+                        }
+                        .delete {
+                            height: 36rx;
+                            line-height: 36rx;
+                            color: #ff0000;
+                            border: 1px solid #ff0000;
+                            padding: 0 25rx;
+                        }
+                    }
+                }
+            }
+            .pageWrap {
+                margin: 15rx 0 0 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+
+        .bottomWrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80rx;
+            text-align: center;
+            background-color: #ffffff;
+        }
+    }
+}

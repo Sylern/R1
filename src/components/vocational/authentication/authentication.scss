@@ -1,0 +1,305 @@
+.authentication {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .stepContent {
+        padding: 0 20px;
+        height: 100%;
+        border-radius: 10rx;
+
+        .stepMain {
+            margin-top: 20px;
+            height: calc(100% - 20px - 80rx);
+
+            .steps {
+                padding: 0 10px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #F7F8FA;
+
+                .stepItem {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &.center {
+                        position: relative;
+                        width: 500px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .stepline {
+                            position: absolute;
+                            top: 16px;
+                            left: 0;
+                            right: 0;
+                            width: 100%;
+                            border-bottom: 1px dashed rgba(var(--main-theme-color), 1);
+                            z-index: -1;
+                        }
+
+                        .snBox {
+                            display: flex;
+                            justify-content: center;
+                            width: 40px;
+                            height: 32px;
+                            background-color: #ffffff;
+                        }
+
+                        .tipsText {
+                            padding: 0 10px;
+                        }
+                    }
+
+                    .sn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px dashed rgba(var(--main-theme-color), 1);
+                        color: #99A7E8;
+                        background-color: #F7F8FA;
+                        border-radius: 50%;
+                        font-size: 20px;
+                        font-style: italic;
+                        font-weight: bold;
+
+                        &.selected {
+                            color: #ffffff;
+                            border: 1px solid rgba(var(--main-theme-color), 1);
+                            background-color: rgba(var(--main-theme-color), 1);
+                            border-radius: 50%;
+                        }
+
+                        .text {
+                            padding-right: 3px;
+                        }
+                    }
+
+                    .stepText {
+                        margin-top: 5px;
+                    }
+
+                    .tips {
+                        margin-top: 5px;
+                        line-height: 25px;
+                        height: 25px;
+                        color: #D12222;
+                        background-color: #FFEDED;
+                    }
+                }
+            }
+
+            .stepInfo {
+                height: calc(100% - 100px);
+
+                .infoTitle {
+                    padding: 0 5px;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+                    color: #666666;
+                    border-bottom: 1px solid #F7F8FA;
+                }
+
+                .infoContent {
+                    padding: 0 100px;
+                    height: calc(100% - 56px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .infoLeft {
+                        padding-top: 30px;
+                        height: 100%;
+
+                        .infoLine {
+                            line-height: 40px;
+                        }
+                    }
+
+                    .qrCode {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    .qrcodeText {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .authContent {
+        padding: 0 20px;
+        height: calc(100% - 60px - 80rx);
+        border-radius: 10rx;
+
+        .uploadWrap {
+            display: flex;
+            flex-wrap: wrap;
+            height: fit-content;
+
+            .uploadItem {
+                margin: 0 20px 20px 20px;
+                width: calc(30% - 40px);
+
+                &.widthRight {
+                    padding: 0 5%;
+                    width: calc(40% - 40px);
+                }
+
+                .img {
+                    margin: 10px 0;
+                    width: 100%;
+                    height: 110px;
+
+                    /deep/.uploadImgBtn {
+                        width: 100%;
+                        height: 100%;
+                        line-height: 80px;
+                        border: 1px dashed rgba(var(--main-theme-color), 1);
+                    }
+
+                    /deep/.showImg {
+                        width: 100%;
+                        height: 70px;
+                    }
+                }
+
+                .itemTips {
+                    color: #999999;
+                }
+            }
+        }
+
+        .OCR_list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .inputItem {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                width: 50%;
+
+                .key {
+                    width: 120px;
+                    text-align: right;
+                }
+
+                .value {
+                    padding-left: 10px;
+                    width: calc(100% - 120px);
+
+                    /deep/.el-input__inner {
+                        height: 40px;
+                        width: 280px;
+                    }
+                }
+            }
+        }
+
+        .checkWrap {
+            margin-top: 50px;
+
+            .inputWrap {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+
+                .key {
+                    width: 120px;
+                    text-align: right;
+                }
+
+                .value {
+                    padding-left: 10px;
+                    width: 290px;
+
+                    /deep/.el-input__inner {
+                        height: 40px;
+                    }
+
+                    /deep/.el-input-group__append {
+                        padding: 0;
+                        color: #ffffff;
+                        background-color: rgba(var(--main-theme-color), 1);
+                        cursor: pointer;
+
+                        .btnVerifi {
+                            padding: 0 15px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+
+            .ncWrap {
+                margin: 10px 20px;
+                padding-left: 50px;
+                width: 370px;
+
+                .tips {
+                    margin-bottom: 5px;
+                }
+
+                .lable {
+                    margin: 0;
+                    padding: 0 0 15rx;
+                }
+
+                .nc-container {
+                    position: relative;
+
+                    /deep/ .nc_wrapper {
+                        width: 100% !important;
+                    }
+
+                    /deep/ .stage1 {
+                        padding: 0;
+                        height: 40px;
+
+                        .slider {
+                            height: 40px;
+                            left: 0;
+                            right: 0;
+
+                            .button {
+                                height: 40px;
+                            }
+
+                            .bg-green,
+                            .label {
+                                line-height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btnWrap {
+        height: 80rx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btnItem {
+            width: 150px;
+        }
+    }
+}

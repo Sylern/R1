@@ -1,0 +1,31 @@
+.checkedFlavor {
+    padding: 10px 10px;
+    height: 470px;
+    .searchInput {
+        display: flex;
+        justify-content: flex-end;
+        .el-icon-search {
+            cursor: pointer;
+        }
+    }
+    .myTable {
+        margin: 10px 0 10px 0;
+        height: calc(100% - 160px);
+        .cs_table {
+            height: 100% !important;
+        }
+    }
+    .pageWrap {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 30px 10px 0;
+    }
+    .foot {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 30px 0 15px;
+        height: 40px;
+    }
+}

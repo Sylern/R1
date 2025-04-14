@@ -1,0 +1,22 @@
+.callRoll{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10rx;
+    .tabsWrap{
+        height: 55px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 10rx;
+       ::v-deep .el-tabs__nav-wrap{
+            &::after{
+                opacity: 0;
+            }
+        }
+    }
+    .contentWrap{
+        width: 100%;
+        height: calc(100% - 55px);
+    }
+}

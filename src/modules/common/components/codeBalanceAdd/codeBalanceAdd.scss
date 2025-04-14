@@ -1,0 +1,87 @@
+.codeBalanceAdd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        padding: 0 35rx;
+        height: calc(100% - 80rx);
+
+        /deep/.el-form-item__error {
+            right: 15rx;
+            left: auto;
+        }
+
+        .inputWrap {
+            width: 100%;
+            margin-bottom: 20rx;
+            margin-top: 14rx;
+            .el-form-item {
+                margin-bottom: 26rx;
+            }
+            .inputBox {
+                height: 48rx;
+                display: flex;
+                align-items: center;
+                background-color: #F4F6F9;
+                border-radius: 6rx;
+
+                .key {
+                    width: 110rx;
+                    padding-left: 16rx;
+                }
+
+                /deep/.el-select {
+                    flex: 1;
+                }
+
+                /deep/.el-input {
+                    flex: 1;
+                    height: 48rx;
+                    display: flex;
+
+                    .el-input__inner {
+                        padding-left: 0;
+                        height: 100%;
+                        border: none;
+                        background-color: transparent;
+                        text-align: right;
+                    }
+
+                    .el-input__suffix {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            margin-top: 30rx;
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20rx;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.el-select-dropdown {
+    .el-select-dropdown__item {
+        // text-align: center;
+        width: 100%;
+    }
+}

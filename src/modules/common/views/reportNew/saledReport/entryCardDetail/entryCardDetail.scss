@@ -1,0 +1,82 @@
+.entryCardDetail{
+    width: 100%;
+    height: 100%;
+    .top{
+        width: 100%;
+        height: calc(100% - 320rx - 10rx);
+        background-color: white;
+        box-sizing: border-box;
+        padding: 20rx;
+        .head{
+            width: 100%;
+            height: 120rx;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding-bottom: 20rx;
+            ::v-deep .el-image{
+                width: 160rx;
+                height: 100%;
+            }
+            .info{
+                flex: 1;
+                height: 100%;
+                margin-left: 10rx;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .name{
+                    font-size: 15px;
+                    span{
+                        color: rgba(var(--main-theme-color), 1);
+                    }
+                }
+            }
+            .op{
+                height: 100%;
+                .btnItem{
+                    margin-right: 10rx;
+                }
+            }
+        }
+        .center{
+            width: 100%;
+            height: calc(100% - 120rx);
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            padding: 20rx 0;
+            padding-top: 10rx;
+            .title{
+                font-size: 15px;
+                font-weight: bold;
+                width: 100%;
+                margin-top: 10rx;
+
+                span{
+                    color: red;
+                    margin-left: 20rx;
+                }
+            }
+            .item{
+                width: 33%;
+                box-sizing: border-box;
+                padding-right: 10rx;
+                display: flex;
+                .value{
+                    flex: 1;
+                    color: #666;
+                }
+            }
+        }
+    }
+    .foot{
+        width: 100%;
+        height: 320rx;
+        margin-top: 10rx;
+        background-color: white;
+        box-sizing: border-box;
+        padding: 20rx;
+    }
+}

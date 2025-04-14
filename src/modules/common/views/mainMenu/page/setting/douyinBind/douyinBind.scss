@@ -1,0 +1,109 @@
+.douyinBind {
+    height: 100%;
+    padding: 30px 30px 0 10px;
+
+    .redText {
+        color: #E73A3A;
+    }
+
+    .subTitle {
+        font-size: 18px;
+    }
+
+    .subTitle2 {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .containar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line {
+        padding-left: 14rx;
+        margin-top: 30px;
+        display: flex;
+        align-items: flex-start;
+
+        .key {
+            width: 110px;
+            margin-right: 16px;
+            line-height: 40px;
+            text-align: right;
+        }
+
+        .value {
+            display: flex;
+            flex-direction: column;
+
+            &.switchWrap {
+                .info {
+                    color: #999999;
+                    font-size: 12px;
+                }
+            }
+
+            .tipsIcon {
+                margin-left: 10px;
+                color: #F4F6F9;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .switch {
+                display: flex;
+                align-items: center;
+                height: 40px;
+            }
+
+            .el-select {
+                width: 240px;
+            }
+
+            .el-input__inner {
+                height: 40px;
+            }
+        }
+
+        .lineBtnWrap {
+            display: flex;
+            align-items: center;
+            height: 40px;
+
+            .btn {
+                margin-left: 10px;
+                padding: 6px 18px;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 6px;
+                cursor: pointer;
+
+                &:active {
+                    background-color: rgba(var(--main-theme-color), 0.8);
+                }
+            }
+        }
+    }
+
+    .btnSavePoi {
+        padding-left: 140px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        height: 40px;
+
+        .btn {
+            margin-left: 10px;
+            padding: 6px 18px;
+            color: #ffffff;
+            background-color: rgba(var(--main-theme-color), 1);
+            border-radius: 6px;
+            cursor: pointer;
+
+            &:active {
+                background-color: rgba(var(--main-theme-color), 0.8);
+            }
+        }
+    }
+}

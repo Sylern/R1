@@ -1,0 +1,275 @@
+// #region 滚动条样式
+.el-scrollbar__wrap {
+    height: calc(100% + 17px) !important;
+    width: calc(100% + 17px) !important;
+    // width: calc(100% + 17px);
+}
+
+// #region 兼容非Windows 环境滚动条不占宽高的代码
+.bodyScrollbar {
+    .el-scrollbar__wrap {
+        height: 100% !important;
+        margin-bottom: 0 !important;
+
+        .el-scrollbar__view {
+            width: calc(100% - 17px) !important;
+        }
+    }
+}
+
+// #region 选择日期控件
+.el-range-editor {
+
+    .el-range-input,
+    .el-range-separator {
+        font-size: 12px;
+    }
+}
+
+// #region 输入框样式
+.el-input__inner {
+    // height: 34rx;
+    // line-height: 24rx;
+    //  padding: 0 15rx;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    // font-size: 12px;
+
+}
+
+.el-textarea__inner,
+.el-radio__label,
+.el-checkbox__label {
+    font-size: 14px;
+}
+
+.el-select .el-input__inner:focus,
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus,
+.el-textarea__inner:focus,
+.el-checkbox .el-checkbox__input.is-focus .el-checkbox__inner,
+.el-select .el-input.is-focus .el-input__inner,
+.el-cascader .el-input .el-input__inner:focus,
+.el-cascader .el-input.is-focus .el-input__inner {
+    border-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-select-dropdown {
+    z-index: 20000 !important;
+
+    ul {
+        position: relative;
+
+        .selectAll {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 10px;
+        }
+
+        li {
+            .optionLeft {
+                font-size: 13px;
+                float: left;
+            }
+
+            .optionRight {
+                font-size: 12px;
+                color: rgba(101, 157, 255, 1);
+                float: right;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.el-select-dropdown__item.selected,
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover,
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected,
+.el-select-dropdown.is-multiple .el-select-dropdown__item.hover,
+.el-select-dropdown.is-multiple .el-select-dropdown__item:hover {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+.el-input.is-disabled .el-input__inner {
+    color: #666666;
+    background-color: #f1f1f3;
+}
+
+.el-date-editor .el-range-separator {
+    display: flex;
+    align-items: center;
+}
+
+// 多选按钮改色
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    color: rgba(var(--main-theme-color), 1);
+    background-color: rgba(var(--main-theme-color), 1);
+    border-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-checkbox__inner:hover {
+    border-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+    border-color: rgba(var(--main-theme-color), 1);
+    background-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-button--primary {
+    color: #ffffff;
+    border-color: rgba(var(--main-theme-color), 1);
+    background-color: rgba(var(--main-theme-color), 1);
+}
+
+// 分页样式
+.el-pagination {
+    z-index: 10;
+}
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+    background: center center no-repeat #fff;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    color: #ffffff;
+    background-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active:hover {
+    color: #ffffff;
+}
+
+.el-pagination .btn-next:hover,
+.el-pagination .btn-prev:hover {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pager li:hover {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pager li.active {
+    color: #ffffff;
+    background-color: rgba(var(--main-theme-color), 1);
+}
+
+.el-pager li {
+    min-width: 30px;
+    font-weight: 400;
+}
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+    min-width: 30px;
+}
+
+.el-pagination__editor.el-input {
+    width: 50px;
+}
+
+//#region 字体行高
+.el-input__icon {
+    line-height: 34px;
+    font-size: 14px;
+}
+
+.el-date-editor .el-range__icon,
+.el-date-editor .el-range__close-icon {
+    line-height: 26px;
+}
+
+.cs_table .cs_tr .cs_td .cs_cell i {
+    height: 15px;
+    line-height: 15px;
+}
+
+.el-input-number.is-controls-right .el-input-number__decrease {
+    bottom: 3px;
+    height: 15px;
+    line-height: 15px;
+}
+
+.el-input-number.is-controls-right .el-input-number__increase {
+    top: 3px;
+    height: 15px;
+    line-height: 15px;
+}
+
+//#region
+.el-upload-list {
+    .el-upload-list__item:last-child {
+        margin-bottom: 10px;
+    }
+}
+
+.el-menu {
+    border: 0;
+}
+
+.el-menu-item {
+    height: 48px;
+    line-height: 48px;
+}
+
+.el-menu-item:focus,
+.el-menu-item:hover,
+.el-submenu__title:hover,
+.el-submenu__title:focus {
+    background-color: #eaf9f2 !important
+}
+
+.el-menu-item.is-active {
+    color: rgb(49, 193, 123);
+}
+
+//#region 日期选中
+.el-time-spinner__item {
+    line-height: initial;
+}
+
+//#region 联级选择器
+.el-cascader-panel {
+    max-height: 400px;
+
+    .el-cascader-menu__list {
+        &.is-empty {
+            padding: 20px 0;
+        }
+    }
+}
+
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-active,
+.el-cascader-node.is-selectable.in-checked-path {
+    color: rgba(var(--main-theme-color), 1);
+}
+
+// 面包屑
+.el-breadcrumb__item:last-child .el-breadcrumb__inner,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner a,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner:hover {
+    color: #333;
+}

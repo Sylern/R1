@@ -1,0 +1,65 @@
+.stockSetting {
+    margin-top: 10px;
+    height: calc(100% - 10px);
+    padding: 15rx;
+    background-color: #ffffff;
+
+    .itemBox {
+        padding: 0 10px;
+        margin-top: 30px;
+
+        &.hover{
+            &:hover {
+                background-color: rgba(var(--main-theme-color), 0.05);
+            }
+        } 
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .top {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .itemName {
+                font-weight: 500;
+                color: #333333;
+            }
+
+            .itemSub {
+                padding-left: 20px;
+                color: #999999;
+            }
+        }
+
+        .itemContent {
+
+            .radioWrap {
+                padding: 10px 20px 0 20px;
+
+                .radioBox {
+                    margin-bottom: 20px;
+
+                    .el-radio {
+                        display: flex;
+
+                        .radioName {
+                            font-weight: bold;
+                        }
+
+                        .tips {
+                            margin-top: 6px;
+                        }
+                    }
+                }
+
+                .highLight {
+                    color: #FF3131;
+                }
+            }
+        }
+    }
+}

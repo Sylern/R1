@@ -1,0 +1,287 @@
+.mainContent .moreFunc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    overflow: hidden;
+
+    .pageTop {
+        display: flex;
+        flex-direction: column;
+
+        .shopInfo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            width: 100%;
+            height: 80px;
+            background-color: #ffffff;
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                .shopName {
+                    color: #333333;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .tag {
+                    margin-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 60px;
+                    height: 28px;
+                    color: #ffffff;
+                    background-color: rgba(var(--main-theme-color), 1);
+                    border-radius: 3px;
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+
+                .iconWrap {
+                    display: flex;
+                    align-items: center;
+
+                    .iconItem {
+                        margin: 0 8px;
+                        width: 24px;
+                        height: 24px;
+                        cursor: pointer;
+                    }
+                }
+
+                .userInfo {
+                    margin-left: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    .userLogo {
+                        width: 34px;
+                        height: 34px;
+                        background-color: #F7F8FA;
+                        border-radius: 50%;
+                    }
+
+                    .userName {
+                        margin-left: 10px;
+                        padding-right: 10px;
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .funcContent {
+        position: relative;
+        margin: 0px 20px 0 30px;
+        padding-top: 20px;
+        width: calc(100% - 50px);
+        height: calc(100% - 80px);
+    }
+
+    .el_content {
+        width: 100%;
+        height: 100%;
+
+        .listWrap {
+            margin-bottom: 20px;
+
+            .listWrap-title {
+                color: #333333;
+                font-size: 22px;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            .subTitle {
+                display: flex;
+                margin-bottom: 10px;
+                color: #666666;
+
+                .settingText {
+                    width: 90px;
+                }
+                
+                .settingWrap {
+                    margin-left: 20px;
+                    color: rgba(var(--main-theme-color), 1);
+                    cursor: pointer;
+                }
+            }
+
+            .listContent {
+                position: relative;
+                // width: 756px;
+                padding: 25px 18px;
+                display: inline-flex;
+                flex-wrap: wrap;
+                background-color: #ffffff;
+                border-radius: 20px;
+
+                .isEditWrap {
+                    position: absolute;
+                    top: 25px;
+                    left: 18px;
+                    width: calc(100% - 36px);
+                    height: calc(100% - 50px);
+                    border: 1px dashed #666666;
+                    border-radius: 20px;
+                    z-index: 1;
+                }
+
+                .item {
+                    padding: 15px 0;
+                    width: 120px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    box-sizing: content-box;
+                    z-index: 5;
+
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 20px;
+                    }
+
+                    .listName {
+                        margin-top: 18px;
+                    }
+                }
+            }
+        }
+
+        .storeListWrap {
+            margin-top: 40px;
+
+            .listWrap-title {
+                color: #333333;
+                font-size: 22px;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            .listWrap-content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .storeList {
+                margin-left: 20px;
+                margin-bottom: 20px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .listWrap-subtitle {
+                margin-bottom: 10px;
+                color: #666666;
+            }
+
+            .listContent {
+                padding: 25px 18px;
+                display: inline-flex;
+                flex-wrap: wrap;
+                background-color: #ffffff;
+                border-radius: 20px;
+
+                .item {
+                    padding: 15px 0;
+                    width: 120px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    box-sizing: content-box;
+
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 20px;
+                    }
+
+                    .listName {
+                        margin-top: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .editSetting {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        height: 150px;
+        width: calc(100% - 40px);
+        background-color: #ffffff;
+        border: 1px solid #efefef;
+        border-radius: 10px 10px 0 0;
+        transform: translateY(160px);
+        -webkit-transform: translateY(160px);
+        transition: 300ms;
+        -webkit-transition: 300ms;
+        font-size: 14px;
+        -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+
+        &.isShow {
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+        }
+
+        .editSetting-title {
+            position: relative;
+            margin: 10px 10px 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #333333;
+            font-size: 16px;
+
+            .icon {
+                position: absolute;
+                right: 0;
+                font-size: 28px;
+                cursor: pointer;
+            }
+        }
+
+        .editList {
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .item {
+                margin-right: 30px;
+                width: 70px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .icon {
+                    width: 70px;
+                    height: 70px;
+                    background-color: aqua;
+                    border-radius: 7px;
+                }
+
+                .listName {
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+}

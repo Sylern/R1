@@ -1,0 +1,76 @@
+.minAppLink {
+    width: 100%;
+    height: calc(100% - 60px);
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+
+    .left {
+        width: 100px;
+        text-align: center;
+
+        .qr-code {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #eee;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    .right {
+        flex: 1;
+        box-sizing: border-box;
+        padding-left: 20px;
+
+        .link {
+            width: 100%;
+
+            background-color: #f5f7fa;
+            box-sizing: border-box;
+            padding: 8px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:last-child {
+                border: 0;
+            }
+
+
+
+            .title {
+                display: flex;
+                align-items: center;
+
+                .iconfont {
+                    margin-left: 10px;
+                    background-color: #00c800;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                }
+
+                .icon-xiaochengxu1 {
+                    background-color: transparent;
+                }
+            }
+
+            .bottom {
+                width: 100%;
+                background-color: #eee;
+                color: #666;
+                border-radius: 3px;
+                box-sizing: border-box;
+                padding: 4px;
+                // cursor: pointer;
+            }
+        }
+    }
+}

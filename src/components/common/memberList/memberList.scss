@@ -1,0 +1,316 @@
+.memberList {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .listContentWrap {
+        padding: 0 20rx;
+        height: calc(100% - 60rx);
+
+        .searchWrap {
+            height: 48rx;
+
+            /deep/.el-input__inner {
+                height: 46rx;
+                background-color: #F4F6F9;
+                border-radius: 10rx;
+            }
+        }
+
+        .listContent {
+            padding: 20rx 0;
+            height: calc(100% - 60rx);
+
+            .listItem {
+                display: flex;
+                align-items: center;
+                padding: 12rx;
+                cursor: pointer;
+
+                &.selected {
+                    background-color: #F4F6F9;
+                }
+                &:hover {
+                    background-color: #F4F6F9;
+                }
+
+                .left {
+                    width: 40rx;
+                    height: 40rx;
+
+                    .logo {
+                        width: 40rx;
+                        height: 40rx;
+                        background-color: #F4F6F9;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+                }
+
+                .center {
+                    flex: 1;
+                    padding-left: 10rx;
+
+                    .lineOccuped {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: #333333;
+                        font-size: 12px;
+
+                        .nameWrap {
+                            margin-bottom: 4rx;
+                            display: flex;
+                            align-items: center;
+
+                            .nameText {
+                                font-size: 14px;
+                            }
+
+                            .flag {
+                                margin-left: 6rx;
+                                padding: 0 4rx;
+                                color: #E79520;
+                                font-size: 10px;
+                                border: 1px solid #E0912E;
+                                background-color: #FFF4E1;
+                                border-radius: 3rx;
+                            }
+                        }
+
+                        &.phoneWrap {
+                            .telephone {
+                                color: #999999;
+                                font-size: 12rx;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40rx;
+                    height: 40rx;
+                    color: #999999;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .memberContentWrap {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 60rx);
+        padding: 0 17rx;
+
+        .left {
+            .content {
+                width: 290rx;
+                padding: 20rx 15rx;
+                background-color: #F4F6F9;
+                border-radius: 6rx;
+
+                .userInfo {
+                    .top {
+                        display: flex;
+
+                        .logo {
+                            width: 48rx;
+                            height: 48rx;
+                            background-color: salmon;
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+
+                        .nameWrap {
+                            margin-left: 10rx;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            .name {
+                                color: #000000;
+                                font-size: 18px;
+                            }
+
+                            .flag {
+                                margin-left: 6rx;
+                                padding: 0 4rx;
+                                color: #E79520;
+                                font-size: 10px;
+                                border: 1px solid #E0912E;
+                                background-color: #FFF4E1;
+                                border-radius: 3rx;
+                            }
+                        }
+
+                        .telephone {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .recodeWrap {
+                        margin-top: 30rx;
+                        display: flex;
+                        padding-bottom: 25rx;
+                        border-bottom: 1px solid #EAEEF3;
+
+                        .totalMoney {
+                            width: calc(50% - 1px);
+                            border-right: 1px solid #EAEEF3;
+                        }
+
+                        .totalNumber {
+                            width: 50%;
+                        }
+
+                        .content {
+                            padding: 5rx 0;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            font-size: 12px;
+                            color: #000000;
+
+                            .value {
+                                margin-top: 10rx;
+
+                                .number {
+                                    font-size: 18rx;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .itemBox {
+                    display: flex;
+                    height: 60rx;
+                    padding: 0 15rx;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #EAEEF3;
+                }
+
+                .nextRecord {
+                    margin-top: 30rx;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .right {
+            margin-left: 10rx;
+            width: calc(100% - 300rx);
+            height: 100%;
+
+            .timeWrap {
+                display: flex;
+                align-items: center;
+                height: 34px;
+                line-height: 34px;
+
+                /deep/.el-input__inner {
+                    height: 32px;
+                    line-height: 32px;
+
+                    .el-range-input,
+                    .el-range-separator,
+                    .el-range-separator {
+                        height: 24px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            .tableWrap {
+                margin-top: 10px;
+                height: calc(100% - 44px);
+
+                .tableBox {
+                    width: 100%;
+                    max-height: calc(100% - 40rx);
+                    display: flex;
+
+                    .Jump {
+                        color: rgba(var(--main-theme-color), 1);
+                        font-weight: 400;
+                        cursor: pointer;
+                    }
+
+                    .Jump:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .tableBottom {
+                    padding-left: 20rx;
+                    height: 40rx;
+                    line-height: 40rx;
+                    color: #333333;
+                    background-color: #F4F6F9;
+
+                    .highLight {
+                        padding: 0 5rx;
+                        color: #EE2020;
+                    }
+                }
+            }
+        }
+    }
+
+    .recordsContentWrap {
+        width: 100%;
+        height: calc(100% - 60rx);
+        padding: 0 37rx;
+
+        .recordsInfo {
+            padding-left: 23rx;
+            line-height: 30rx;
+            margin-bottom: 10rx;
+            color: #666666;
+        }
+
+        .tableWrap {
+            margin-top: 10rx;
+            height: calc(100% - 44rx);
+
+            .tableBox {
+                width: 100%;
+                max-height: calc(100% - 40rx);
+                display: flex;
+
+                .Jump {
+                    color: rgba(var(--main-theme-color), 1);
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+
+                .Jump:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .tableBottom {
+                padding-left: 20rx;
+                height: 40rx;
+                line-height: 40rx;
+                color: #333333;
+                background-color: #F4F6F9;
+
+                .highLight {
+                    padding: 0 5rx;
+                    color: #EE2020;
+                }
+            }
+        }
+    }
+}

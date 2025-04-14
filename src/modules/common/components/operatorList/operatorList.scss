@@ -1,0 +1,122 @@
+.guiderSelect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        padding: 0 20rx;
+        height: calc(100% - 60rx);
+
+        .listWrap {
+            padding: 20rx 0;
+            height: calc(100% - 60rx);
+
+            .listItem {
+                display: flex;
+                align-items: center;
+                padding: 12rx;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba($color: #F4F6F9, $alpha: 0.6);
+                }
+
+                &.selected {
+                    background-color: #F4F6F9;
+                }
+
+                .left {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #eeeeee;
+                    border-radius: 50%;
+                }
+
+                .center {
+                    flex: 1;
+                    padding-left: 10rx;
+
+                    .lineOccuped {
+                        display: flex;
+                        justify-content: space-between;
+                        color: #333333;
+                        font-size: 12px;
+
+                        &.nameWrap {
+                            .nameText {
+                                font-size: 14px;
+                            }
+                        }
+
+                        &.phoneWrap {
+                            margin-top: 4rx;
+                            .telephone {
+                                color: #999999;
+                                font-size: 12rx;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40rx;
+                    height: 40rx;
+                    color: #999999;
+                    font-size: 22px;
+
+                    .check {
+                        width: 18rx;
+                        height: 18rx;
+                        border: 1rx solid #DCDCDC;
+                        background-color: #ffffff;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        &.isCheck{
+                            width: 18rx;
+                            height: 18rx;
+                            border: 1rx solid rgba(var(--main-theme-color), 1);
+                            &::after {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                color: #ffffff;
+                                background-color: rgba(var(--main-theme-color), 1);
+                                content: "✔";
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20rx;
+                cursor: pointer;
+            }
+        }
+    }
+}

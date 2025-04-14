@@ -1,0 +1,166 @@
+.discount {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        padding: 0 14rx;
+        height: calc(100% - 80rx);
+
+        .searchWrap {
+            height: 48rx;
+            width: 360rx;
+            margin-bottom: 27rx;
+
+            /deep/.el-input__inner {
+                height: 100%;
+                background-color: #F4F6F9;
+            }
+
+            .el-icon-search {
+                line-height: 48px;
+            }
+        }
+
+        .listWrap {
+            width: 100%;
+            height: calc(100% - 170rx);
+
+            .listContent {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 100%;
+
+
+
+                .listItem {
+                    margin-left: 19rx;
+                    margin-bottom: 10rx;
+                    width: 302rx;
+                    height: 136rx;
+                    background-color: #F4F6F9;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    &.isLineFirst {
+                        margin-left: 0;
+                    }
+
+                    .container {
+                        position: relative;
+                        padding: 8rx;
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 0px 2px 0px 0px rgba(62, 69, 80, 0.1);
+
+                        .leftSemicircle {
+                            position: absolute;
+                            top: calc(50% - 10px);
+                            left: -10px;
+                            width: 20px;
+                            height: 20px;
+                            background-color: #ffffff;
+                            border-radius: 50%;
+                        }
+
+                        .rightSemicircle {
+                            position: absolute;
+                            top: calc(50% - 10px);
+                            right: -10px;
+                            width: 20px;
+                            height: 20px;
+                            background-color: #ffffff;
+                            border-radius: 50%;
+                        }
+
+                        .checkBox {
+                            width: 100%;
+                            height: 20px;
+
+                            .check {
+                                width: 18px;
+                                height: 18px;
+                                border: 1rx solid #DCDCDC;
+                                background-color: #ffffff;
+                                border-radius: 50%;
+                                overflow: hidden;
+
+                                &.isCheck {
+                                    border: 1px solid rgba(var(--main-theme-color), 1);
+
+                                    &::after {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 100%;
+                                        height: 100%;
+                                        color: #ffffff;
+                                        background-color: rgba(var(--main-theme-color), 1);
+                                        content: "✔";
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .infoWrap {
+                            padding: 0 20px;
+                            height: 100px;
+
+                            .priceWrap {
+                                margin-bottom: 24px;
+                                color: #3E4550;
+                                font-size: 32px;
+                                font-weight: bold;
+
+                                .symbol {
+                                    font-size: 16px;
+                                    margin-right: 4px;
+                                }
+                            }
+
+                            .infoRow {
+                                color: #8E9195;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .notNull {
+                    width: 100%;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    /* width: calc(100% - 100px); */
+                    /* width: 50%; */
+                    color: #909399;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .btnWrap {
+            margin-top: 36rx;
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20rx;
+                cursor: pointer;
+            }
+        }
+    }
+}

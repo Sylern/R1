@@ -1,0 +1,210 @@
+.pswResetWrap {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://ds.decerp.cc/images/base/login/background.png');
+    background-size: 100% 100%;
+
+    .logo {
+        display: inline-block;
+        margin: 38px 0 0 40px;
+        width: 200px;
+        height: 43px;
+    }
+
+    .contentWrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .loginContent {
+            margin-top: 100rx;
+            position: relative;
+            width: 560px;
+            min-height: 520px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 1px 1px 10px 0px rgba(150, 169, 253, 0.3);
+
+            .main {
+                width: 100%;
+                height: 100%;
+                background-color: #ffffff;
+
+                .title {
+                    padding-left: 90px;
+                    margin-top: 60px;
+                    line-height: 40px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+
+                .formIcon {
+                    padding: 5px;
+                }
+
+                .stepWrap {
+                    margin-top: 30px;
+                    padding: 0 70px 0 30px;
+                }
+
+                .infoWrap {
+                    margin: 30px 130px 30px 90px;
+
+                    .checkRememberPsw {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+
+                        .forgetPsw {
+                            color: #1876FC;
+                            cursor: pointer;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .picture_append {
+                        width: 70px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+
+                    .btnVerifi {
+                        text-align: center;
+                        cursor: pointer;
+                    }
+
+                    .agreement {
+                        .checkbox {
+                            margin-right: 5px;
+                        }
+
+                        .link {
+                            color: #1876FC;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .success_icon {
+                        margin-top: 60px;
+                        text-align: center;
+
+                        .img {
+                            width: 72px;
+                            height: 72px;
+                        }
+
+                        .text {
+                            margin-top: 12px;
+                        }
+                    }
+
+                    .btnRegister {
+                        margin-top: 20px;
+                        height: 48px;
+                        line-height: 48px;
+                        text-align: center;
+                        color: #ffffff;
+                        background-color: #1876FC;
+                        border-radius: 3px;
+                        cursor: pointer;
+
+                        &:active {
+                            opacity: 0.8;
+                        }
+
+                        &.is-disabled {
+                            color: #C0C4CC;
+                            cursor: not-allowed;
+                            background-image: none;
+                            background-color: #FFF;
+                            border-color: #EBEEF5;
+                        }
+                    }
+
+                    .btnBack {
+                        margin-top: 60px;
+                        height: 48px;
+                        line-height: 48px;
+                        text-align: center;
+                        color: #ffffff;
+                        background-color: #1876FC;
+                        border-radius: 3px;
+                        cursor: pointer;
+
+                        &:active {
+                            opacity: 0.8;
+                        }
+                    }
+
+                    .bottomBtn {
+                        margin-right: 5px;
+                        margin-top: 16px;
+                        display: flex;
+                        justify-content: space-between;
+                        color: #1876FC;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .el-icon-view {
+                        cursor: pointer;
+                    }
+
+                    /deep/ .el-form-item__content {
+                        line-height: normal;
+                    }
+
+                    /deep/ .el-form-item {
+                        margin-bottom: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        position: fixed;
+        bottom: 50px;
+        width: 100%;
+        color: #9F9F9F;
+        text-align: center;
+    }
+
+    /* 滑动验证 */
+    .ncWrap {
+        .tips {
+            padding: 0 0 15px;
+        }
+
+        .nc-container {
+            /deep/ .stage1 {
+                padding: 0;
+                height: 48px;
+
+                .slider {
+                    height: 48px;
+                    left: 0;
+                    right: 0;
+
+                    .button {
+                        height: 48px;
+                    }
+
+                    .bg-green,
+                    .label {
+                        line-height: 48px;
+                    }
+                }
+            }
+        }
+    }
+}

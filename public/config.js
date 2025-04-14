@@ -1,0 +1,1 @@
+var domainConfig = "http://dev.decerp.cc:81"

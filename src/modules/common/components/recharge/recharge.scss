@@ -1,0 +1,76 @@
+.recharge_dialog {
+    .el-dialog .el-dialog__body {
+        padding: 25px 55px;
+    }
+
+    .el-dialog__body .item_activity {
+        margin: 0;
+    }
+
+    .activity_wrap {
+        display: flex;
+
+        .el-radio {
+            height: auto;
+            padding: 6px 14px 6px 8px;
+            margin: 0;
+            line-height: 23px;
+            text-align: left;
+
+            &.is-bordered.is-checked {
+                border-color: rgba(var(--main-theme-color), 1);
+            }
+
+            .el-radio__input {
+                display: none;
+            }
+
+            .el-radio__label {
+                padding: 0;
+                font-size: 13px;
+            }
+        }
+    }
+    .el-form-item {
+        margin-bottom: 16px;
+    }
+    .payment_wrap {
+        display: flex;
+
+        .el-radio {
+            padding: 10px 14px;
+            margin-right: 2px;
+            margin-left: 0 !important;
+            text-align: center;
+            border: none;
+
+            &.is-checked {
+                background-color: #f7f7f7;
+                .el-radio__label {
+                    color: #333;
+                }
+            }
+            &.is-bordered {
+                height: auto;
+            }
+            &.is-bordered.is-checked {
+                border-color: rgba(var(--main-theme-color), 1);
+            }
+
+            .el-radio__input {
+                display: none;
+            }
+
+            img {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 6px;
+            }
+
+            .el-radio__label {
+                padding: 0;
+                font-size: 12px;
+            }
+        }
+    }
+}

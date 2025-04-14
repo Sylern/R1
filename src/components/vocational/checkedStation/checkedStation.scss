@@ -1,0 +1,22 @@
+.svim_station_dialog {
+    padding: 20px 0 20px 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    .svim_sd_section {
+        max-height: 400px;
+        width: 100%;
+        .svim_section_checkbox {
+            width: 120px;
+            line-height: 40px;
+        }
+    }
+
+    .btnWrap {
+        .btnPrimary {
+            margin: 20px 0 0 0 !important;
+            width: 120px;
+        }
+    }
+}

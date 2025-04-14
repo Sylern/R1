@@ -1,0 +1,96 @@
+.categoryFirstAdd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        padding: 0 55px;
+        margin-top: 20px;
+        height: calc(100% - 80px);
+
+        .menuBox {
+            width: 100%;
+            height: 34px;
+            padding: 0 55px;
+            display: flex;
+
+            .item {
+                width: 50%;
+                line-height: 34px;
+                text-align: center;
+                color: #666666;
+                background-color: #F4F6F9;
+                cursor: pointer;
+
+                &.selected {
+                    color: #FFFFFF;
+                    background-color: rgba(var(--main-theme-color), 1);
+                }
+
+                &.left {
+                    border-radius: 6px 0px 0px 6px;
+                }
+
+                &.right {
+                    border-radius: 0px 6px 6px 0px;
+                }
+            }
+        }
+
+        .inputWrap {
+            width: 100%;
+            margin-top: 26px;
+            margin-bottom: 40px;
+
+            .inputBox {
+                display: flex;
+                align-items: center;
+                border: 1px solid #DCDFE6;
+                background-color: #F4F6F9;
+                border-radius: 6px;
+
+                .key {
+                    width: 150px;
+                    padding-left: 16px;
+                }
+
+                &.typeCode {
+                    margin-top: 14px;
+
+                }
+
+                /deep/.el-input {
+                    flex: 1;
+                    height: 48px;
+
+                    .el-input__inner {
+                        height: 100%;
+                        border: none;
+                        background-color: transparent;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

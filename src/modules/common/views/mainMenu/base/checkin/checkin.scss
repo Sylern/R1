@@ -1,0 +1,823 @@
+.checkin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    /deep/.checkin-dialog {
+
+        .dcContent:nth-child(1) {
+            min-width: 1000px;
+            min-height: 600px;
+        }
+    }
+
+    .contentWrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100% - 60px);
+
+        .topInfo {
+            display: flex;
+            height: 30px;
+            justify-content: space-between;
+            line-height: 30px;
+            margin-bottom: 10rx;
+            color: #666666;
+            padding: 0 60rx;
+
+            .btn {
+                color: rgba(var(--main-theme-color), 1);
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .orderWrap {
+                .btn {
+                    margin-left: 10rx;
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .statistics {
+            display: flex;
+            padding: 0 60rx;
+
+            .item {
+                padding: 6rx 0;
+                width: 25%;
+                color: #404040;
+                text-align: center;
+
+                &.line {
+                    width: calc(25% - 1rx);
+                    border-right: 1rx solid #eeeeee;
+                }
+
+
+                .itemTitle {
+                    font-size: 18px;
+
+                    .text {
+                        position: relative;
+
+                        .btnGoodsActivity {
+                            position: absolute;
+                            top: -8rx;
+                            left: calc(100% + 5rx);
+                            width: 50rx;
+                            text-align: center;
+                            color: #ffffff;
+                            font-size: 14rx;
+                            background-color: #d60b0b;
+                            cursor: pointer;
+                            border-radius: 3rx;
+                        }
+                    }
+                }
+
+                .value {
+                    margin-top: 10rx;
+                    font-size: 26px;
+
+                    &.receivable i {
+                        cursor: pointer;
+                    }
+
+                    .symbol {
+                        font-size: 16px;
+                    }
+
+                    .linethruthText {
+                        font-size: 14px;
+                        color: #999999;
+                        text-decoration: line-through;
+                    }
+
+                    .moneyEdit {
+                        margin-left: 5rx;
+                        font-size: 20px;
+                        color: rgba(var(--main-theme-color), 1);
+                    }
+
+                    &.highlight {
+                        color: #FF6666;
+                    }
+                }
+
+                .valueTime {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 5rx;
+                    font-size: 12px;
+
+                    &.receivable i {
+                        cursor: pointer;
+                    }
+
+                    .symbol {
+                        font-size: 16rx;
+                    }
+
+                    .moneyEdit {
+                        margin-left: 5rx;
+                        font-size: 20rx;
+                        color: rgba(var(--main-theme-color), 1);
+                    }
+
+                    &.highlight {
+                        color: #FF6666;
+                    }
+                }
+            }
+        }
+
+        .controlWrap {
+            margin-top: 20rx;
+            flex: 1;
+            padding-bottom: 10rx;
+            // height: calc(100% - 160rx);
+            display: flex;
+
+            .leftWrap {
+                position: relative;
+                width: calc(50% - 1rx);
+                // height: 520rx;
+                padding-left: 60rx;
+                padding-right: 105rx;
+                border-right: 1rx solid #eeeeee;
+
+                .searchMember {
+                    margin-bottom: 10rx;
+                    border: 1px solid #F4F6F9;
+                    border-radius: 4px;
+
+                    /deep/.el-input__inner {
+                        height: 46px;
+                        line-height: 28rx;
+                        background-color: #F4F6F9;
+                        border: none;
+                    }
+
+                    /deep/.el-input-group__append {
+                        border: none;
+                        color: rgba(var(--main-theme-color), 1);
+                    }
+
+                    &:has(.el-input__inner:focus) {
+                        border: 1px solid rgba(var(--main-theme-color), 1);
+                    }
+                }
+
+                .memberInfo {
+                    margin-bottom: 10rx;
+                    border-radius: 6rx;
+                    overflow: hidden;
+
+                    .userInfo {
+                        padding: 12rx 12rx 12rx 17rx;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        background-color: #E5CAA0;
+
+                        .left {
+                            display: flex;
+                            align-items: center;
+
+                            .logo {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: #ffffff;
+                                width: 48rx;
+                                height: 48rx;
+                                border-radius: 50%;
+                                overflow: hidden;
+                            }
+
+                            .nameWrap {
+                                margin-left: 8rx;
+
+                                .name {
+                                    color: #000000;
+                                    font-size: 18rx;
+                                }
+
+                                .flag {
+                                    padding: 0 4rx;
+                                    margin-left: 4rx;
+                                    color: #E79520;
+                                    font-size: 12px;
+                                    border-radius: 3rx;
+                                    border: 1rx solid #E0912E;
+                                    background-color: #FFF4E1;
+                                }
+                            }
+
+                            .telephone {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .right {
+                            display: flex;
+
+                            .btn {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 46px;
+                                height: 26px;
+                                font-size: 12px;
+                                border-radius: 3rx;
+                                background-color: #FFFFFF;
+                                border: 1rx solid #C3A980;
+                                cursor: pointer;
+
+                                &:active {
+                                    background-color: rgba(#FFFFFF, 0.8);
+                                }
+                            }
+
+                            .btnClear {
+                                margin-right: 3rx;
+                            }
+                        }
+                    }
+
+                    .userRights {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 58rx;
+                        min-height: 45px;
+                        width: 100%;
+                        padding: 8rx 48rx;
+                        background-color: #ffffff;
+                        border: 1rx solid #F4F6F9;
+
+                        .item {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            &.discount {
+                                cursor: pointer;
+                            }
+
+                            .key {
+                                font-size: 13px;
+                            }
+
+                            .value {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+
+                .pointWrap {
+                    display: flex;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .useWrap {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .left {
+                            .pointCheckBox {
+                                margin-right: 10rx;
+                            }
+
+                            .inputPoint {
+                                margin: 0 5rx;
+                                width: 70rx;
+                                height: 28px;
+
+                                /deep/.el-input__inner {
+                                    height: 28px;
+                                    line-height: 18px;
+                                    padding: 0 5rx;
+                                    background-color: #F4F6F9;
+                                    text-align: center;
+                                }
+                            }
+
+                            .updatePoint {
+                                padding-left: 10rx;
+                                font-size: 12rx;
+                                color: rgba(var(--main-theme-color), 1);
+                                cursor: pointer;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+
+                    .pointChangeBtn {
+                        padding: 5rx 10rx;
+                        color: #ffffff;
+                        background-color: rgba(var(--main-theme-color), 1);
+                        border-radius: 6rx;
+                        cursor: pointer;
+
+                        &:active {
+                            background-color: rgba(var(--main-theme-color), 0.8);
+                        }
+                    }
+                }
+
+                .discountWrap {
+                    padding-top: 10px;
+                    right: 105rx;
+                    height: 50px;
+                    line-height: 40px;
+                    display: flex;
+                    color: #333333;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .btn {
+                        position: relative;
+                        color: rgba(var(--main-theme-color), 1);
+                        cursor: pointer;
+                        z-index: 5;
+                    }
+                }
+
+                .payTypeList {
+                    opacity: 1;
+
+                    &.showPayType {
+                        opacity: 1;
+                    }
+
+                    &.isMultipay {
+                        margin-top: -40px;
+                    }
+
+                    /deep/.dcContent:nth-child(1) {
+                        min-width: 410px;
+                        min-height: 410px;
+                    }
+                }
+            }
+
+            .rightWrap {
+                width: 50%;
+
+                .rightTop {
+                    padding-bottom: 10rx;
+                    display: flex;
+                    justify-content: center;
+
+                    .rightTopContent {
+                        width: 500rx;
+                        padding: 0 14rx;
+
+                        .receipts {
+                            height: 45px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .key {
+                                font-size: 18px;
+                            }
+
+                            .money {
+                                text-align: right;
+                                font-size: 26px;
+
+                                .symbol {
+                                    font-size: 16px;
+                                }
+
+                                .highlight {
+                                    color: #FF5052;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+
+                        .multiPayInput {
+                            // padding-bottom: 20rx;
+
+                            .payInputItem {
+                                height: 45rx;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                &:first-child {
+                                    border-bottom: 1rx solid #efefef;
+                                }
+
+                                .key {
+                                    font-size: 18rx;
+                                }
+
+                                .money {
+                                    text-align: right;
+                                    font-size: 26rx;
+
+                                    .symbol {
+                                        font-size: 16rx;
+                                    }
+                                }
+                            }
+
+                            .highlight {
+                                line-height: 30rx;
+                                text-align: right;
+                                color: #FF5052;
+                                font-size: 13rx;
+                            }
+                        }
+                    }
+                }
+
+                .btnListWrap {
+                    margin-top: 20rx;
+                    display: flex;
+                    justify-content: center;
+
+                    .left {
+                        height: 100%;
+                        width: 300rx;
+                        min-width: calc(180px + 84rx);
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .calculatorItem {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: calc(72rx + 28rx);
+                            height: calc(72rx + 28rx);
+                            min-width: calc(60px + 28rx);
+                            min-height: calc(60px + 28rx);
+                            padding: 14rx;
+
+                            .contentBtn {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                width: 72rx;
+                                height: 72rx;
+                                min-width: 60px;
+                                min-height: 60px;
+                                font-size: 24px;
+                                color: #333333;
+                                background-color: #F4F6F9;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                text-align: center;
+                                user-select: none;
+                            }
+
+                            .checkPrint {
+                                padding-top: 6rx;
+                                font-size: 12px;
+                            }
+
+                            &:active {
+                                background-color: rgba(#F4F6F9, 0.6);
+                            }
+
+                            &.isRowFirst {
+                                margin-left: 0;
+                            }
+
+                            &.isEnd {
+                                color: #ffffff;
+                                background-color: rgba(var(--main-theme-color), 1);
+
+                                &:active {
+                                    background-color: rgba(var(--main-theme-color), 0.6);
+                                }
+                            }
+                        }
+                    }
+
+                    .right {
+                        width: 200rx;
+                        min-width: calc(120px + 56rx);
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .controlItem {
+                            position: relative;
+                            width: calc(72rx + 28rx);
+                            height: calc(72rx + 28rx);
+                            min-width: calc(60px + 28rx);
+                            min-height: calc(60px + 28rx);
+                            padding: 14rx;
+
+                            .contentBtn {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                width: 72rx;
+                                height: 72rx;
+                                min-width: 60px;
+                                min-height: 60px;
+                                font-size: 18px;
+                                color: #ffffff;
+                                background-color: rgba(var(--main-theme-color), 1);
+                                border-radius: 50%;
+                                cursor: pointer;
+                                text-align: center;
+
+                                &:active {
+                                    background-color: rgba(var(--main-theme-color), 0.6);
+                                }
+                            }
+
+                            &.isRowFirst {
+                                .contentBtn {
+                                    color: rgba(var(--main-theme-color), 1);
+                                    background-color: #F4F6F9;
+                                    font-size: 24px;
+
+                                    &:active {
+                                        background-color: rgba(#F4F6F9, 0.6);
+                                    }
+                                }
+                            }
+
+                            &.isEnd {
+                                width: 178rx;
+                                height: 72rx;
+                                color: #ffffff;
+                                background-color: rgba(var(--main-theme-color), 1);
+
+                                &:active {
+                                    background-color: rgba(var(--main-theme-color), 0.6);
+                                }
+                            }
+
+                            &.is-disabled {
+                                color: #C0C4CC !important;
+                                cursor: not-allowed !important;
+                                background-color: #FFF !important;
+                                border-color: #EBEEF5 !important;
+                            }
+                        }
+
+                        .checkinBtnWrap {
+                            width: 200rx;
+                            min-width: calc(120px + 56rx);
+                            padding: 14rx;
+
+                            .checkinBtn {
+                                width: 100%;
+                                height: 72rx;
+                                font-size: 18px;
+                                color: #ffffff;
+                                border-radius: 36rx;
+                                background-color: rgba(var(--main-theme-color), 1);
+
+                                &:active {
+                                    background-color: rgba(var(--main-theme-color), 0.6);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 结算成功弹窗样式
+    .successContentWrap {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 60px);
+        padding: 0 60rx;
+
+        .orderInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20rx;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80rx;
+                height: 80rx;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 40rx;
+                font-size: 48rx;
+                font-weight: bold;
+            }
+
+            .orderNumber {
+                margin: 20rx 0;
+            }
+        }
+
+        .memberInfo {
+            margin: 10rx 0;
+
+            .memberTitle {
+                margin-top: 30rx;
+                text-align: center;
+                font-size: 18rx;
+            }
+        }
+
+        .btnSure {
+            position: absolute;
+            bottom: 40rx;
+            left: 0;
+            width: 100%;
+            text-align: center;
+
+            .btn {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                border-radius: 20rx;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                cursor: pointer;
+            }
+        }
+
+        .itemBox {
+            display: flex;
+            height: 40rx;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+.downPaymentContentWrap {
+    width: 100%;
+    height: calc(100% - 60rx);
+    padding: 0 60rx;
+
+    .receivableMoney {
+        margin-top: 10rx;
+        font-size: 42rx;
+    }
+
+    .downPaymentInfo {
+        margin-top: 10rx;
+        padding: 20rx;
+        background-color: #E9EAF2;
+        border-radius: 8rx;
+
+        .top {
+            margin: 10rx 0;
+            font-size: 28rx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .highLight {
+                color: #FF3131;
+            }
+        }
+
+        .line {
+            line-height: 30rx;
+        }
+    }
+
+    .downPaymentBtnWrap {
+        margin-top: 40rx;
+        display: flex;
+        justify-content: center;
+
+        .btnItem {
+            margin: 0 10rx;
+            height: 40rx;
+            line-height: 40rx;
+            text-align: center;
+            width: 120rx;
+            background-color: #dedede;
+            border-radius: 40rx;
+            cursor: pointer;
+            user-select: none;
+
+            &.sure {
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+
+                &:active {
+                    background-color: rgba(var(--main-theme-color), 0.8);
+                }
+            }
+        }
+    }
+}
+
+.billabletimeUpdate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 60rx);
+    padding: 0 60rx;
+
+    .updateInfo {
+        padding-top: 20px;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+
+        .infoItem {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            margin-bottom: 30px;
+
+            .key {
+                width: 80px;
+                text-align: right;
+            }
+
+            .value {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 80px);
+            }
+        }
+    }
+
+    .billabletimeBtnWrap {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .billabletimePrice {
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+
+            .highLight {
+                font-size: 16px;
+                color: #d60b0b;
+            }
+        }
+
+        .btnItem {
+            margin: 0 10rx;
+            height: 40rx;
+            line-height: 40rx;
+            text-align: center;
+            width: 120rx;
+            background-color: #dedede;
+            border-radius: 4rx;
+            cursor: pointer;
+            user-select: none;
+
+            &.sure {
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+
+                &:active {
+                    background-color: rgba(var(--main-theme-color), 0.8);
+                }
+
+                &.disabled {
+                    cursor: not-allowed;
+                    background-color: rgba(var(--main-theme-color), 0.6);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+.goodsAssistant {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        padding: 20px 30px;
+        height: calc(100% - 70px);
+        font-size: 14px;
+
+        .employeeInfo {
+            margin: 20px 0;
+            display: flex;
+            color: #333333;
+
+            .imgBox {
+                margin-right: 10px;
+                width: 100px;
+                height: 100px;
+                background-color: #F2F8FF;
+            }
+
+            .employeeName {
+                padding: 5px 0;
+                color: #000000;
+                font-size: 18px;
+            }
+        }
+
+        .multiSpecWrap {
+            height: calc(100% - 140px);
+
+            .specContent {
+                .subTitle {
+                    line-height: 50px;
+                    font-size: 16px;
+                }
+
+                .contentList {
+                    padding-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    .specItem {
+                        margin: 5px;
+                        padding: 5px 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 110px;
+                        height: 50px;
+                        color: #000000;
+                        background-color: #E8EAEF;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        user-select: none;
+
+                        .itemText {
+                            line-height: 20px;
+                            display: -webkit-box;
+                            align-items: center;
+                            justify-content: center;
+                            line-clamp: 2;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            box-sizing: border-box;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            word-break: break-all;
+                        }
+
+                        &.selected {
+                            color: #ffffff;
+                            background-color: rgba(var(--main-theme-color), 1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .multiSpec {
+            margin-bottom: 20px;
+
+            .validTitle {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .specItem {
+                display: flex;
+                flex-wrap: wrap;
+
+                .item {
+                    position: relative;
+                    width: 29.5%;
+                    margin-right: 3%;
+                    margin-bottom: 15px;
+                    line-height: 42px;
+                    height: 42px;
+                    color: #848692;
+                    border: 1px solid #AAACB8;
+                    background-color: #ffffff;
+                    text-align: center;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                    &.selected {
+                        color: #ffffff;
+                        border: 1px solid rgba(var(--main-theme-color), 1);
+                        background-color: rgba(var(--main-theme-color), 1);
+                    }
+
+                    &.lineLast {
+                        margin-right: 0;
+                    }
+
+                    .number {
+                        position: absolute;
+                        top: -8px;
+                        right: -8px;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        color: #ffffff;
+                        border-radius: 50%;
+                        background-color: #F15454;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .bottomWrap {
+        padding-left: 48px;
+        padding-right: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btnSure {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #ffffff;
+            background-color: rgba(var(--main-theme-color), 1);
+            border-radius: 30px;
+            cursor: pointer;
+        }
+    }
+}

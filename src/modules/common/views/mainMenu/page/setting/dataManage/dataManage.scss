@@ -1,0 +1,199 @@
+.dataManage {
+    height: 100%;
+    width: 100%;
+
+    .dm_title {
+        width: 100%;
+        height: 55px;
+        background: #F0F9EB;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #419C14;
+        margin: 15px 0 0 0;
+    }
+
+    .dm_name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        padding: 0 30px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .dm_scrollbar {
+        height: calc(100% - 200px);
+        width: 100%;
+
+        .dm_sb_item {
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px;
+
+            .dm_sb_i_checkbox {
+                height: 40px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin: 0 0 2px 0px;
+            }
+        }
+    }
+
+    .dm_foot {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .dm_progree{
+            padding: 0 20px;
+            width: calc(100% - 40px);
+            height: auto;
+            .dm_p_name{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                color: #419C14;
+                margin: 0 0 10px 0;
+            }
+        }
+
+        .dm_f_btn {
+            height: 40px;
+            width: 120px;
+            border-radius: 20px;
+            background: rgba(var(--main-theme-color), 1);
+            font-size: 14px;
+            font-weight: 500;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}
+
+.dataManageEntry {
+    display: flex;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .dme_name {
+        margin: 0 0 40px 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333333;
+    }
+
+    .addTxt {
+        height: 80px;
+        line-height: 67px;
+        font-size: 16px;
+    }
+
+    .btnWrap {
+        .btnPrimary {
+            margin: 10rx 0 0 45px;
+        }
+
+        &.notMargin {
+            .btnPrimary {
+                margin: 0;
+            }
+        }
+    }
+
+    &.stores_Form {
+        .el-form-item {
+            display: flex;
+
+            .el-form-item__content {
+                width: 290px;
+                height: 40px;
+
+                input {
+                    width: 290px;
+                    height: 40px;
+                }
+
+                .flex {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    input {
+                        width: inherit;
+                        margin: 0;
+                    }
+
+                    .btnPrimary {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 0 0 10px;
+                        font-size: 14px;
+                        width: 120px;
+                        height: 40px;
+
+                        background: #FFFFFF;
+                        border: 1px solid rgba(var(--main-theme-color), 1);
+                        border-radius: 3px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: rgba(var(--main-theme-color), 1);
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            button {
+                width: 120px;
+                height: 40px;
+                margin: 0 !important;
+            }
+        }
+
+        .ncWrap {
+            .tips {
+                padding: 0 15px;
+                margin-bottom: 8px;
+                line-height: 17px;
+                font-size: 12px;
+                color: #606266;
+            }
+
+            .nc-container {
+                display: block;
+                width: 410px;
+                margin: 0 -15px 0 0;
+            }
+
+            ._nc .stage {
+                padding: 0;
+            }
+
+            ._nc .stage1 .slider,
+            ._nc .stage1 .track div,
+            ._nc .stage1 .label,
+            ._nc .stage1 .button {
+                height: 36px;
+                line-height: 36px;
+                font-size: 14px;
+            }
+        }
+    }
+}

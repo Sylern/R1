@@ -1,0 +1,139 @@
+.cardReport {
+    width: 100%;
+    height: calc(100% - 55px);
+
+    .filterWrap {
+        padding: 23rx 10rx 13rx 10rx;
+        background-color: #ffffff;
+
+        .btnWrap {
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+
+            .btnItem {
+                margin-right: 16rx;
+            }
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                .batchTips {
+                    display: flex;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    font-size: 24px;
+                    color: rgba(var(--main-theme-color), 1);
+                }
+            }
+
+            .right {
+                width: 280rx;
+
+                i {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .selectList {
+            margin-top: 16rx;
+            padding-top: 28rx;
+            background-color: #F7F7F9;
+
+            .top {
+                display: flex;
+
+                .left,
+                .center,
+                .right {
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 16rx;
+
+                        .key {
+                            width: 100px;
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .center {
+                    margin: 0 100px;
+                }
+            }
+
+            .timeWrap {
+                display: flex;
+                align-items: center;
+                padding-bottom: 16rx;
+
+                .key {
+                    width: 100px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .tableWrap {
+        margin-top: 10rx;
+        height: calc(100% - 185rx);
+        padding: 12rx 10rx 0 10rx;
+        background-color: #ffffff;
+
+        .tableBox {
+            width: 100%;
+            max-height: calc(100% - 80rx);
+            display: flex;
+            // height: 100%;
+        }
+
+        .pageWrap {
+            height: 80rx;
+            padding: 0 20rx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .left {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+
+                .money {
+                    margin-right: 20px;
+                    color: #f56c6c;
+                }
+            }
+        }
+
+        .Jump {
+            color: rgba(var(--main-theme-color), 1);
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .Jump:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.dialogForm {
+    .contentWrap {
+        padding: 0 60px 0 30px;
+    }
+
+    .btnWrap {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            margin: 0 10px;
+        }
+    }
+}

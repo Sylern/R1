@@ -1,0 +1,43 @@
+
+.classroomSelectWrap {
+    /deep/.dcContent {
+        padding: 0 20px;
+
+        .searchInput {
+            height: 40px;
+        }
+
+        .list {
+            margin: 10px 0;
+            height: calc(100% - 190px);
+
+            .tableBox {
+                width: 100%;
+                max-height: calc(100% - 60px);
+                display: flex;
+            }
+
+            .pageWrap {
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                
+                .el-select {
+                    width: 100px;
+                }
+            }
+        }
+
+        .btnWrap {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .btnItem {
+                margin: 0 10px;
+            }
+        }
+    }
+}

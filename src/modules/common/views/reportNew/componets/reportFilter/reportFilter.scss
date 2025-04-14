@@ -1,0 +1,27 @@
+.reportFilter {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+
+    .filterLeft {
+        display: flex;
+        align-items: center;
+
+        .filterItem {
+            margin-right: 10px;
+        }
+
+        .btnWrap {
+            display: flex;
+            align-items: center;
+
+            .btnItem {
+                margin-right: 10px;
+            }
+        }
+    }
+}

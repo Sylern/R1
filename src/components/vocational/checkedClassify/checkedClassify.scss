@@ -1,0 +1,37 @@
+.checkedClassify {
+    padding: 10px 10px;
+    height: calc(100% - 60px);
+
+    .searchInput {
+        display: flex;
+        justify-content: flex-end;
+
+        .el-icon-search {
+            cursor: pointer;
+        }
+    }
+
+    .myTable {
+        margin-top: 10px;
+        height: calc(100% - 160px);
+
+        .cs_table {
+            height: 100% !important;
+        }
+    }
+
+    .pageWrap {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .foot {
+        height: 60px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}

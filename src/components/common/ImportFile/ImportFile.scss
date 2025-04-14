@@ -1,0 +1,20 @@
+.ImportFile-wrap {
+    .el-upload__tip {
+        margin-top: -5px;
+        margin-bottom: 5px;
+        line-height: 24px;
+    }
+    .upload-file {
+        width: 360px;
+        height: 180px;
+    }
+    .disabled {
+        cursor: no-drop;
+        .el-upload {
+            cursor: no-drop;
+        }
+        .el-upload__tip,div {
+            cursor: no-drop;
+        }
+    }
+}

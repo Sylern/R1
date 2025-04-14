@@ -1,0 +1,349 @@
+.goodsItem {
+    background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 1px 1px 0px rgba(69, 89, 120, 0.2);
+    transition-duration: 200ms;
+
+    .goodsImg {
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &:hover {
+        background-color: rgba($color: #fefefe, $alpha: 0.5);
+    }
+
+    .isAppraiseClear {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .img {
+            width: 120px;
+        }
+    }
+
+    .flag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 24px;
+        line-height: 20px;
+        color: #ffffff;
+        font-size: 12px;
+        text-align: center;
+        background-color: rgba(var(--main-theme-color), 1);
+        overflow: hidden;
+
+        .corver {
+            position: absolute;
+            bottom: -3px;
+            left: -8px;
+            border-left: 18px solid;
+            border-right: 18px solid;
+            border-bottom: 8px solid;
+            border-color: transparent transparent #ffffff transparent;
+        }
+    }
+
+    &.big {
+        padding: 8rx;
+        margin: 0 4rx 8rx 3rx;
+        width: 180rx;
+        height: calc(174rx + 100px);
+        border-radius: 5px;
+
+        .goodsImg {
+            width: 164rx;
+            height: 164rx;
+            background-color: #F4F6F9;
+        }
+
+        .goodsName {
+            margin: 6px 0;
+            line-height: 22px;
+            height: 44px;
+            font-size: 16px;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .discount {
+            margin-top: 5px;
+
+            .btnFlag {
+                padding: 0 2px;
+                display: inline-block;
+                color: #FF0000;
+                font-size: 12px;
+                border: 1px solid #FF0711;
+                background-color: #FFF1F1;
+                border-radius: 3px;
+            }
+        }
+
+        .priceWrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .price {
+                color: #FF3131;
+                font-size: 18px;
+                font-weight: bold;
+
+                .symbol {
+                    font-size: 12px;
+                }
+            }
+
+            .priceRight {
+                display: flex;
+                align-items: center;
+
+                .stock {
+                    margin-right: 5px;
+                }
+
+                .appraise {
+                    margin-right: 2px;
+                    padding: 2rx;
+                    color: #ffffff;
+                    border-radius: 2rx;
+                    background-color: rgba(var(--main-theme-color), 1);
+                }
+            }
+
+            .stock {
+                color: #333333;
+                font-size: 12px;
+            }
+
+            .more {
+                padding: 5px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &.small {
+        display: flex;
+        align-items: center;
+        padding: 6rx;
+        width: 240rx;
+        height: 80px;
+        margin: 0 4rx 8rx 4rx;
+        border-radius: 5px;
+
+        .goodsImg {
+            width: 60rx;
+            height: 60rx;
+            background-color: #F4F6F9;
+        }
+
+        .goodsInfo {
+            padding: 2rx 0 0 8rx;
+            width: calc(100% - 60rx);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .goodsName {
+                line-height: 16px;
+                height: 31px;
+                font-size: 15px;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .goodsCode {
+                line-height: 16px;
+            }
+
+            .discount {
+                margin-top: 5px;
+
+                .btnFlag {
+                    padding: 0 2px;
+                    display: inline-block;
+                    color: #FF0000;
+                    font-size: 12px;
+                    border: 1px solid #FF0711;
+                    background-color: #FFF1F1;
+                    border-radius: 3px;
+                }
+            }
+
+            .priceWrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 20px;
+
+                .price {
+                    color: #FF3131;
+                    font-size: 18px;
+                    font-weight: bold;
+
+                    .symbol {
+                        font-size: 12px;
+                    }
+                }
+
+                .priceRight {
+                    display: flex;
+                    align-items: center;
+
+                    .stock {
+                        margin-right: 5px;
+                    }
+
+                    .appraise {
+                        margin-right: 2px;
+                        padding: 2rx;
+                        color: #ffffff;
+                        border-radius: 2rx;
+                        background-color: rgba(var(--main-theme-color), 1);
+                    }
+                }
+
+                .stock {
+                    color: #333333;
+                    font-size: 12px;
+                }
+
+                .more {
+                    padding: 5px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &.noPic {
+        padding: 6rx 12rx;
+        width: 240rx;
+        height: 80px;
+        margin: 0 4rx 8rx 4rx;
+        border-radius: 5px;
+
+        .goodsInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .goodsName {
+                margin-top: 2rx;
+                line-height: 16px;
+                height: 31px;
+                font-size: 15px;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+
+                &.notCommon {
+                    padding-left: 10px;
+                }
+            }
+
+            .goodsCode {
+                line-height: 16px;
+            }
+
+            .discount {
+                margin-top: 5px;
+
+                .btnFlag {
+                    padding: 0 2px;
+                    display: inline-block;
+                    color: #FF0000;
+                    font-size: 12px;
+                    border: 1px solid #FF0711;
+                    background-color: #FFF1F1;
+                    border-radius: 3px;
+                }
+            }
+
+            .priceWrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 20px;
+
+                .price {
+                    color: #FF3131;
+                    font-size: 18px;
+                    font-weight: bold;
+
+                    .symbol {
+                        font-size: 12px;
+                    }
+                }
+
+                .priceRight {
+                    display: flex;
+                    align-items: center;
+
+                    .stock {
+                        margin-right: 5px;
+                    }
+
+                    .appraise {
+                        margin-right: 2px;
+                        padding: 2rx;
+                        color: #ffffff;
+                        border-radius: 2rx;
+                        background-color: rgba(var(--main-theme-color), 1);
+                    }
+                }
+
+                .stock {
+                    color: #333333;
+                    font-size: 12px;
+                }
+
+                .more {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.restaurant {
+    .big {
+        width: 200rx;
+        height: calc(180rx + 115px);
+
+        .goodsImg {
+            width: 184rx;
+            height: 184rx;
+        }
+    }
+}

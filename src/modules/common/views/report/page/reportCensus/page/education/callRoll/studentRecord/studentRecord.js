@@ -1,0 +1,152 @@
+import { classSelect, memberList, courseSelect, guiderSelect, classroomSelect } from '@/modules/common/views/report/components/index'
+import { stockApi } from '@/api/index';
+export default {
+    components: { memberList, courseSelect, guiderSelect, classSelect, classroomSelect },
+    data() {
+        return {
+            queryEntity: {                          // 查询实体
+                sv_start_class_date: '',            // 上课开始时间
+                sv_end_class_date: '',              // 上课结束时间
+                sv_m_id: -1,                        // 报名学员
+                sv_state: -1,                       // 点名状态
+                sv_p_ids: [],                       // 课程
+                sv_calss_ids: [],                   // 班级
+                sv_teacher_ids: [],                 // 上课老师
+                sv_room_ids: [],                     // 上课教室
+                pageIndex: 1,                       // 页码
+                pageSize: 10,                       // 页数
+                // sv_order_code: ""
+            },
+            total: 0,
+            memberInfo: {},
+            memberListStatus: false,
+            teacherStatus: false,
+            courseStatus: false,
+            classroomStatus: false,
+            classStatus: false,
+            currentCourse: [],
+            currentTeacher: [],
+            currentClassRoom: [],
+            currentClass: [],
+
+            dataList: [],
+            values: {
+                sumAmount: 0,
+                sumHour: 0,
+                sumDay: 0
+            }
+        }
+    },
+    mounted() {
+        this.queryEntity.sv_start_class_date = this.$app.currentTime(new Date(), 'yyyy-MM-dd') + ' 00:00:00';
+        this.queryEntity.sv_end_class_date = this.$app.currentTime(new Date(), 'yyyy-MM-dd') + ' 23:59:59';
+        this.GetRollCallMemberRecord();
+    },
+    methods: {
+
+        //#region   事件
+        handleChangeTime(date) {                            // 选择时间
+            this.queryEntity.sv_start_class_date = date ? this.$app.currentTime(date[0], 'yyyy-MM-dd HH:mm:ss') : "";
+            this.queryEntity.sv_end_class_date = date ? this.$app.currentTime(date[1], 'yyyy-MM-dd HH:mm:ss') : "";
+            this.handleSearch();
+        },
+        handleSearch() {                                    // 查询
+            this.queryEntity.pageIndex = 1;
+            this.GetRollCallMemberRecord();
+        },
+
+        handleCurrentSize(index, type) {                    // 页码 - 页数
+            if (type === 'current') this.queryEntity.pageIndex = index;
+            if (type === 'size') this.queryEntity.pageIndex = 1, this.queryEntity.pageSize = index;
+            this.GetRollCallMemberRecord();
+        },
+        handleDownload() {                                  // 导出
+            const { queryEntity } = this
+            const params = { ...queryEntity }
+            stockApi.GetRollCallMemberRecordExport(params).then(res => {
+                if (res) this.$app.downloadUrl(JSON.parse(res));
+                if (!res) {
+                    this.$message.success('报表生成成功');
+                    this.$router.push('/downloadReport')
+                }
+            });
+        },
+
+        handleCourseSubmit(dataEmit) {
+            if (!this.$app.isNull(dataEmit)) {
+                this.currentCourse = dataEmit
+                this.queryEntity.sv_p_ids = dataEmit.map(item => item.id)
+
+            } else {
+                this.currentCourse = []
+                this.queryEntity.sv_p_ids = []
+            }
+            this.handleSearch()
+        },
+        getGuiderSelected(dataEmit) {
+
+            if (!this.$app.isNull(dataEmit)) {
+                this.currentTeacher = dataEmit
+                this.queryEntity.sv_teacher_ids = dataEmit.map(item => item.id)
+
+            } else {
+                this.currentTeacher = []
+                this.queryEntity.sv_teacher_ids = []
+            }
+            this.handleSearch()
+        },
+        handleClassSubmit(dataEmit) {
+            if (!this.$app.isNull(dataEmit)) {
+                this.currentClass = dataEmit
+                this.queryEntity.sv_calss_ids = dataEmit.map(item => item.id)
+
+            } else {
+                this.currentClass = []
+                this.queryEntity.sv_calss_ids = []
+            }
+            this.handleSearch()
+        },
+        handleMemberInfo(memberInfo) {
+            if (memberInfo) {
+                this.memberInfo = memberInfo
+                this.queryEntity.sv_m_id = +memberInfo.member_id
+            } else {
+                this.memberInfo = {}
+                this.queryEntity.sv_m_id = -1
+            }
+            this.handleSearch()
+        },
+        handleClassroomSubmit(dataEmit) {
+            if (!this.$app.isNull(dataEmit)) {
+                this.currentClassRoom = dataEmit
+                this.queryEntity.sv_room_ids = dataEmit.map(item => item.id)
+
+            } else {
+                this.currentClassRoom = []
+                this.queryEntity.sv_room_ids = []
+            }
+            this.handleSearch()
+        },
+        stateChangeHandle() {
+            this.queryEntity.pageIndex = 1
+            this.handleSearch()
+        },
+        //#endregion
+
+        //#region   获取数据
+        GetRollCallMemberRecord() {                               // 获取点名学员报表数据
+            const { queryEntity } = this
+            const params = { ...queryEntity }
+            stockApi.GetRollCallMemberRecord(params).then(res => {
+                if (!this.$app.isNull(res)) {
+                    const { total, list, values } = res
+                    this.dataList = list || []
+                    this.total = total;
+                    this.values = values
+                    this.$refs.myTable.onReset()
+                }
+            });
+        },
+        //#endregion
+    }
+}

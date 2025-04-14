@@ -1,0 +1,89 @@
+{
+  "name": "decerp",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "serve": "cross-env apiconfig=serve vue-cli-service serve",
+    "tt": "cross-env apiconfig=test vue-cli-service serve",
+    "proxy": "cross-env apiconfig=proxy vue-cli-service serve",
+    "build": "cross-env apiconfig=build node build/build.js",
+    "gdpe": "cross-env apiconfig=gdpe node build/build.js",
+    "test": "cross-env apiconfig=test node build/build.js",
+    "local": "cross-env apiconfig=local node build/build.js",
+    "pack": "vue-cli-service build",
+    "create": "node build/create.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "babel-polyfill": "^6.26.0",
+    "caniuse-lite": "^1.0.30001180",
+    "codemirror": "^5.62.2",
+    "core-js": "^2.6.11",
+    "echarts": "^5.4.3",
+    "element-ui": "^2.13.2",
+    "es6-promise": "^4.2.8",
+    "glob": "^7.1.6",
+    "gridmanager": "^2.14.0",
+    "html2canvas": "^1.4.1",
+    "js-md5": "^0.7.3",
+    "jsbarcode": "^3.11.3",
+    "node-sass": "^6.0.1",
+    "postcss": "^7.0.32",
+    "qrcodejs2": "0.0.2",
+    "sass-loader": "^10.2.0",
+    "swiper": "^5.2.0",
+    "vant": "^2.12.13",
+    "vue": "^2.7.14",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-count-to": "^1.0.13",
+    "vue-i18n": "8.27.2",
+    "vue-json-editor": "^1.4.3",
+    "vue-mobile-calendar": "^3.3.0",
+    "vue-router": "^3.3.4",
+    "vue-signature-pad": "^2.0.2",
+    "vue-to-pdf": "^1.0.0",
+    "vue-video-player": "^5.0.2",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.5.1",
+    "wangeditor": "^4.6.4",
+    "weixin-js-sdk": "^1.6.0"
+  },
+  "devDependencies": {
+    "@aspnet/signalr": "^1.0.27",
+    "@microsoft/signalr": "^6.0.7",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^4.4.6",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "install": "^0.13.0",
+    "postcss-relaxed-unit": "^1.1.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/prettier"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

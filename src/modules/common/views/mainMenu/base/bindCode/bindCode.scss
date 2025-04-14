@@ -1,0 +1,84 @@
+.discount {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1002;
+
+    .contentWrap {
+        padding: 0 27rx;
+        height: calc(100% - 80rx);
+
+        .header {
+            height: 36rx;
+            display: flex;
+            align-items: center;
+            background-color: #eeeeee;
+
+            .left {
+                padding: 0 10px;
+                width: 200px;
+            }
+
+            .right {
+                width: calc(100% - 200px);
+            }
+        }
+
+        .listWrap {
+            width: 100%;
+            height: calc(100% - 90rx);
+
+            .listItem {
+                padding: 5px 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid #efefef;
+
+                .goodsName {
+                    padding: 0 10px;
+                    width: 200px;
+                }
+
+                .codeInputWrap {
+                    padding-right: 5px;
+                    width: calc(100% - 190px);
+
+                    .codeInput {
+                        margin: 10px 0;
+
+                        .el-input {
+                            height: 45px;
+
+                            /deep/.el-input__inner {
+                                height: 45px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            margin-top: 14rx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .btnSure {
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 4rx;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,218 @@
+.servicerSetting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        margin-top: 10px;
+        display: flex;
+        padding: 0 20px;
+        height: calc(100% - 80px);
+        color: #333333;
+
+        .leftList {
+            padding-left: 10px;
+            padding-right: 15px;
+            width: 160px;
+            height: 100%;
+
+            .contentTitle {
+                height: 40px;
+                line-height: 40px;
+            }
+
+            .borderRight {
+                padding-right: 20px;
+                width: 100%;
+                height: calc(100% - 40px);
+                border-right: 1px solid #EEEEEE;
+
+                .listItem {
+                    position: relative;
+                    padding: 10px;
+                    width: 114px;
+                    height: 114px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    background-color: #FAFAFA;
+                    cursor: pointer;
+
+                    &:hover {
+                        .deleteBtn {
+                            opacity: 1;
+                        }
+                    }
+
+                    .employeePhoto {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .textWrap {
+                        position: absolute;
+                        bottom: 10px;
+                        width: calc(100% - 20px);
+                        height: 42px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: #ffffff;
+                        background-color: rgba(0, 0, 0, 0.5);
+
+                        .name {
+                            padding-left: 10px;
+                            width: 100%;
+                            height: 20px;
+                            font-size: 14px;
+                            overflow: hidden;
+                        }
+
+                        .workerNum {
+                            padding-left: 10px;
+                            width: 100%;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .deleteBtn {
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        font-size: 20px;
+                        cursor: pointer;
+                        color: #f56c6c;
+                        opacity: 1;
+
+                        .el-icon-error {
+                            background-color: #ffffff;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .rightList {
+            height: 100%;
+            width: 700px;
+
+            .menuList {
+                display: flex;
+                white-space: nowrap;
+
+                .item {
+                    display: inline-block;
+                    margin: 0 10px;
+                    padding: 0 6px;
+                    line-height: 40px;
+                    cursor: pointer;
+
+                    &.selected {
+                        color: #943FD9;
+                        border-bottom: 2px solid #943FD9;
+                    }
+                }
+            }
+
+            .rightScroll {
+                margin-top: 11px;
+                width: 100%;
+                height: calc(100% - 61px);
+            }
+
+            .listWrap {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .listItem {
+                position: relative;
+                margin: 10px;
+                width: 120px;
+                height: 130px;
+                border-radius: 6px;
+                background-color: #f4f6f4;
+                cursor: pointer;
+
+                .employeePhoto {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .textWrap {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 42px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: #ffffff;
+                    background-color: rgba(0, 0, 0, 0.5);
+
+                    .name {
+                        padding-left: 10px;
+                        width: 100%;
+                        height: 20px;
+                        font-size: 16px;
+                        overflow: hidden;
+                    }
+
+                    .workerNum {
+                        padding-left: 10px;
+                        width: 100%;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .btnWrap {
+        padding: 20px 30px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .iconWrap {
+            color: #ED2A2A;
+            cursor: pointer;
+
+            span {
+                margin-left: 5px;
+            }
+        }
+
+        .btnSure {
+            display: inline-block;
+            width: 140px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #8056F7;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    }
+}
+
+.el-empty {
+    width: 100%;
+}

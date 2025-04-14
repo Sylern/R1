@@ -1,0 +1,271 @@
+.screenCustom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .contentSrcoll {
+        width: 100%;
+        height: calc(100% - 80px);
+
+        .contentWrap {
+            padding: 0 100rx 0 10rx;
+        }
+    }
+
+    .customSetting {
+        padding-left: 14rx;
+
+        .subTitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .line {
+            padding-left: 14rx;
+            display: flex;
+            align-items: flex-start;
+
+            .key {
+                width: 70px;
+                margin-right: 16rx;
+                line-height: 40px;
+            }
+
+            .value {
+                display: flex;
+                flex-direction: column;
+
+                .tipsIcon {
+                    margin-left: 10px;
+                    color: #999999;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                .switch {
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+                }
+
+                .slotInputBox {
+                    margin-top: 10px;
+                    width: 240px;
+                    height: 40px;
+                    border: 1px solid #DCDFE6;
+                    border-radius: 4px;
+
+                    .el-input-group__append,
+                    .el-input-group__prepend {
+                        padding: 0;
+                        border: none;
+                        background-color: #ffffff;
+                    }
+
+                    .el-input-group__prepend {
+                        padding-left: 10px;
+                    }
+
+                    .el-input-group__append {
+                        padding-right: 10px;
+                        cursor: pointer;
+                        color: rgba(var(--main-theme-color), 1);
+                    }
+
+                    .el-input__inner {
+                        border: none;
+                    }
+                }
+
+                .el-select {
+                    width: 240px;
+                }
+
+                .el-input__inner {
+                    height: 38px;
+                }
+            }
+
+            &.switchWrap {
+                .info {
+                    color: #999999;
+                    font-size: 12px;
+                }
+            }
+
+            &.portWrap {
+                margin-top: 20px;
+            }
+
+            &.baudRate {
+                margin-top: 10px;
+            }
+
+            &.testWrap {
+                margin-top: 20px;
+            }
+
+        }
+    }
+
+    .screenSetting {
+        // margin-top: 60px;
+        padding-top: 60px;
+        padding-left: 14rx;
+
+        .subTitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .line {
+            padding-left: 14rx;
+            display: flex;
+            align-items: flex-start;
+
+            .key {
+                width: 90px;
+                margin-right: 16rx;
+                line-height: 40px;
+                text-align: right;
+            }
+
+            .value {
+                display: flex;
+                flex-direction: column;
+
+                &.switchWrap {
+                    .info {
+                        color: #999999;
+                        font-size: 12px;
+                    }
+                }
+
+                .slotInputBox {
+                    width: 240px;
+                    height: 40px;
+                }
+
+                .tipsIcon {
+                    margin-left: 10px;
+                    color: #F4F6F9;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                .switch {
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+                }
+
+                .el-select {
+                    width: 240px;
+                }
+
+                .el-input__inner {
+                    height: 40px;
+                }
+            }
+
+        }
+
+        .cssContent {
+            margin-top: 30px;
+
+            .value {
+                display: flex;
+                flex-direction: column;
+
+                .showWrap {
+                    display: flex;
+
+                    .item {
+                        cursor: pointer;
+
+                        .el-radio {
+                            line-height: 40px;
+                        }
+
+                        .itemContent {
+                            margin-right: 30px;
+                            width: 260px;
+                            height: 140px;
+                            border: 1px solid #313754;
+                            border-radius: 3px;
+                            display: flex;
+
+                            .allImg {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 18px;
+                                color: #DCDFE6;
+                            }
+
+                            .img {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            video {
+                                width: 100%;
+                            }
+                            
+                            .left {
+                                width: calc(100% - 100px);
+                                height: 100%;
+                                overflow: hidden;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                .noPic {
+                                    font-size: 18px;
+                                    color: #DCDFE6;
+                                }
+                            }
+
+                            .list {
+                                height: 100%;
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+
+                .importWrap {
+                    margin-top: 16px;
+
+                    .ImportImg-wrap .showImg,
+                    .ImportImg-wrap .uploadImgBtn {
+                        width: 150px;
+                        height: 82px;
+                        line-height: 82px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomWrap {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .btn {
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            color: #ffffff;
+            text-align: center;
+            background-color: rgba(var(--main-theme-color), 1);
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+}

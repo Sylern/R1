@@ -1,0 +1,86 @@
+.inventory-Main {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: #f7f8fa;
+
+    .rep_query {
+        height: 160px;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .rep_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20rx;
+            margin-bottom: 10rx;
+            background: #ffffff;
+
+            .btnItem {
+                margin-right: 16rx;
+            }
+        }
+
+        .rep_q_bottom {
+            width: 100%;
+            background: #f7f8fa;
+            position: relative;
+
+            .rep_qb_from {
+                display: flex;
+                align-items: center;
+                padding: 20rx;
+
+                .rep_qbf_item {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 50rx 0 0;
+
+                    .rep_qbfi_name {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #000000;
+                        width: 70px;
+                        text-align: left;
+                    }
+
+                    .rep_qbfi_label {
+                        width: 210rx;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .req_table {
+        width: 100%;
+        height: calc(100% - 160px);
+        padding: 10rx;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        .tableBox {
+            width: 100%;
+            max-height: calc(100% - 70rx);
+            display: flex;
+        }
+
+        .pageWrap {
+            margin-top: 10rx;
+            padding: 0 35rx;
+            height: 60rx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            label {
+                color: #FF3131;
+                padding-right: 20px;
+            }
+        }
+    }
+}

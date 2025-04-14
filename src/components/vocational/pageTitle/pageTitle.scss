@@ -1,0 +1,28 @@
+.pageTitle_wrap {
+    padding: 0 18rx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60rx;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    border-left: 1px solid #ebedf0;
+
+    .showHelpWrap {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        label {
+            cursor: pointer;
+        }
+
+        .btn_showHelp {
+            margin-left: 10rx;
+            color: #999999;
+            cursor: pointer;
+        }
+    }
+}

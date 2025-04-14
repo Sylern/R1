@@ -1,0 +1,156 @@
+.discount {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1002;
+
+    .contentWrap {
+        padding: 0 22px;
+        height: calc(100% - 80px);
+
+        .searchWrap {
+            margin-left: 10px;
+            margin-bottom: 25px;
+            height: 48px;
+            width: 360px;
+
+            /deep/.el-input__inner {
+                height: 100%;
+                background-color: #F4F6F9;
+            }
+        }
+
+        .listWrap {
+            width: 100%;
+            height: calc(100% - 170px);
+
+            .listContent {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 100%;
+
+                .listItem {
+                    padding: 5px 10px;
+                    width: 33.33%;
+                    height: 136px;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    .listItemContent {
+                        background-color: #F4F6F9;
+                    }
+
+                    &.disabled {
+                        cursor: not-allowed;
+                    }
+
+                    .container {
+                        position: relative;
+                        padding: 8px;
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 0px 2px 0px 0px rgba(62, 69, 80, 0.1);
+
+                        .leftSemicircle {
+                            position: absolute;
+                            top: calc(50% - 10px);
+                            left: -10px;
+                            width: 20px;
+                            height: 20px;
+                            background-color: #ffffff;
+                            border-radius: 50%;
+                        }
+
+                        .rightSemicircle {
+                            position: absolute;
+                            top: calc(50% - 10px);
+                            right: -10px;
+                            width: 20px;
+                            height: 20px;
+                            background-color: #ffffff;
+                            border-radius: 50%;
+                        }
+
+                        .checkBox {
+                            width: 100%;
+                            height: 20px;
+
+                            .check {
+                                width: 18px;
+                                height: 18px;
+                                border: 1rx solid #DCDCDC;
+                                background-color: #ffffff;
+                                border-radius: 50%;
+                                overflow: hidden;
+
+                                &.isCheck {
+                                    border: 1px solid rgba(var(--main-theme-color), 1);
+
+                                    &::after {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 100%;
+                                        height: 100%;
+                                        color: #ffffff;
+                                        background-color: rgba(var(--main-theme-color), 1);
+                                        content: "✔";
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                &.disabled {
+                                    cursor: not-allowed;
+                                }
+                            }
+                        }
+
+                        .infoWrap {
+                            padding: 0 20px;
+                            height: 100px;
+
+                            .priceWrap {
+                                margin-bottom: 15px;
+                                color: #3E4550;
+                                font-size: 32px;
+                                font-weight: bold;
+
+                                .symbol {
+                                    font-size: 16px;
+                                    margin-right: 4px;
+                                }
+                            }
+
+                            .infoRow {
+                                color: #8E9195;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .btnWrap {
+            margin-top: 36px;
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

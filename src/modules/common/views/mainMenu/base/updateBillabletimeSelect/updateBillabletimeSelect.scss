@@ -1,0 +1,110 @@
+.updateBillabletimeSelect {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 60rx);
+    padding: 0 30px;
+
+    .nameWrap {
+        padding: 0 30px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-color: #F5F6F9;
+
+        .left {
+            width: 50%;
+        }
+    }
+
+    .updateInfo {
+        padding: 40px 30px 0 30px;
+        flex: 1;
+
+        .itemListWrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .infoItem {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            margin-bottom: 30px;
+
+            .key {
+                width: 80px;
+                text-align: right;
+            }
+
+            .value {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 80px);
+            }
+        }
+
+        .tips {
+            margin-top: 30px;
+            display: flex;
+            align-items: flex-start;
+            color: #d60b0b;
+
+            .tipsLeft {
+                height: 30px;
+            }
+
+            .tipsRight {
+                width: 670px;
+
+                .tipsLine {
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    .billabletimeBtnWrap {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .billabletimePrice {
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+
+            .highLight {
+                font-size: 16px;
+                color: #d60b0b;
+            }
+        }
+
+        .btnItem {
+            margin: 0 10rx;
+            height: 40rx;
+            line-height: 40rx;
+            text-align: center;
+            width: 120rx;
+            background-color: #dedede;
+            border-radius: 4rx;
+            cursor: pointer;
+            user-select: none;
+
+            &.sure {
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+
+                &:active {
+                    background-color: rgba(var(--main-theme-color), 0.8);
+                }
+
+                &.disabled {
+                    cursor: not-allowed;
+                    background-color: rgba(var(--main-theme-color), 0.6);
+                }
+            }
+        }
+    }
+}

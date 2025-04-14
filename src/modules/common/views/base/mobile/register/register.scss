@@ -1,0 +1,82 @@
+.m_registerWrap{
+    max-width: 750px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-size: 20rpx;
+    .contentWrap{
+        padding: 180rpx 90rpx;
+        height: 100%;
+        .title{
+            color: #000000;
+            font-size: 50rpx;
+        }
+        .infoWrap{
+            margin-top: 88rpx;
+            .formIcon{
+                
+            }
+            .picture_append{
+                width: 130rpx;
+                display: flex;
+                align-items: center;
+            }
+            .btnVerifi{
+                width: 144rpx;
+                text-align: center;
+            }
+            .agreement{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                .checkbox{
+                    margin-right: 10rpx;
+                }
+                .link{
+                    color: rgba(var(--main-theme-color), 1);
+                }
+            }
+            .btnRegister{
+                width: 100%;
+                padding: 0;
+                margin-top: 160rpx;
+                line-height: 84rpx;
+                text-align: center;
+                color: #ffffff;
+                border-radius: 6rpx;
+                font-size: 24rpx;
+                background-color: rgba(var(--main-theme-color), 1);
+                &.is-disabled{
+                    color: #C0C4CC;
+                    cursor: not-allowed;
+                    background-image: none;
+                    background-color: #FFF;
+                    border-color: #EBEEF5;
+                }
+            }
+        }
+    }
+    /* 滑动验证 */
+    .ncWrap{
+        .tips{
+            padding: 15rx;
+        }
+        .nc-container{
+            /deep/ .stage1{
+                padding: 0;
+                height: 48rx;
+                .slider{
+                    height: 48rx;
+                    left: 0;
+                    right: 0;
+                    .button {
+                        height: 48rx;
+                    }
+                    .bg-green, .label{
+                        line-height: 48rx;
+                    }
+                }
+            }
+        }
+    }
+}

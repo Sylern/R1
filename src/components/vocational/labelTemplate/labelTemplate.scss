@@ -1,0 +1,38 @@
+.template{
+    transform-origin: 0 0 0;
+    .wash-icon {
+        width: 40px;
+    }
+    .wash-icon-bg{
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background-size: 100% 100%;
+    }
+    .drawing-board {
+        position: relative;
+        width: 260px;
+        .item-box{
+            position: absolute;
+            .item-bold {
+            font-weight: bold;
+            }
+            .font-small {
+                font-size: 41px;
+            }
+        }
+        .style {
+        line-height: 1.2;
+        text-align: center;
+        .f10 {
+            font-size: 10px;
+        }
+        }
+    }
+    .bar-code{
+        width: 100%;
+        height: 46px;
+        background: url('~@/assets/images/commodity/tiaoma.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}

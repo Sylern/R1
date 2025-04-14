@@ -1,0 +1,10 @@
+.rechargeReport {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+
+    .contentWrap {
+        padding: 10px 15px;
+        height: calc(100% - 60px);
+    }
+}

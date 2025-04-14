@@ -1,0 +1,156 @@
+.payTypeList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(40px + 180rx + 20rx);
+    min-height: calc(40px + 160px + 20rx);
+
+    .multiPay {
+        // padding-top: 20rx;
+        // margin-bottom: 20rx;
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+        span {
+            padding-right: 10rx;
+        }
+    }
+
+    .listWrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: calc(180rx + 20rx);
+        min-height: calc(160px + 20rx);
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {		// 隐藏滚动条
+            width: 0;
+        }
+
+        .item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 21%;
+            height: 90rx;
+            min-height: 80px;
+            // padding: 10rx 0;
+            margin: 5rx 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 6rx;
+            border: 1px solid #ffffff;
+            cursor: pointer;
+
+            &.disabled {
+                cursor: no-drop;
+            }
+
+            .imgWrap {
+                width: 50px;
+                height: 50px;
+            }
+
+            .payTypeName {
+                margin-top: 5rx;
+                font-size: 12px;
+            }
+
+            &.selected {
+                background-color: #E0E6FE;
+                border: 1px solid rgba(var(--main-theme-color), 1);
+                overflow: hidden;
+
+                .corner {
+                    display: block;
+                    position: absolute;
+                    right: -8px;
+                    bottom: -7px;
+                }
+            }
+
+            .corner {
+                display: none;
+            }
+        }
+    }
+}
+
+.qr_pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: 1000;
+
+    .pay_content {
+        width: 360px;
+        margin: auto;
+        padding: 10px 0;
+        border-radius: 10px;
+        background-color: #fff;
+
+        .pc_title {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .pc_item {
+            text-align: center;
+
+            .pci_img_wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 223px;
+
+                .pci_img {
+                    width: 200px;
+                    height: auto;
+                    margin: 10px 0;
+                    border-radius: 50%;
+                }
+            }
+
+            .pci_text {
+                margin: 20px 0;
+                font-size: 18px;
+                font-weight: bold;
+
+                &.authcode {
+                    margin: 20px 0 5px;
+
+                    /deep/.el-input__inner {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .pci_icon {
+                font-size: 50px;
+                color: #bcbcbc;
+
+                &.el-icon-circle-check {
+                    font-size: 110px;
+                    color: #09BB07;
+                }
+
+                &.el-icon-circle-close {
+                    font-size: 110px;
+                    color: #F76260;
+                }
+            }
+
+            .authcode_err {
+                color: #F76260;
+            }
+        }
+    }
+}

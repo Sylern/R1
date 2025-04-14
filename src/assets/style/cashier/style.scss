@@ -1,0 +1,65 @@
+html,
+body,
+#app {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #eeeeee;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+}
+
+div {
+    &.is-disabled {
+        pointer-events: none;
+    }
+}
+
+body {
+
+    .el-select .el-input__inner:focus,
+    .el-input.is-active .el-input__inner,
+    .el-input__inner:focus,
+    .el-textarea__inner:focus,
+    .el-select .el-input.is-focus .el-input__inner {
+        border-color: rgba(var(--main-theme-color), 1);
+    }
+
+    .el-cascader-node.in-active-path,
+    .el-cascader-node.is-active,
+    .el-cascader-node.is-selectable.in-checked-path,
+    .el-radio__input.is-checked+.el-radio__label,
+    .el-checkbox__input.is-checked+.el-checkbox__label,
+    .el-select-dropdown__item.selected,
+    .el-select-dropdown__item.hover,
+    .el-select-dropdown__item:hover,
+    .el-select-dropdown.is-multiple .el-select-dropdown__item.selected,
+    .el-select-dropdown.is-multiple .el-select-dropdown__item.hover,
+    .el-select-dropdown.is-multiple .el-select-dropdown__item:hover {
+        color: rgba(var(--main-theme-color), 1);
+    }
+
+    .el-button--primary,
+    .el-button--primary:focus,
+    .el-button--primary:active {
+        background-color: rgba(var(--main-theme-color), 1);
+        border-color: rgba(var(--main-theme-color), 1);
+    }
+
+    .el-button--primary:hover {
+        background: rgba(var(--main-theme-color), 0.8);
+        border-color: rgba(var(--main-theme-color), 0.8);
+    }
+
+    .el-button--primary:active {
+        background: rgba(var(--main-theme-color), 1);
+        border-color: rgba(var(--main-theme-color), 1);
+    }
+
+
+    .el-radio__input.is-checked .el-radio__inner,
+    .el-checkbox__input.is-checked .el-checkbox__inner,
+    .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+        background-color: rgba(var(--main-theme-color), 1);
+        border-color: rgba(var(--main-theme-color), 1);
+    }
+}

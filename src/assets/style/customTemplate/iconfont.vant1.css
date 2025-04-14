@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "iconfont-vant"; /* Project id 4649671 */
+  src: url('iconfont.vant1.ttf') format('truetype');
+}
+
+.iconfont-vant {
+  font-family: "iconfont-vant" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont-vant-iconyinhangqia:before {
+  content: "\e767";
+}
+
+.iconfont-vant-iconkecheng:before {
+  content: "\e609";
+}
+
+.iconfont-vant-iconxiangmuruchangrenyuandengji:before {
+  content: "\e6b3";
+}
+

@@ -1,0 +1,90 @@
+.popCashmoney {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1002;
+
+    .ncContentWrap {
+        padding: 20rx 60rx 20rx 60rx;
+        height: calc(100% - 80rx);
+
+        .inputWrap {
+            height: 60rx;
+
+            /deep/.el-input__inner {
+                height: 58rx;
+                background-color: #F4F6F9;
+                border-radius: 30rx;
+                font-size: 16px;
+                text-align: center;
+            }
+
+            /deep/.el-input__suffix {
+                top: 2rx;
+                right: 10rx;
+                height: 58rx;
+
+                .el-input__clear {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .listWrap {
+            margin-top: 10rx;
+            padding: 20rx 12rx;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .listItem {
+                display: flex;
+                width: 33.33%;
+                height: 85rx;
+
+                &.center {
+                    justify-content: center;
+                }
+
+                &.right {
+                    justify-content: flex-end;
+                }
+
+                .keyItem {
+                    width: 75rx;
+                    height: 75rx;
+                    display: flex;
+                    font-size: 18px;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #F7F7F7;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    &:active {
+                        background-color: #eeeeee;
+                    }
+                }
+            }
+        }
+
+        .btnSure {
+            margin: 12rx;
+            height: 70rx;
+            line-height: 70rx;
+            text-align: center;
+            color: #ffffff;
+            font-size: 17px;
+            background-color: rgba(var(--main-theme-color), 1);
+            border-radius: 70rx;
+            cursor: pointer;
+
+            &:active {
+                background-color: rgba(var(--main-theme-color), 0.6);
+            }
+        }
+    }
+}

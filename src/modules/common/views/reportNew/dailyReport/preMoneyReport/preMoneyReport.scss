@@ -1,0 +1,161 @@
+.preMoneyReport {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    // background-color: #f7f8fa;
+
+    .rep_query {
+        height: 160px;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .rep_q_top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            width: 100%;
+
+            .button {
+                width: 100px;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+            }
+        }
+
+        .rep_q_bottom {
+            height: 80px;
+            width: 100%;
+            background: #f7f8fa;
+            position: relative;
+
+            .rep_qb_from {
+                display: flex;
+                align-items: center;
+                padding: 20rx;
+
+                .rep_qbf_item {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 50rx 0 0;
+
+                    .rep_qbfi_name {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #000000;
+                        width: 50px;
+                        text-align: left;
+                    }
+
+                    .rep_qbfi_label {
+                        width: 160px;
+
+                        .el-select {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .rep_qbf_item_button {
+                    margin-right: 20rx;
+
+                    .button {
+                        color: #ffffff;
+                        background-color: rgba(var(--main-theme-color), 1);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .req_table {
+        margin-top: 10rx;
+        padding: 10rx;
+        width: 100%;
+        height: calc(100% - 160px - 10rx);
+        background-color: #fff;
+
+        .tableBox {
+            width: 100%;
+            max-height: calc(100% - 70rx);
+            display: flex;
+
+            .cellContent {
+                display: flex;
+                align-items: center;
+
+                .typeFlag {
+                    margin-right: 5px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+
+                    &.flag_1 {
+                        background-color: #16B866;
+                    }
+
+                    &.flag_2 {
+                        background-color: #FF3131;
+                    }
+
+                    &.flag_3 {
+                        background-color: #FF3131;
+                    }
+                }
+
+                &.money_1 {
+                    color: #16B866;
+                }
+
+                &.money_2 {
+                    color: #FF3131;
+                }
+
+                &.money_3 {
+                    color: #FF3131;
+                }
+            }
+
+            .cellBtn {
+                color: #FF3131;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .pageWrap {
+            margin-top: 10rx;
+            padding: 0 35rx;
+            height: 60rx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .summary {
+                display: flex;
+                align-items: center;
+
+                .dataItem {
+                    margin-right: 20rx;
+                    display: flex;
+                    align-items: center;
+
+                    .value {
+                        padding-left: 3px;
+                        color: #FF3131;
+                    }
+                }
+            }
+
+            label {
+                color: #FF3131;
+                padding-right: 20px;
+            }
+        }
+    }
+}

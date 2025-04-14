@@ -1,0 +1,133 @@
+.memberCardCheck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1002;
+
+    .contentWrap {
+        display: flex;
+        padding: 10px 55px;
+        height: calc(100% - 120px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .inputWrap {
+            width: 300px;
+            height: calc(100% - 80px);
+
+            .tips {
+                margin-bottom: 30px;
+                color: #333333;
+                font-size: 18px;
+            }
+
+            /deep/.el-input__inner {
+                height: 40px;
+            }
+
+            .phoneBox {
+                margin-top: 20px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+
+                .key {
+                    margin-right: 10px;
+                    width: 60px;
+                }
+
+                .value {
+                    width: calc(100% - 70px);
+                }
+            }
+
+            .codeBox {
+                margin-top: 20px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+
+                .key {
+                    width: calc(100% - 100px);
+                }
+
+                .value {
+                    display: flex;
+                    align-items: center;
+
+                    .btn {
+                        margin-left: 10px;
+                        width: 90px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        color: #333333;
+                        border: 1px solid #333333;
+                        border-radius: 4px;
+
+                        &.highLight {
+                            color: #ffffff;
+                            background-color: rgba(var(--main-theme-color), 1);
+                            border: 1px solid rgba(var(--main-theme-color), 1);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* 滑动验证 */
+        .ncWrap {
+            width: 100%;
+
+            .nc-container {
+                position: relative;
+
+                /deep/ .nc_wrapper {
+                    width: 100% !important;
+                }
+
+                /deep/ .stage1 {
+                    padding: 0;
+                    height: 40px;
+
+                    .slider {
+                        height: 40px;
+                        left: 0;
+                        right: 0;
+
+                        .button {
+                            height: 40px;
+                        }
+
+                        .bg-green,
+                        .label {
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btnWrap {
+        text-align: center;
+
+        .btnSure {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #ffffff;
+            background-color: rgba(var(--main-theme-color), 1);
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+}

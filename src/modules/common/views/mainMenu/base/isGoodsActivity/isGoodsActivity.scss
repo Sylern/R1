@@ -1,0 +1,289 @@
+.isGoodsActivity {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1001;
+
+
+    .contentWrap {
+        margin-top: 10rx;
+        padding: 0 20rx;
+        height: calc(100% - 70rx);
+
+        .top {
+            width: 100%;
+            display: flex;
+            height: calc(100% - 60rx);
+
+            .left {
+                padding-left: 10rx;
+                padding-right: 20rx;
+                width: 450rx;
+                height: calc(100% - 55rx);
+                box-sizing: border-box;
+
+                .leftTItle {
+                    line-height: 40rx;
+                    padding-left: 10rx;
+                    color: #333333;
+                }
+
+                .td1 {
+                    width: 50rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .td2 {
+                    padding: 0 10rx;
+                    width: 120rx;
+                }
+
+                .td3 {
+                    width: 60rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .td4 {
+                    width: 120rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        display: inline-block;
+                        text-align: center;
+                    }
+                }
+
+                .td5 {
+                    width: 60rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .tableHeader {
+                    height: 40rx;
+                    display: flex;
+                    align-items: center;
+                    background-color: #F4F6F9;
+                    border-radius: 6rx 6rx 0 0;
+                }
+
+                .left-scroll {
+                    width: 100%;
+                    height: calc(100% - 40rx);
+                    border-radius: 0 0 6rx 6rx;
+                    background-color: #F4F6F9;
+                }
+
+                .listItem {
+                    display: flex;
+                    align-items: center;
+                    height: 60rx;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #E6EAF1;
+                    }
+
+                    &.selected {
+                        background-color: #E6EAF1;
+                    }
+                }
+            }
+
+
+            .right {
+                flex: 1;
+                height: calc(100% - 28rx);
+
+                .rightTitle {
+                    display: flex;
+                    justify-content: space-between;
+                    line-height: 40rx;
+                    padding-left: 10rx;
+                    color: #333333;
+
+                    .el-input {
+                        width: 280rx;
+                        height: 40rx;
+
+                        /deep/.el-input__inner {
+                            color: #999999;
+                            height: 34rx;
+                            line-height: 34rx;
+                            font-size: 14px;
+                            background-color: #F4F6F9;
+                            border-radius: 6rx;
+                        }
+                    }
+                }
+
+                .right-scroll {
+                    height: calc(100% - 80rx);
+                }
+
+                .td1 {
+                    width: 50rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .td2 {
+                    padding: 0 10rx;
+                    width: 260rx;
+                }
+
+                .td3 {
+                    width: 140rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .td4 {
+                    width: 60rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .td5 {
+                    width: 100rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .td6 {
+                    padding: 0 10rx;
+                    width: 160rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .tableHeader {
+                    display: flex;
+                    line-height: 40rx;
+                    background-color: #F4F6F9;
+                }
+
+                .tableLine {
+                    display: flex;
+                    padding: 12rx 0;
+                    height: 60rx;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #F4F6F9;
+                    }
+
+                    .td1 {
+                        // padding-bottom: 20rx;
+                    }
+
+                    .td2 {
+                        .goodsName {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                        }
+                    }
+
+                    .td3 {
+                        // padding-bottom: 20rx;
+                    }
+
+                    .td4 {
+                        // padding-bottom: 20rx;
+                    }
+
+                    .td5 {
+                        // padding-bottom: 20rx;
+                    }
+
+                    .td6 {
+                        display: flex;
+                        align-items: center;
+                        // padding-bottom: 20rx;
+
+                        .btnSubtract {
+                            width: 38rx;
+                            height: 38rx;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #E5E5E5;
+                            font-size: 18px;
+                            border-radius: 3rx 0rx 0rx 3rx;
+
+                            &:active {
+                                background-color: rgba($color: #000000, $alpha: 0.1);
+                            }
+                        }
+
+                        .btnAdd {
+                            width: 38rx;
+                            height: 38rx;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #E5E5E5;
+                            font-size: 18px;
+                            border-radius: 0rx 3rx 3rx 0rx;
+
+                            &:active {
+                                background-color: rgba($color: #000000, $alpha: 0.1);
+                            }
+                        }
+
+                        .goodsNum {
+                            width: 80rx;
+                            height: 38rx;
+                            line-height: 38rx;
+                            text-align: center;
+                            border-top: 1px solid #E5E5E5;
+                            border-bottom: 1px solid #E5E5E5;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .btnWrap {
+            padding-right: 10rx;
+            text-align: center;
+            height: 40rx;
+
+            .btnSure {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20rx;
+                cursor: pointer;
+
+                &:active {
+                    background-color: rgba(var(--main-theme-color), 0.6);
+                }
+            }
+        }
+    }
+}

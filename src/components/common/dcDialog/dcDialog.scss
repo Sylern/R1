@@ -1,0 +1,62 @@
+.dcDialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: auto;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    // z-index: 1001;
+
+    .dcContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border-radius: 10rx;
+
+        .dcTitle {
+            font-size: 16px;
+            line-height: 60px;
+            color: #333333;
+            text-align: center;
+            position: relative;
+            width: calc(100% - 20rx);
+            margin: 0 auto;
+            user-select: none;
+
+            .back {
+                position: absolute;
+                width: 40rx;
+                height: 100%;
+                left: 0;
+                top: 0;
+                font-size: 25rx;
+                cursor: pointer;
+            }
+
+            .search {
+                position: absolute;
+                right: 0;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+            }
+        }
+
+        .close {
+            position: absolute;
+            right: -50rx;
+            top: 0rx;
+            width: 40rx;
+            height: 40rx;
+            color: #ffffff;
+            font-size: 28px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.classSelection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1002;
+
+    .contentWrap {
+        padding: 0 27rx;
+        height: calc(100% - 80rx);
+
+        .tableBox {
+            height: calc(100% - 60rx);
+        }
+
+        .btnWrap {
+            margin-top: 14rx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .btn {
+                margin: 0 20px;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+            }
+
+            .btnCancle {
+                color: rgba(var(--main-theme-color), 1);
+                border: 1px solid rgba(var(--main-theme-color), 1);
+                border-radius: 4rx;
+                cursor: pointer;
+            }
+
+            .btnSure {
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 4rx;
+                cursor: pointer;
+            }
+        }
+    }
+}

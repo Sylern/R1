@@ -1,0 +1,59 @@
+.orderSupplement {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        display: flex;
+        padding: 20rx 55rx;
+        height: calc(100% - 60rx);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .tips {
+            color: #333333;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .selectWrap {
+            width: 100%;
+
+            /deep/.el-select {
+                width: 100%;
+                height: 48rx;
+
+                .el-input {
+                    height: 100%;
+
+                    .el-input__inner {
+                        height: 100%;
+                        background-color: #F4F6F9;
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20rx;
+                cursor: pointer;
+            }
+        }
+    }
+}

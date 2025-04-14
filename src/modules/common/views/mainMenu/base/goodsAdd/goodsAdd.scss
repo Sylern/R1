@@ -1,0 +1,117 @@
+.goodsAdd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        padding: 0 35px;
+        height: calc(100% - 60px);
+
+        .top {
+            padding-left: 20px;
+
+            .contentTitle {
+                margin-bottom: 20px;
+            }
+
+            .el-radio {
+                margin-right: 30px;
+            }
+        }
+
+        /deep/.el-form-item__error {
+            padding-top: 4px;
+            right: 15px;
+            left: auto;
+        }
+
+        .inputWrap {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            .el-form-item {
+                margin-bottom: 22px;
+            }
+
+            .hide {
+                visibility: hidden;
+            }
+
+            .inputBox {
+                display: flex;
+                align-items: center;
+                height: 48px;
+                background-color: #F4F6F9;
+                border-radius: 6px;
+
+
+                .key {
+                    width: 150px;
+                    height: 100%;
+                    padding-left: 16px;
+                    display: flex;
+                    align-items: center;
+
+                    .symbol {
+                        padding-top: 6px;
+                        color: #ED1F1F;
+                        display: inline-block;
+                        width: 10px;
+                        font-size: 16px;
+                    }
+                }
+
+                /deep/.el-select {
+                    flex: 1;
+                }
+
+                /deep/.el-cascader,
+                /deep/.el-input {
+                    flex: 1;
+                    height: 100%;
+                    line-height: 100%;
+
+                    .el-input__inner {
+                        height: 100%;
+                        border: none;
+                        background-color: transparent;
+                        text-align: right;
+                    }
+
+                    .el-input__suffix {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.el-select-dropdown {
+    .el-select-dropdown__item {
+        // text-align: center;
+        width: 100%;
+    }
+}

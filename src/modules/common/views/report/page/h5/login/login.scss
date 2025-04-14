@@ -1,0 +1,154 @@
+.loginWrap {
+    max-width: 750px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-size: 20rpx;
+    background: url('~@/assets/images/report/loginbgi.jpg') no-repeat center center;
+    background-size: cover;
+
+    .contentWrap {
+        padding: 260rpx 90rpx;
+        height: 100%;
+
+        .title {
+            color: #000000;
+            font-size: 50rpx;
+            font-weight: bold;
+        }
+
+        .infoWrap {
+            margin-top: 88rpx;
+
+            .formIcon {}
+
+            .picture_append {
+                width: 130rpx;
+                display: flex;
+                align-items: center;
+            }
+
+            .btnVerifi {
+                width: 144rpx;
+                text-align: center;
+            }
+
+            .agreement {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .checkbox {
+                    margin-right: 10rpx;
+                }
+
+                .link {
+                    color: rgba(var(--main-theme-color), 1);
+                }
+            }
+
+            .btnRegister {
+                width: 100%;
+                padding: 0;
+                margin-top: 160rpx;
+                line-height: 84rpx;
+                text-align: center;
+                color: #ffffff;
+                border-radius: 6rpx;
+                font-size: 24rpx;
+                background-color: rgba(var(--main-theme-color), 1);
+                border: none;
+
+                &.is-disabled {
+                    color: #C0C4CC;
+                    cursor: not-allowed;
+                    background-image: none;
+                    background-color: #FFF;
+                    border-color: #EBEEF5;
+                }
+            }
+        }
+    }
+
+    /* 滑动验证 */
+    .ncWrap {
+        .tips {
+            padding: 15rx;
+        }
+
+        .nc-container {
+            /deep/ .stage1 {
+                padding: 0;
+                height: 48rx;
+
+                .slider {
+                    height: 48rx;
+                    left: 0;
+                    right: 0;
+
+                    .button {
+                        height: 48rx;
+                    }
+
+                    .bg-green,
+                    .label {
+                        line-height: 48rx;
+                    }
+                }
+            }
+        }
+    }
+
+    /deep/ .el-input-group__append,
+    .el-input-group__prepend {
+        padding: 0 10rpx;
+    }
+
+    /deep/ .el-input__inner {
+        height: 96rpx;
+        background-color: #f7f7f7;
+        border: none;
+        font-size: 16px;
+    }
+
+    /deep/ .el-input__suffix {
+        padding: 0 5px;
+    }
+
+    /deep/ .el-select .el-input__inner:focus,
+    /deep/ .el-input.is-active .el-input__inner,
+    /deep/ .el-input__inner:focus,
+    /deep/ .el-textarea__inner:focus,
+    /deep/ .el-select .el-input.is-focus .el-input__inner {
+        border: 1px solid #1775fc;
+        background-color: #fff;
+    }
+
+    /deep/ .el-input-group--append .el-input__inner {
+        /* width: 380rpx; */
+        width: 95%;
+        border-radius: 4px;
+    }
+
+    /deep/ .el-input-group__append {
+        border: 1px solid #eeeeee;
+        border-radius: 4px;
+    }
+
+    /deep/ .el-checkbox__input.is-checked .el-checkbox__inner {
+        color: #1775fc;
+        background-color: #1775fc;
+    }
+
+    /deep/ .nc-container #nc_1_wrapper {
+        width: 100%;
+    }
+
+    /deep/ .el-input__inner:hover {
+        border-color: #1775fc;
+    }
+
+    /deep/ .ncWrap .nc_wrapper {
+        width: 100%!important;
+    }
+}

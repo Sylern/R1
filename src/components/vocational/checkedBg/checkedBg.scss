@@ -1,0 +1,75 @@
+.checkedBg{
+    width: 100%;
+    height: 100%;
+    .bg-content-scrollbar {
+        width: 100%;
+        height: calc(100% - 100rx - 60px);
+
+        .bg-content {
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            padding: 0 40px;
+            flex-wrap: wrap;
+
+            .bg-item {
+                width: calc(20% - 10px);
+                height: 90px;
+                margin: 0 5px 10px 5px;
+                border-radius: 10rx;
+                overflow: hidden;
+                cursor: pointer;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+                background-color: white;
+
+                /deep/ .uploadImgBtn {
+                    border-radius: 10rx;
+                    width: 150px;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /deep/ .showImg {
+                    width: 150px;
+                    height: 80px;
+                    margin: 0;
+                    .iconImg{
+                        top: 0px;
+                        right: 0px;
+                    }
+                }
+
+                .select {
+                    color: rgba($color: white, $alpha: 0.9);
+                    font-size: 48px;
+                    text-align: center;
+                    line-height: 48px;
+                    border-radius: 50%;
+                    opacity: 0.9;
+                    position: absolute;
+                    z-index: 999;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                // &:nth-child(3n) {
+                //     margin-right: 0;
+                // }
+            }
+        }
+    }
+
+    .bg-foot {
+        width: 100%;
+        height: 100rx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,157 @@
+.servicesPersonSelect {
+    width: 100%;
+    height: 100%;
+    color: #333333;
+    font-size: 14px;
+    background-color: #ffffff;
+
+    .topWrap {
+        position: relative;
+        padding: 20rx 20rx 0 20rx;
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px solid #efefef;
+        box-shadow: 0px 0px 10px 0px rgba(173, 173, 173, 0.3);
+
+        .btnBack {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .text {
+                margin-left: 5px;
+                font-size: 14px;
+            }
+        }
+
+        .menuWrap {
+            position: absolute;
+            bottom: 5rx;
+            width: 100%;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+
+            .pageTitle {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .listWrap {
+                margin-left: 50rx;
+                display: flex;
+
+                .item {
+                    position: relative;
+                    margin-right: 30rx;
+                    padding: 0 10px;
+                    cursor: pointer;
+
+                    &.selected {
+                        margin-bottom: -7px;
+                        color: rgba(var(--main-theme-color), 1);
+                        border-bottom: 2px solid rgba(var(--main-theme-color), 1);
+
+                        .selectedBar {
+                            height: 2px;
+                            background-color: rgba(var(--main-theme-color), 1);
+                            border-radius: 1px;
+                        }
+                    }
+
+                    .selectedBar {
+                        height: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contentWrap {
+        width: 100%;
+        padding-left: calc(20rx + 10px);
+        height: calc(100% - 100px);
+        overflow-y: scroll;
+
+        .listWrap {
+            width: 90%;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+
+            .listWrap_view {
+                width: calc(100% + 17px);
+                height: calc(100% + 17px);
+                display: flex;
+                flex-wrap: wrap;
+                overflow-y: scroll;
+            }
+
+            .listTitle {
+                padding-top: 10px;
+                width: 100%;
+                line-height: 40px;
+            }
+
+            .item {
+                position: relative;
+                margin-right: 30rx;
+                margin-bottom: 30rx;
+                width: 120px;
+                height: 130px;
+                border-radius: 6px;
+                background-color: #f4f6f4;
+                overflow: hidden;
+                cursor: pointer;
+
+                .employeePhoto {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .textWrap {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 42px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: #ffffff;
+                    background-color: rgba(0,0,0,0.5);
+
+                    .name {
+                        padding-left: 10px;
+                        width: 100%;
+                        height: 20px;
+                        font-size: 16px;
+                        overflow: hidden;
+                    }
+
+                    .workerNum {
+                        padding-left: 10px;
+                        width: 100%;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .btnAdd {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 60px;
+            right: 80px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            color: #ffffff;
+            background-color: rgba(var(--main-theme-color), 1);
+            font-size: 36px;
+        }
+    }
+}

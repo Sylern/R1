@@ -1,0 +1,108 @@
+.quotationNo {
+    width: 100%;
+    height: 616px;
+    display: flex;
+
+    .left {
+        width: 150px;
+        border-right: 1px solid #e6e6e6;
+        background: #eee;
+
+        .dl {
+            cursor: pointer;
+
+            .dd {
+                dd {
+                    padding: 0 0 0 0rx;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    color: #303133;
+                }
+            }
+
+            .dd:hover {
+                background: #e8e8e8;
+            }
+
+            .active {
+                dd {
+                    color: rgba(var(--main-theme-color), 1) !important;
+                }
+
+                background: #e8e8e8;
+            }
+        }
+    }
+
+    // .right {
+    //     flex: 1;
+
+    //     .right_top {
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //         padding: 15rx 20rx;
+
+    //         .query {
+    //             display: flex;
+    //             flex-direction: column;
+    //             .searchInput {
+    //                 margin: 0 10rx 10rx 0;
+    //             }
+    //         }
+    //     }
+    // }
+    .right {
+        flex: 1;
+        width: calc(100% - 150px);
+        position: relative;
+        .right_top {
+            display: flex;
+            justify-content: space-between;
+            padding: 10rx 20rx;
+        }
+        .myTable {
+            width: calc(100%);
+            padding: 0 20rx;
+            max-height: calc(100% - 170px);
+            display: flex;
+        }
+        .pageWrap {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 30px 10px 0;
+        }
+
+        .foot {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 30px 0 15px;
+            position: absolute;
+            bottom: 10px;
+
+            .txt {
+                font-size: 14rx;
+                
+                color: rgba(var(--main-theme-color), 1);
+                line-height: 8px;
+            }
+        }
+    }
+}
+
+.el-dialogTitle {
+    .name {
+        line-height: 24px;
+        font-size: 18px;
+        color: #303133;
+    }
+
+    .content {
+        margin: 6px 0 0 0;
+        color: #e23838;
+    }
+}

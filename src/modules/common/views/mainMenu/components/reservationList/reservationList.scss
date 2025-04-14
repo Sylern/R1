@@ -1,0 +1,408 @@
+.reservationList {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1003;
+
+    .contentWrap {
+        padding: 20px;
+        height: 100%;
+        background-color: #ffffff;
+        border-radius: 10rx;
+
+        .topInfo {
+            padding: 10px 25px;
+            display: flex;
+            align-items: center;
+            height: 80px;
+            width: 100%;
+            background-color: #F8F9FF;
+            border-radius: 10px;
+
+            .tableInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 300px;
+                border-radius: 10px;
+
+                .name {
+                    font-size: 28px;
+                    color: #000000;
+                    font-weight: normal;
+                }
+
+                .area {
+                    color: #666666;
+                    font-size: 16px;
+                }
+            }
+
+            .timeInfo {
+                padding-top: 10px;
+                height: 100%;
+                width: calc(100% - 300px);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                .tipsWrap {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+
+                    .tipsItem {
+                        display: flex;
+                        align-items: center;
+                        padding-right: 20px;
+
+                        .dot {
+                            margin-right: 2px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: #CFD2D8;
+
+                            &.isSet {
+                                background-color: #38D91A;
+                            }
+                        }
+                    }
+                }
+
+                .timeLine {
+                    display: flex;
+                    align-items: center;
+
+                    .timeLineItem {
+                        position: relative;
+                        width: 14px;
+
+                        .line {
+                            height: 2px;
+                            background-color: #CFD2D8;
+                            border-left: 1px solid #ffffff;
+                        }
+
+                        .text {
+                            margin-left: -5px;
+                            color: #A5A8AF;
+                            transform: scale(0.6);
+                        }
+                        
+                        .timeLineSelect {
+                            position: absolute;
+                            top: 0;
+                            height: 2px;
+                            background-color: #38D91A;
+                        }
+                    }
+                }
+            }
+        }
+
+        .listContent {
+            position: relative;
+            padding-top: 40px;
+            height: calc(100% - 160px);
+            overflow: hidden;
+
+            .dateSelectBtn {
+                position: absolute;
+                top: 40px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #F8F9FF;
+                border-radius: 10px;
+                font-size: 24px;
+                color: #AEB3CE;
+                cursor: pointer;
+                z-index: 5;
+
+                &:active {
+                    background-color: rgba($color: #000000, $alpha: 0.05);
+                }
+
+                .el-date-editor {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+            }
+
+            .dateList {
+                display: inline-flex;
+                align-items: center;
+                height: 100px;
+                overflow: hidden;
+                transition-duration: 300ms;
+
+                .dateItem {
+                    display: flex;
+                    flex-direction: column;
+                    width: 320px;
+                    cursor: pointer;
+                    user-select: none;
+
+                    &.center {
+                        align-items: center;
+                    }
+
+                    &.right {
+                        align-items: flex-end;
+                    }
+
+                    .date {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        .dot {
+                            position: absolute;
+                            bottom: -26px;
+                            left: 0;
+                            width: 10px;
+                            height: 10px;
+                            border: 2px solid rgba(var(--main-theme-color), 1);
+                            background-color: #ffffff;
+                            border-radius: 50%;
+
+                            &.isSet {
+                                background-color: rgba(var(--main-theme-color), 1);
+                            }
+                        }
+                    }
+
+                    .dateText {
+                        font-weight: normal;
+                        font-size: 16px;
+                        color: #000000;
+                    }
+
+                    .dateFlag {
+                        margin-left: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 38px;
+                        height: 22px;
+                        color: #ffffff;
+                        font-size: 12px;
+                        background-color: rgba(var(--main-theme-color), 1);
+                        border-radius: 10px 10px 10px 0px;
+
+                        &.tommorow {
+                            background-color: #38D91A;
+                        }
+                    }
+
+                    .bottomLine {
+                        margin-top: 20px;
+                        width: 100%;
+                        height: 2px;
+                        border-bottom: 2px dashed #e2e4ec;
+                    }
+                }
+            }
+
+            .listWrap {
+                width: 100%;
+                height: calc(100% - 100px);
+
+                .dataListContent {
+                    padding-top: 40px;
+                    display: inline-flex;
+                    height: 100%;
+
+                    .empty {
+                        padding: 0;
+                        width: 960px;
+                        display: flex;
+                        justify-content: flex-start;
+                    }
+
+                    .listItem {
+                        position: relative;
+                        margin: 0 10px;
+                        padding: 15px 20px 0 20px;
+                        width: 300px;
+                        height: fit-content;
+                        min-height: 220px;
+                        border: 1px solid #EEEEEE;
+                        border-radius: 10px;
+                        cursor: pointer;
+
+                        &.selected {
+                            box-shadow: 0px 4px 11px 0px rgba(111, 128, 210, 0.2);
+                        }
+
+                        .stateImg {
+                            position: absolute;
+                            right: 5px;
+                            top: 5px;
+                            width: 78px;
+                            height: 50px;
+                        }
+
+                        .memberInfo {
+                            display: flex;
+
+                            .memberLogo {
+                                height: 48px;
+                                width: 48px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                            }
+
+                            .memberTextInfo {
+                                padding-left: 12px;
+                                width: calc(100% - 48px);
+
+                                .nameText {
+                                    font-size: 18px;
+                                    color: #000000;
+                                }
+
+                                .phoneText {
+                                    padding-left: 5px;
+                                    color: #666666;
+                                    font-size: 12px;
+                                }
+
+                                .reservationDate {
+                                    color: #666666;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        .timeInfo {
+                            margin-top: 15px;
+                            display: flex;
+                            align-items: center;
+                            height: 80px;
+                            background-color: #F1F2F7;
+                            border-radius: 10px;
+
+                            .timeBox {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100px;
+
+                                .time {
+                                    font-size: 24px;
+                                    font-weight: bold;
+                                    color: #000000;
+                                }
+
+                                .text {
+                                    color: #666666;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                }
+                            }
+
+                            .spaceBox {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: calc(100% - 200px);
+
+                                .line {
+                                    height: 2px;
+                                    width: 30px;
+                                    background-color: #666666;
+                                }
+                            }
+                        }
+
+                        .payInfo {
+                            padding: 10px 0;
+
+                            .payItem {
+                                padding: 8px 10px;
+                                height: 44px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .payIcon {
+                                    display: flex;
+                                    align-items: center;
+
+                                    .img {
+                                        height: 28px;
+                                        width: 28px;
+                                    }
+
+                                    .payText {
+                                        padding-left: 10px;
+                                    }
+                                }
+
+                                .payItemMoney {
+                                    color: #000000;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .btn {
+                margin: 0 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 170px;
+                height: 50px;
+                border-radius: 10px;
+                color: rgba(var(--main-theme-color), 1);
+                border: 1px solid rgba(var(--main-theme-color), 1);
+                cursor: pointer;
+                transition-duration: 300ms;
+
+                &:active {
+                    background-color: rgba($color: #000000, $alpha: 0.05)
+                }
+
+                &.check {
+                    color: #ffffff;
+                    background-color: rgba(var(--main-theme-color), 1);
+
+                    &:active {
+                        background-color: rgba(var(--main-theme-color), 0.8);
+                    }
+
+                    &.disabled {
+                        cursor: not-allowed;
+                        color: #666666;
+                        border-color: rgba(var(--main-theme-color), 0.2);
+                        background-color: rgba(var(--main-theme-color), 0.2);
+                    }
+                }
+            }
+        }
+    }
+}

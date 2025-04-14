@@ -1,0 +1,173 @@
+.ImportImg-wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    .file {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .showImg {
+        position: relative;
+        border-radius: 10rx;
+        border: 1rx dashed #f1f1f1;
+
+        &.moreImg {
+            margin: 0 15rx 15rx 0;
+        }
+
+        img,
+        video {
+            width: 100%;
+            height: 100%;
+            margin: 0 15rx 0 0;
+            border-radius: 10rx;
+            cursor: pointer;
+        }
+
+        .iconImg {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+
+            label {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+
+            i {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 24px;
+                color: #bdbdbd;
+            }
+        }
+
+        i:hover {
+            color: red;
+        }
+    }
+
+    .disabled {
+        cursor: no-drop;
+    }
+
+    .uploadImgBtn {
+        position: relative;
+        width: 150rx;
+        height: 150rx;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        cursor: pointer;
+        overflow: hidden;
+
+        i {
+            font-size: 28px;
+            color: #8c939d;
+        }
+
+    }
+
+    .takePhotoModel {
+        position: relative;
+        // width: 200rx;
+        // height: 200rx;
+
+        .takeImg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+    
+            &.moreImg {
+                margin: 0 15rx 15rx 0;
+            }
+    
+            img,
+            video {
+                width: 100%;
+                height: 100%;
+                margin: 0 15rx 0 0;
+                border-radius: 10rx;
+                cursor: pointer;
+            }
+    
+            .iconImg {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+    
+                label {
+                    position: absolute;
+                    top: 3px;
+                    left: 8px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                }
+    
+                i {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 24px;
+                    color: #bdbdbd;
+                }
+            }
+    
+            i:hover {
+                color: red;
+            }
+        }
+
+        .defaultImg {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E6EEFF;
+            border-radius: 5px;
+        }
+
+        .controlBtn {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35rx;
+            color: #ffffff;
+            font-size: 12px;
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            border-radius: 0 0 5px 5px;
+
+            .btn {
+                width: 50%;
+                text-align: center;
+                cursor: pointer;
+
+                &:first-child {
+                    border-right: 1px solid #ffffff;
+                }
+            }
+        }
+    }
+}

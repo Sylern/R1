@@ -1,0 +1,197 @@
+.equityCardSelect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1002;
+
+    .equityCardSelectContent {
+        height: calc(100% - 60px);
+
+        .carousel {
+            padding: 0 20px;
+            height: 130px;
+
+            .item {
+                margin-left: -30px;
+                width: calc(50% + 60px);
+                height: 130px;
+                border-radius: 15px;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor: pointer;
+
+                .top {
+                    display: flex;
+                    align-items: center;
+
+                    .logo {
+                        width: 34px;
+                        height: 34px;
+                        border-radius: 50%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        box-shadow: 0 0 5px 0px rgba(black, 0.5);
+                    }
+
+                    .name {
+                        flex: 1;
+                        margin-left: 8px;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        color: rgba(white, 0.9);
+                        text-shadow: 0 2px 4px rgba(black, 0.5);
+                    }
+                }
+
+                .bottom {
+                    letter-spacing: 2px;
+                    font-size: 13px;
+                    color: rgba(white, 0.9);
+                    text-shadow: 0 2px 4px rgba(black, 0.5);
+                }
+            }
+        }
+
+
+        .listWrap {
+            width: 100%;
+            height: calc(100% - 210px);
+
+            .contentItemInfo {
+                padding-top: 20px;
+
+                .info {
+                    border-radius: 15px;
+                    background-color: white;
+                    padding: 15px 15px 0 20px;
+        
+                    .title {
+                        display: inline-block;
+                        font-weight: bold;
+                        position: relative;
+                        margin: 10px 0;
+                        font-size: 15px;
+
+                        .titleContent {
+                            position: relative;
+                            z-index: 3;
+                        }
+        
+                        &::after {
+                            position: absolute;
+                            left: -10px;
+                            right: -10px;
+                            bottom: -2px;
+                            content: '';
+                            height: 10px;
+                            background: linear-gradient(to right, #eee1d2, #e6af83);
+                        }
+                    }
+        
+                    .items {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-bottom: 10px;
+        
+                        .info-item {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: 25%;
+                            margin: 10px 0;
+        
+                            .icon {
+                                width: 45px;
+                                height: 45px;
+                                border-radius: 50%;
+                                background-color: #f1c490;
+                                color: white;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 25px;
+                                background-size: 80% 80%;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                box-shadow: 0 0 5px 0px rgba(#ebb992, 0.5);
+                            }
+        
+                            .name {
+                                color: #e6af83;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+        
+                    .second {
+                        align-items: center;
+        
+                        .info-item {
+                            flex-direction: row;
+                            margin-bottom: 0;
+                            width: 50%;
+                            justify-content: flex-start;
+                            position: relative;
+        
+                            &:first-child {
+                                &::after {
+                                    width: 1px;
+                                    height: 60%;
+                                    content: '';
+                                    background-color: #eee;
+                                    position: absolute;
+                                    right: 10px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+        
+                            .name {
+                                margin: 0 0 0 10px;
+                                color: black;
+                            }
+                        }
+                    }
+        
+                    .rule {
+                        width: 100%;
+                        word-break: break-all;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        line-clamp: 3;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            margin-top: 20px;
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

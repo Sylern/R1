@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "scaleValue";
+    src: url('~@/assets/font/DS-DIGIB_1.TTF') format('truetype')
+}
+
+.quickPay {
+    // padding-top: 10rx;
+    // padding-left: 8rx;
+    // background-color: #2a2d36;
+
+    .quickPayList {
+        width: 0;
+        // overflow: hidden;
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // z-index: -1;
+    }
+
+    .cashier_mask {
+        background-color: rgb(0, 0, 0);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        position: fixed;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cashier_ms_item {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-45%);
+            width: 55px;
+            height: 55px;
+            color: #27F189;
+            background-color: #606266;
+            border-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 35px;
+            cursor: pointer;
+
+            &.cashier_msi_left {
+                left: 40px;
+            }
+
+            &.cashier_msi_right {
+                right: 40px;
+            }
+        }
+
+        .cashier_m_btnGroup {
+            bottom: 40px;
+            right: 100px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            .cashier_mbg_btn {
+                width: 180px;
+                height: 60px;
+                border: 2px solid #27F189;
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: 500;
+                color: #27F189;
+                background: no-repeat;
+                cursor: pointer;
+
+                &:last-child {
+                    margin: 0 0 0 25px;
+                }
+            }
+        }
+    }
+
+    // 结算成功弹窗样式
+    .successContentWrap {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 60px);
+        padding: 0 60rx;
+
+        .orderInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20rx;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80rx;
+                height: 80rx;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 40rx;
+                font-size: 48rx;
+                font-weight: bold;
+            }
+
+            .orderNumber {
+                margin: 20rx 0;
+            }
+        }
+
+        .memberInfo {
+            margin: 10rx 0;
+
+            .memberTitle {
+                margin-top: 30rx;
+                text-align: center;
+                font-size: 18rx;
+            }
+        }
+
+        .btnSure {
+            position: absolute;
+            bottom: 40rx;
+            left: 0;
+            width: 100%;
+            text-align: center;
+
+            .btn {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                border-radius: 20rx;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                cursor: pointer;
+            }
+        }
+
+        .itemBox {
+            display: flex;
+            height: 40rx;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

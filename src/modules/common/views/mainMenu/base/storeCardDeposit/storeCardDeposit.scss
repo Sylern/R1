@@ -1,0 +1,414 @@
+.ml-10 {
+    margin-left: 10px;
+}
+
+.storeCardDeposit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1002;
+
+    /deep/.storeCardDeposit-dialog {
+        .dcContent:nth-child(0) {
+            min-height: 680px;
+        }
+    }
+
+    .contentWrap {
+        margin-top: 10px;
+        height: calc(100% - 70px);
+
+        .top {
+            height: calc(100% - 100rx);
+
+            .contentMain {
+                padding: 0 70px;
+                font-size: 16px;
+            }
+
+            .basicWrap {
+
+                .userContent {
+                    border-radius: 6rx;
+                    overflow: hidden;
+                    color: #ffffff;
+                    background-color: rgba(var(--main-theme-color), 1);
+
+                    .userInfo {
+                        position: relative;
+                        padding: 13rx 20rx 18rx 20rx;
+                        display: flex;
+                        align-items: center;
+                        height: 78rx;
+                        width: 100%;
+
+                        .logo {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #ffffff;
+                            width: 46rx;
+                            height: 46rx;
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+
+                        .nameWrap {
+                            margin-left: 9rx;
+
+                            .nameText {
+                                display: flex;
+                                align-items: flex-end;
+
+                                .name {
+                                    font-size: 18px;
+                                }
+
+                                .flag {
+                                    padding: 0 4rx;
+                                    margin-left: 4rx;
+                                    color: #E79520;
+                                    font-size: 12px;
+                                    border-radius: 3rx;
+                                    border: 1px solid #E0912E;
+                                    background-color: #FFF4E1;
+                                }
+                            }
+
+                            .telephone {
+                                margin-top: 2rx;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .btnSelected {
+                            position: absolute;
+                            right: 20px;
+                            padding: 4px 10px;
+                            color: rgba(var(--main-theme-color), 1);
+                            background-color: #ffffff;
+                            border-radius: 4px;
+                            cursor: pointer;
+
+                            &:active {
+                                background-color: rgba($color: #ffffff, $alpha: 0.8);
+                            }
+                        }
+                    }
+
+                    .userRights {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 78rx;
+                        width: 100%;
+                        padding: 12rx 40rx;
+
+                        .item {
+                            text-align: center;
+                            font-size: 14px;
+
+                            .value {
+                                margin-top: 5rx;
+                            }
+                        }
+                    }
+                }
+
+                .discountWrap {
+                    display: flex;
+                    max-height: 140px;
+
+                    .wrapContent {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-bottom: 5rx;
+                    }
+
+                    .item {
+                        margin-top: 8rx;
+                        margin-left: 12rx;
+                        display: flex;
+                        align-items: center;
+                        width: 130px;
+                        height: 60px;
+                        padding: 0 12rx;
+                        color: #999999;
+                        font-size: 12px;
+                        border-radius: 6rx;
+                        cursor: pointer;
+                        border: 1px solid #F4F6F9;
+
+                        &.selected {
+                            color: rgba(var(--main-theme-color), 1);
+                            border: 1px solid rgba(var(--main-theme-color), 1);
+                        }
+
+                        &.isRowFirst {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                .inputWrap {
+                    margin-top: 14rx;
+
+                    .inputLine {
+                        display: flex;
+                        margin-bottom: 14rx;
+                        font-size: 16px;
+
+                        .key {
+                            padding-left: 20px;
+                            width: 100px;
+                            height: 46rx;
+                            line-height: 46rx;
+                            background-color: #F4F6F9;
+                        }
+                    }
+
+                    /deep/.el-input {
+                        height: 46rx;
+
+                        &.right .el-input__inner {
+                            text-align: right;
+                        }
+
+                        &.remark {
+                            .el-input__inner {
+                                padding: 0 20px;
+                            }
+                        }
+
+                        .el-input__inner {
+                            height: 100%;
+                            border: none;
+                            background-color: #F4F6F9;
+                            font-size: 16px;
+                        }
+
+                        .el-input-group__prepend {
+                            padding: 0 20px;
+                            color: #333333;
+                            border: none;
+                        }
+                    }
+
+                    /deep/.el-select {
+                        width: calc(100% - 100px);
+                        height: 46rx;
+                        text-align: right;
+
+                        .el-select__tags,
+                        .el-select__input {
+                            height: 100%;
+                        }
+
+                        .el-input__inner {
+                            text-align: right;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .payBox {
+                margin-top: 14rx;
+
+                .multiPay {
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+
+                    .value {
+                        width: calc(50% - 5px);
+                    }
+
+                    /deep/.el-input {
+                        height: 46rx;
+
+                        &.right .el-input__inner {
+                            text-align: right;
+                        }
+
+                        .el-input__inner {
+                            height: 100%;
+                            border: none;
+                            background-color: #F4F6F9;
+                            font-size: 16px;
+                        }
+
+                        .el-input-group__prepend {
+                            padding: 0 20px;
+                            color: #333333;
+                            border: none;
+                            font-size: 16px;
+                        }
+
+                        .el-input__suffix {
+                            right: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            color: #333333;
+                        }
+                    }
+                }
+
+                .titleWrap {
+                    padding: 0 10px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #333333;
+
+                    .value {
+                        display: flex;
+                        align-items: center;
+
+                        .text {
+                            padding-right: 10rx;
+                        }
+                    }
+                }
+
+                .payTypeList {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .item {
+                        padding: 8px 12px;
+                        margin-left: 20px;
+                        margin-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border-radius: 6rx;
+                        border: 1px solid #ffffff;
+                        cursor: pointer;
+
+                        .img {
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        .payTypeName {
+                            margin-top: 5px;
+                            font-size: 12px;
+                        }
+
+                        &.rowFirst {
+                            margin-left: 0;
+                        }
+
+                        &.selected {
+                            background-color: #F4F6F9;
+                            border: 1px solid #eeeeee;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btnWrap {
+            margin-top: 30rx;
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20rx;
+                cursor: pointer;
+            }
+        }
+
+        .qr_pay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            z-index: 10;
+
+            .pay_content {
+                position: relative;
+                width: 360px;
+                padding: 10px 0;
+                border-radius: 10px;
+                background-color: #fff;
+
+                .btnClose {
+                    position: absolute;
+                    right: -50px;
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    color: #ffffff;
+                    font-size: 28px;
+                    cursor: pointer;
+                }
+
+                .pc_title {
+                    margin: 20px 0;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .pc_item {
+                    text-align: center;
+
+                    .pci_img_wrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 223px;
+
+                        .pci_img {
+                            width: 200px;
+                            height: auto;
+                            margin: 10px 0;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .pci_text {
+                        margin: 20px 0;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+
+                    .pci_icon {
+                        font-size: 50px;
+                        color: #bcbcbc;
+
+                        &.el-icon-circle-check {
+                            font-size: 110px;
+                            color: #09BB07;
+                        }
+
+                        &.el-icon-circle-close {
+                            font-size: 110px;
+                            color: #F76260;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

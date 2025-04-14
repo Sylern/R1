@@ -1,0 +1,200 @@
+.popCheckedCommodity {
+    width: 100%;
+    height: 620px;
+    display: flex;
+    overflow: hidden;
+
+    .popLeft {
+        width: 150px;
+        border-right: 1px solid #e6e6e6;
+        background: #eee;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 0 0 0 10px;
+        overflow: hidden;
+
+        .menuWrap {
+            display: flex;
+            flex-direction: column;
+
+            .menuItem {
+                width: 100%;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: #000000;
+                padding: 0 0 0 20px;
+                position: relative;
+
+                .text {
+                    padding-right: 2px;
+                    display: flex;
+                    align-items: center;
+                    line-height: 20px;
+                    width: calc(100% - 23px);
+                }
+
+                i {
+                    right: 10px;
+                    top: 42%;
+                }
+            }
+
+            .subItem {
+                display: flex;
+                flex-direction: column;
+
+                .subText {
+                    padding-left: 30px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    line-height: 20px;
+                    font-size: 14px;
+                    color: #333333;
+                    overflow: hidden;
+                }
+            }
+
+            .active {
+                color: rgba(var(--main-theme-color), 1) !important;
+            }
+        }
+    }
+
+    .popRight {
+        height: 100%;
+        width: calc(100% - 150px);
+        background-color: #ffffff;
+
+        .right_top {
+            padding: 0 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            height: 50px;
+
+            .el-input {
+                width: 280px !important;
+            }
+
+            &.isProductAdd {
+                justify-content: space-between !important;
+            }
+
+            i {
+                cursor: pointer;
+            }
+        }
+
+        .el-scrollbar__wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        .popTable {
+            width: 100%;
+            height: calc(100% - 50px - 110px);
+            display: flex;
+
+            .el-table__fixed::before {
+                background-color: transparent;
+            }
+
+            .el-table {
+                &::before {
+                    background-color: transparent;
+                }
+
+                .el-table__header {
+                    tr {
+                        background-color: #f5f7fa;
+
+                        .el-table__cell {
+                            background-color: transparent;
+
+                            .cell {
+                                line-height: 40px;
+                            }
+                        }
+                    }
+                }
+
+                .el-table__body {
+                    .el-table__row:hover {
+                        cursor: pointer;
+                        background-color: rgba(var(--main-theme-color), 0.1);
+                    }
+                }
+
+                .el-table__cell {
+                    padding: 0 5px;
+                }
+
+                .cell {
+                    padding: 0;
+                    height: 40px;
+                    line-height: 40px;
+
+                    .el-checkbox,
+                    .el-radio {
+                        line-height: 40px;
+                    }
+
+                    .el-icon-document-copy {
+                        padding: 0 5px;
+                    }
+
+                    .etr_tooltip {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        line-height: 40px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                    }
+
+                    .img_cell {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .el-image {
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+            }
+        }
+
+        .popPageWrap {
+            display: flex;
+            height: 60px;
+            justify-content: flex-end;
+            padding: 20px 30px 10px 0;
+        }
+
+        .popBottom {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px 10px 15px;
+
+            .txt {
+                font-size: 14rx;
+
+                color: rgba(var(--main-theme-color), 1);
+                line-height: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,384 @@
+.helpCenter_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: 14px;
+    color: #000000;
+
+    .mt_center {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+
+        .mt_center_content {
+            width: 100%;
+            height: 100%;
+
+            &.calcHeight {
+                height: calc(100% - 60rx);
+            }
+
+            &.isShowHelp {
+                width: calc(100% - 224px);
+            }
+        }
+
+        .title {
+            padding: 0 18rx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 60rx;
+            font-size: 14px;
+            color: #000000;
+            background-color: #ffffff;
+            border-left: 1px solid #ebedf0;
+
+            .breadcrumb {
+                display: flex;
+
+                .breadcrumb_item {
+                    &.isUrl {
+                        font-weight: 700;
+                        text-decoration: none;
+                        -webkit-transition: color .2s cubic-bezier(.645, .045, .355, 1);
+                        transition: color .2s cubic-bezier(.645, .045, .355, 1);
+                        color: #303133;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: rgba(var(--main-theme-color), 1);
+                        }
+                    }
+                }
+
+                .breadcrumb_separator {
+                    margin: 0 9px;
+                }
+            }
+
+            .showHelpWrap {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                label {
+                    cursor: pointer;
+                }
+
+                .btn_showHelp {
+                    margin-left: 10rx;
+                    color: #999999;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .mt_right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: calc(100% - 30rx);
+        width: 224px;
+        -webkit-box-shadow: inset 1px 0 0 0 #ebedf0;
+        box-shadow: inset 1px 0 0 0 #ebedf0;
+        font-size: 14px;
+        background-color: #ffffff;
+        transform: translateX(224px);
+        -webkit-transform: translateX(224px);
+        transition: 300ms;
+
+        &.show {
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            height: 60rx;
+            text-align: center;
+            border-bottom: 1px solid #ebedf0;
+            cursor: pointer;
+
+            .btn_hideHelp {
+                cursor: pointer;
+            }
+
+            .divFont {
+                color: #1775fc;
+                cursor: pointer;
+
+                span {
+                    margin: 0 5px 0 0;
+                }
+            }
+        }
+
+        .container {
+            height: calc(100% - 60rx);
+
+            .help_ul {
+                display: flex;
+                overflow: hidden;
+                padding: 10px 0;
+                min-height: 280px;
+                height: calc(100% - 220px);
+
+                &.OEMHeight {
+                    max-height: calc(100% - 20rx);
+                }
+
+                .li {
+                    padding: 10px 16px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #1775fc;
+                    }
+                }
+            }
+
+            .other {
+                .listItem {
+                    padding: 0 16px;
+                    height: 50rx;
+                    line-height: 50rx;
+                    color: #1775fc;
+                    cursor: pointer;
+
+                    &:hover {
+                        .text {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .contact {
+                    margin-top: 20px;
+                    padding: 0 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    color: #666666;
+
+                    .headIcon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
+                        color: #4176f5;
+                        font-size: 24px;
+                        background-color: #f1f2f3;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+
+                    .name {
+                        margin-bottom: 4px;
+                    }
+                }
+
+                .help_btn {
+                    margin: 18px;
+                    position: relative;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #1775fc;
+                    border: 1px solid #1775fc;
+                    cursor: pointer;
+                    border-radius: 3px;
+
+                    &:hover {
+                        background-color: rgba($color: #68a4f7,
+                                $alpha: 0.1);
+                    }
+
+                    .contact {
+                        padding-bottom: 20px;
+                        display: none;
+                        flex-direction: column;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 54px;
+                        background-color: #ffffff;
+                        box-shadow: 0px 0px 7px 0px rgba(173, 175, 178, 0.4);
+                        border-radius: 3px;
+
+                        &.isClickShow {
+                            display: flex !important;
+                        }
+
+                        .contact_name {
+                            color: #1775fc;
+                            font-size: 14px;
+                            height: 20px;
+                            line-height: 20px;
+                        }
+
+                        .contact_tel {
+                            color: #1775fc;
+                            font-size: 14px;
+                            height: 20px;
+                            line-height: 20px;
+                        }
+
+                        .qrCode {
+                            margin-top: 10px;
+                            height: 150px;
+                            width: 150px;
+                            background-color: red;
+                        }
+
+                        .qrCodeText {
+                            line-height: 28px;
+                            font-size: 12px;
+                            color: #454545;
+                        }
+
+                        .cover {
+                            position: absolute;
+                            bottom: -19px;
+                            left: calc(50% - 5px);
+                            border: 10rx solid;
+                            border-color: #ffffff transparent transparent transparent;
+                        }
+                    }
+                }
+
+                .contactWrap:hover {
+                    .contact {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.schoolDialog {
+    overflow: hidden;
+
+    /deep/.el-dialog {
+        overflow: hidden;
+    }
+
+    /deep/.el-dialog__header {
+        padding: 0;
+    }
+
+    /deep/.el-dialog__headerbtn {
+        position: absolute;
+        z-index: 99;
+        height: 30px;
+        width: 30px;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+
+        .el-dialog__close {
+            color: #ffffff;
+        }
+    }
+
+    /deep/.el-dialog__body {
+        height: 100%;
+        padding: 0;
+    }
+
+    .schoolWrap {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.downloadWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 13;
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 560px;
+        width: 360px;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        padding: 0 80px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .close {
+            position: absolute;
+            right: -50rx;
+            top: 0rx;
+            width: 40rx;
+            height: 40rx;
+            color: #ffffff;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .dowloadTitle {
+            margin-top: 40px;
+            color: #000000;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .qrCode {
+            margin: 28px 0;
+            width: 180px;
+            height: 180px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-left: 40px;
+            width: 200px;
+            height: 58px;
+            color: #000000;
+            border: 1px solid #000000;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            user-select: none;
+
+            .btn_icon {
+                margin-right: 16px;
+            }
+
+            &.typewin {
+                color: #1775fc;
+                border: 1px solid #1775fc;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba($color: #1775fc, $alpha: 0.1);
+                }
+            }
+        }
+    }
+}

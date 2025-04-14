@@ -1,0 +1,47 @@
+.chart_dialog {
+    /deep/ .el-dialog {
+        background: #F7F8FA;
+        border-radius: 10px;
+
+        .el-dialog__headerbtn {
+            top: 8px;
+            right: -32px;
+
+            .el-dialog__close {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+
+        .el-dialog__title {
+            font-size: 16px;
+        }
+    }
+
+    .chart_content {
+        padding: 0 30rx;
+
+        .cw_charts_list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 36px;
+
+            .cw_charts_item {
+                width: 25%;
+                padding: 0 42rx 62px;
+
+                .charts_check {
+                    height: 16px;
+                    margin-bottom: 15rx;
+                }
+
+                .charts_img_wrap {
+                    width: 160rx;
+                    height: 160rx;
+                    background: #FFFFFF;
+                    border-radius: 10rx;
+                }
+            }
+        }
+    }
+}

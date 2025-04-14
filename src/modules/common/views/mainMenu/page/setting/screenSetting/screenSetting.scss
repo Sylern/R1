@@ -1,0 +1,130 @@
+.screenSetting {
+    width: 100%;
+    height: 100%;
+
+    .contentSrcoll {
+        width: 100%;
+        height: calc(100% - 80px);
+
+        .customSetting {
+            width: 100%;
+            padding-top: 14rx;
+            padding-left: 14rx;
+            box-sizing: border-box;
+
+            .subTitle {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+
+            .line {
+                padding-left: 14rx;
+                display: flex;
+                align-items: flex-start;
+
+                .key {
+                    width: 80px;
+                    margin-right: 16rx;
+                    line-height: 40px;
+                }
+
+                .value {
+                    display: flex;
+                    flex-direction: column;
+
+                    .tipsIcon {
+                        margin-left: 10px;
+                        color: #999999;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+
+                    .switch {
+                        display: flex;
+                        align-items: center;
+                        height: 40px;
+                    }
+
+                    .slotInputBox {
+                        margin-bottom: 10px;
+                        width: 240px;
+                        height: 40px;
+                        border: 1px solid #DCDFE6;
+                        border-radius: 4px;
+
+                        ::v-deep .el-input {
+
+                            .el-input-group__append,
+                            .el-input-group__prepend {
+                                padding: 0;
+                                border: none;
+                                background-color: #ffffff;
+                            }
+
+                            .el-input-group__prepend {
+                                padding-left: 10px;
+                            }
+
+                            .el-input-group__append {
+                                padding-right: 10px;
+                                cursor: pointer;
+                                color: rgba(var(--main-theme-color), 1);
+                            }
+
+                            .el-input__inner {
+                                border: none;
+                                height: 38px;
+                            }
+                        }
+
+
+                    }
+
+                    ::v-deep .el-select {
+                        width: 240px;
+                    }
+                }
+
+                &+.portWrap {
+                    margin-top: 20px;
+                }
+
+                &+.baudRate {
+                    margin-top: 10px;
+                }
+
+                &+.testWrap {
+                    margin-top: 20px;
+                }
+
+                .switchWrap {
+                    .info {
+                        color: #999999;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .bottomWrap {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .btn {
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            color: #ffffff;
+            text-align: center;
+            background-color: rgba(var(--main-theme-color), 1);
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+.cashierBase {
+    height: 100%;
+    padding-top: 20px;
+
+    .containar {
+        padding: 0 20px 20px 10px;
+
+        .itemBox {
+            padding: 0 10px;
+            width: 100%;
+            line-height: 40px;
+            transition-duration: 300ms;
+
+            &.main {
+                padding-left: 0px;
+
+                .itemName {
+                    color: #000000 !important;
+                    font-weight: 600 !important;
+                }
+
+                .el-switch {
+                    padding-left: 10px;
+                }
+            }
+
+            &.hasRight:hover {
+                background-color: rgba(var(--main-theme-color), 0.05);
+            }
+
+            &.radioWrap {
+                display: flex;
+                flex-direction: column;
+
+                .radioContent {
+                    padding-left: 10px;
+                }
+            }
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+
+                .left {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .itemName {
+                    font-weight: 500;
+                    color: #666666;
+                    display: flex;
+                    align-items: center;
+
+                    label {
+                        padding-right: 10px;
+                    }
+
+                    .el-icon-question {
+                        color: rgba(var(--main-theme-color), 1);
+                        ;
+                        cursor: pointer;
+                        font-size: 16px;
+                    }
+                }
+
+                .itemSub {
+                    padding-left: 20px;
+                    color: #999999;
+                    display: flex;
+                    align-items: center;
+
+                    .el-input {
+                        width: 200px;
+                    }
+
+                    .btn {
+                        margin-left: 10px;
+                        height: 32px;
+                        line-height: 32px;
+                        padding: 0 18px;
+                        color: #ffffff;
+                        background-color: rgba(var(--main-theme-color), 1);
+                        ;
+                        border-radius: 6px;
+                        cursor: pointer;
+
+                        &:active {
+                            background-color: rgba(var(--main-theme-color), 0.8);
+                        }
+                    }
+                }
+            }
+
+            .itemContent {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+
+                .btn {
+                    padding: 0 18px;
+                    height: 32px;
+                    line-height: 32px;
+                    color: #ffffff;
+                    background-color: rgba(var(--main-theme-color), 1);
+                    border-radius: 6px;
+                    cursor: pointer;
+
+                    &:active {
+                        background-color: rgba(var(--main-theme-color), 0.8);
+                    }
+
+                    &.disabled {
+                        cursor: no-drop;
+                        background-color: #999999;
+                    }
+                }
+
+                .itemContentLeft {
+                    margin-bottom: 20px;
+
+                    .el-select {
+                        width: 192px;
+                    }
+                }
+
+                .itemContentRight {
+                    padding-right: 10px;
+                    width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                    overflow: hidden;
+
+                    .showBox {
+                        width: 100%;
+                        margin-top: 30px;
+                        font-size: 36px;
+                        color: #000000;
+                        text-align: right;
+                        font-weight: bold;
+                    }
+                }
+
+                .valueBox {
+                    padding: 10px 20px 0 10px;
+                    display: flex;
+                    align-items: center;
+
+                    .contentName {
+                        padding-right: 10px;
+                    }
+                }
+
+                .radioWrap {
+                    padding: 10px 20px 0 20px;
+
+                    .radioBox {
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

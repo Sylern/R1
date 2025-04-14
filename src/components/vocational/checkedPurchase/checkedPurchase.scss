@@ -1,0 +1,64 @@
+.checkedPurchase {
+    padding: 15rx;
+
+    .filterWrap {
+        background: #f7f8fa;
+        height: 120rx;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20rx 0;
+
+        .el-input {
+            width: 200px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            padding-bottom: 16rx;
+
+            &.remark {
+                align-items: flex-start;
+
+                .key {
+                    padding-top: 8rx;
+                }
+            }
+
+            .key {
+                width: 110rx;
+                text-align: right;
+            }
+
+            .btnText {
+                margin-left: 10rx;
+                color: #2D80FF;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .tablePagin {
+        margin: 10rx 0 0 0;
+
+        .myTable {
+            width: 100%;
+            height: 350px;
+            display: flex;
+        }
+
+        .pageWrap {
+            display: flex;
+            justify-content: flex-end;
+            margin: 25rx 5rx 5rx 0;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: flex-end;
+            margin: 15rx 20rx 0rx 0;
+        }
+    }
+}

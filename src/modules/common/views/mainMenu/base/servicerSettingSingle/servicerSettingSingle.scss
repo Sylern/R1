@@ -1,0 +1,127 @@
+.servicerSettingSingle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        margin-top: 10px;
+        padding: 0 20px;
+        height: calc(100% - 80px);
+        color: #333333;
+
+        .menuList {
+            display: flex;
+            white-space: nowrap;
+
+            .item {
+                display: inline-block;
+                margin: 0 10px;
+                padding: 0 6px;
+                line-height: 40px;
+                cursor: pointer;
+
+                &.selected {
+                    color: #943FD9;
+                    border-bottom: 2px solid #943FD9;
+                }
+            }
+        }
+
+        .rightScroll {
+            margin-top: 11px;
+            width: 100%;
+            height: calc(100% - 61px);
+        }
+
+        .listWrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .listItem {
+            position: relative;
+            margin: 10px;
+            width: 120px;
+            height: 130px;
+            border-radius: 6px;
+            background-color: #f4f6f4;
+            cursor: pointer;
+
+            .employeePhoto {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .textWrap {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 42px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #ffffff;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                .name {
+                    padding-left: 10px;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 16px;
+                    overflow: hidden;
+                }
+
+                .workerNum {
+                    padding-left: 10px;
+                    width: 100%;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .btnWrap {
+        padding: 20px 30px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.flex-right {
+            justify-content: flex-end;
+        }
+
+        .btnAll {
+            display: inline-block;
+            width: 140px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #8056F7;
+            border: 1px solid #8056F7;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        .btnCancel {
+            display: inline-block;
+            width: 140px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #333333;
+            border: 1px solid #333333;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+    }
+}
+
+.el-empty {
+    width: 100%;
+}

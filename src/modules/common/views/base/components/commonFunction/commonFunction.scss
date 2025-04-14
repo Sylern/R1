@@ -1,0 +1,76 @@
+
+.function_dialog {
+    /deep/ .el-dialog {
+        border-radius: 10px;
+        .el-dialog__headerbtn {
+            top: 8px;
+            right: -32px;
+            .el-dialog__close {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+        .el-dialog__title {
+            font-size: 16px;
+        }
+    }
+    .fc_content_wrap {
+        padding: 0 20px;
+
+        .fc_wrap_item {
+            .fc_titel {
+                margin-bottom: 28px;
+                color: #333;
+            }
+
+            .function_list {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 30px;
+                margin-left: -35px;
+                margin-right: -35px;
+
+                .function_item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 110px;
+                    margin: 16px 35px;
+
+                    &:hover {
+                        .fc_img_wrap [class^=el-icon-] {
+                            display: block;
+                        }
+                    }
+
+                    .fc_img_wrap {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                        margin-bottom: 13px;
+                        border-radius: 6px;
+
+                        [class^=el-icon-] {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            font-size: 16px;
+                            color: #B8B8B8;
+                            cursor: pointer;
+                            transform: translate(50%, -50%);
+                            -o-transform: translate(50%, -50%);
+                            -ms-transform: translate(50%, -50%);
+                            -moz-transform: translate(50%, -50%);
+                            -webkit-transform: translate(50%, -50%);
+                        }
+                    }
+
+                    .fc_text_wrap {
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+}

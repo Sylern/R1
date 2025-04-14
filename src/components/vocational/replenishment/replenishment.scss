@@ -1,0 +1,40 @@
+.replenishment {
+    padding: 10rx 35rx 25rx 35rx;
+    .item {
+        display: flex;
+        align-items: center;
+        margin: 30rx 0 0 0;
+    }
+    .columns {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .dd {
+            display: flex;
+            align-items: center;
+            margin: 20rx 0 0 40rx;
+
+            span {
+                width: 30rx;
+            }
+        }
+        .waring {
+            margin: 20rx 0 0 40rx;
+            font-size: 12rx;
+            font-weight: 400;
+            color: #ff2021;
+        }
+        
+    }
+    .input {
+        width: 100rx;
+        margin: 0 10rx;
+        height: 34rx;
+    }
+    .foot{
+        margin: 50rx 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

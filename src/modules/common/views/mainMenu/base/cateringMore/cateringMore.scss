@@ -1,0 +1,209 @@
+.cateringMore {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+
+    .contentWrap {
+        padding: 20px 48px 0 48px;
+        height: calc(100% - 120px);
+        font-size: 14px;
+
+        .contentTitle {
+            font-size: 16px;
+            height: 40px;
+        }
+
+        .contentTop {
+            margin-bottom: 20px;
+            display: flex;
+            height: 64px;
+            justify-content: space-between;
+
+            .goodsInfo {
+                display: flex;
+                align-items: center;
+                color: #333333;
+
+                .imgBox {
+                    margin-right: 10px;
+                    width: 60px;
+                    height: 60px;
+                    background-color: #F2F8FF;
+                }
+
+                .goodsAttr {
+                    padding: 5px 0;
+                    color: #666666;
+                    font-size: 12px;
+
+                    .stock {
+                        padding-left: 16px;
+                    }
+                }
+
+                .goodsPrice {
+                    color: #EF2929;
+                    font-size: 16px;
+                }
+            }
+
+            .goodsNum {
+                padding: 0 18px;
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 8px;
+                height: 48px;
+
+                .btn {
+                    width: 40px;
+                    height: 42px;
+                    line-height: 42px;
+                    text-align: center;
+                    background-color: #F5F5F5;
+                    border: 1px solid #EEEEEE;
+                    font-size: 18px;
+                    cursor: pointer;
+
+                    &.btnSubtract {
+                        border-radius: 4px 0px 0px 4px;
+                    }
+
+                    &.btnAdd {
+                        border-radius: 0px 4px 4px 0px;
+                    }
+                }
+
+                .numberText {
+                    width: 80px;
+                    height: 42px;
+                    line-height: 42px;
+                    text-align: center;
+                    border-top: 1px solid #EEEEEE;
+                    border-bottom: 1px solid #EEEEEE;
+                }
+            }
+        }
+
+        .moreInfo {
+            height: calc(100% - 124px);
+        }
+
+        .infoBox {
+
+            .infoTitle {
+                font-size: 14px;
+            }
+
+            .infoList {
+                margin-top: 8px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .infoItem {
+                    margin: 0 20px 15px 0;
+                    min-width: 140px;
+                    height: 52px;
+                    line-height: 52px;
+                    text-align: center;
+                    border: 1px solid #E5E5E5;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: 100ms;
+
+                    &.selected {
+                        color: #ffffff;
+                        background-color: rgba(var(--main-theme-color), 1);
+                        border: 1px solid rgba(var(--main-theme-color), 1);
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomWrap {
+        height: 120px;
+
+        .totalPrice {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 0 36px;
+            font-size: 14px;
+
+            .value {
+                font-size: 26px;
+                color: #EF2929;
+            }
+
+            .value2 {
+                font-size: 18px;
+                color: #EF2929;
+            }
+        }
+
+        .btnBottom {
+            padding: 0 36px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .remark {
+                width: calc(100% - 220px);
+                display: flex;
+                align-items: center;
+
+                .el-input {
+                    height: 40px;
+                    width: calc(100% - 240px);
+
+                    /deep/.el-input__inner {
+                        height: 40px;
+                    }
+                }
+            }
+
+            .btnWartting {
+                margin-left: 20px;
+                display: inline-block;
+                width: 120px;
+                height: 44px;
+                line-height: 44px;
+                text-align: center;
+                border-radius: 22px;
+                color: #333333;
+                background-color: #cccccc;
+                cursor: pointer;
+
+                &.check {
+                    color: #ffffff;
+                    background-color: rgba(var(--main-theme-color), 1);
+                }
+            }
+
+            .btnSure {
+                display: inline-block;
+                width: 180px;
+                height: 44px;
+                line-height: 44px;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 22px;
+                cursor: pointer;
+
+                &.disabled {
+                    color: #333333;
+                    background-color: #cccccc;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+    }
+}

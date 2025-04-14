@@ -1,0 +1,125 @@
+.admissionList {
+    width: 100%;
+    height: 100%;
+
+    .listWrap {
+        height: calc(100% - 80rx);
+        width: 100%;
+    }
+
+    .listContent {
+        display: flex;
+        flex-wrap: wrap;
+
+        .courseItem {
+            margin-right: 16rx;
+            margin-bottom: 16rx;
+            height: 140rx;
+            width: calc(25% - 12rx);
+            padding: 16rx;
+            background-color: #ffffff;
+            border-radius: 6rx;
+            cursor: pointer;
+
+            &.isRight {
+                margin-right: 0;
+            }
+
+            .courseName {
+                color: #000000;
+                font-size: 16px;
+                height: 72rx;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+            .courseProduct {
+                color: #E72929;
+                font-size: 20rx;
+
+                .symbil {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .btnWrap {
+        margin-top: 10rx;
+        height: 70rx;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+
+        .btn {
+            margin: 0 3rx;
+            width: 40rx;
+            height: 52rx;
+            text-align: center;
+            line-height: 52rx;
+            color: #333333;
+            background-color: #ffffff;
+            border-radius: 3rx;
+            cursor: pointer;
+
+            &.btnMore {
+                width: 86px;
+                text-align: center;
+            }
+
+            &.btnAdd {
+                padding: 0 10rx;
+                width: auto;
+                font-size: 14px;
+                overflow: hidden;
+            }
+
+            &:hover {
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 0.6);
+            }
+
+            &.disabled {
+                color: #333333;
+                cursor: not-allowed;
+                background-color: rgba(#ffffff, 0.6);
+
+                &:hover {
+                    background-color: rgba(#eeeeee, 0.6);
+                }
+            }
+
+        }
+
+        .btnList {
+            display: flex;
+            align-items: center;
+
+            .btnItem {
+                display: flex;
+                width: 100px;
+                align-items: center;
+                justify-content: center;
+                // padding: 0 10px;
+            }
+        }
+
+        .btnOnGoods {
+            padding-right: 8rx;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .pages {
+                font-size: 18px;
+                padding: 0 10rx;
+                color: #ffffff;
+            }
+        }
+    }
+}

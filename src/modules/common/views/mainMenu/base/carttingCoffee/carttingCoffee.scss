@@ -1,0 +1,819 @@
+.carttingCoffee {
+    width: 100%;
+    height: calc(100% - 48rx);
+
+    /deep/.el-scrollbar .el-scrollbar__view {
+        padding-top: 6px;
+    }
+
+    .tableWrap {
+        padding-bottom: 5rx;
+        width: 100%;
+        height: 100%;
+
+        .header {
+            padding: 0 16rx;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            color: #666666;
+            background-color: rgba(#F4F6F9, 0.6);
+            border-radius: 6rx;
+
+            .cell1 {
+                width: 60rx;
+                text-align: center;
+            }
+
+            .cell2 {
+                flex: 1;
+            }
+
+            .cell3 {
+                width: 120rx;
+                text-align: center;
+            }
+
+            .cell4 {
+                padding-right: 20rx;
+                width: 140rx;
+                text-align: right;
+            }
+        }
+
+        .tbody {
+            height: calc(100% - 40px);
+            font-size: 16px;
+
+            .orderItem {
+                position: relative;
+                border-radius: 6rx;
+                margin: 0 16rx;
+                width: calc(100% - 32rx);
+                border-bottom: 1px solid #efefef;
+
+                &.isPackage {
+                    margin-bottom: 10px;
+                    border: 1px solid rgba(var(--main-theme-color), 1);
+                }
+
+                .itemStatus {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .itemGive {
+                    position: absolute;
+                    top: 10rx;
+                    left: 160rx;
+                    width: 100px;
+                }
+
+                .itemPackage {
+                    position: absolute;
+                    top: -5px;
+                    left: 10px;
+                    padding: 6px 6px 4px 6px;
+                    color: #ffffff;
+                    background-color: rgba(var(--main-theme-color), 1);
+                    border-radius: 4px;
+                }
+
+                &:hover {
+                    background-color: rgba(#F4F6F9, 0.4);
+                }
+
+                &.selected,
+                &.selected .dataMain,
+                &.selected .dataSub {
+                    background-color: rgba(#dce4f1, 0.4);
+                }
+
+                .dataMain {
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+                    background-color: #ffffff;
+                    border-radius: 6px;
+
+                    .assistantInfo {
+                        display: flex;
+                        align-items: center;
+
+                        .emPhoto {
+                            margin-right: 10px;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            border: 1px solid #efefef;
+                            overflow: hidden;
+                        }
+
+                        .infoData {
+                            position: relative;
+                            flex: 1;
+
+                            .employeeInfo {
+                                padding-bottom: 6px;
+                                font-size: 16px;
+
+                                .text {
+                                    padding-right: 10px;
+                                }
+                            }
+
+                            .assistantName {
+                                font-size: 14px;
+                                color: #999999;
+
+                                .text1 {
+                                    padding-right: 5px;
+                                }
+
+                                .text2 {
+                                    color: #333333;
+                                }
+
+                                .statusFlag {
+                                    margin-left: 5px;
+                                    padding: 1px 10px;
+                                    border-radius: 10px;
+                                    color: #ffffff;
+                                    font-size: 12px;
+                                    background-color: rgba(var(--main-theme-color), 1);
+                                }
+                            }
+
+                            .assistantDel {
+                                position: absolute;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                top: 0;
+                                right: 10px;
+                                width: 50px;
+                                height: 50px;
+                                font-size: 22px;
+                                color: #FF3131;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .cell4 {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+
+                            .moreInfo {
+                                font-size: 12px;
+                                color: #666666;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .dataSub {
+                    padding: 10px 0;
+                    background-color: rgba(#F4F6F9, 0.8);
+                    border-radius: 6px;
+
+                    .subName {
+                        text-align: center;
+                    }
+                }
+
+                .rowTop,
+                .rowBottom {
+                    min-height: 10rx;
+                    line-height: 20rx;
+                }
+
+                .row {
+                    display: flex;
+                }
+
+                .cell1 {
+                    width: 60rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999999;
+                }
+
+                .cell2 {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .goodsNumber {
+                        margin-bottom: 0rx;
+                        color: #666666;
+                        font-size: 13px;
+                    }
+
+                    .goodsName {
+                        display: flex;
+                        flex-direction: column;
+
+                        .nameText {
+                            flex: 1;
+                            padding-right: 20rx;
+                            color: #000000;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+
+                        .subInfo {
+                            font-size: 12px;
+                        }
+                    }
+
+                    /deep/.vipFlag {
+                        margin-right: 4rx;
+                        height: 15rx;
+                        padding: 0 3rx;
+                        line-height: 15rx;
+                        font-size: 12px;
+                        text-align: center;
+                        color: #E0912E;
+                        border: 1px solid #E0912E;
+                        border-radius: 3rx;
+                        background-color: #FFF4E1;
+                    }
+                }
+
+                .rowBottom {
+                    .cell2 {
+                        font-size: 12px;
+                    }
+
+                    .cell4 {
+                        width: 200rx;
+                    }
+                }
+
+                .cell3 {
+                    width: 120rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .product_num {
+                        margin: 0 2rx;
+                        width: 40px;
+                        height: 32rx;
+                        line-height: 32rx;
+                        color: #000000;
+                        text-align: center;
+                        font-size: 18px;
+                        cursor: pointer;
+                    }
+
+                    .btnSubtract {
+                        width: 30rx;
+                        height: 30rx;
+                        line-height: 30rx;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 24px;
+                        border: 1rx solid #DCDEE0;
+                        border-radius: 3rx;
+                        background-color: #ffffff;
+                        cursor: pointer;
+
+                        &.disabled {
+                            background-color: #F4F6F9;
+                        }
+
+                        &:hover {
+                            background-color: rgba(#eeeeee, 0.4);
+                        }
+                    }
+
+                    .btnAdd {
+                        width: 30rx;
+                        height: 30rx;
+                        line-height: 30rx;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 18px;
+                        border-radius: 3rx;
+                        border: 1rx solid #DCDEE0;
+                        background-color: #ffffff;
+                        cursor: pointer;
+
+                        &.disabled {
+                            background-color: #F4F6F9;
+                        }
+
+                        &:hover {
+                            background-color: rgba(#eeeeee, 0.4);
+                        }
+                    }
+                }
+
+                .cell4 {
+                    width: 140rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 20rx;
+
+                    .salePrice {
+                        width: 100rx;
+                        height: 32rx;
+                        color: #FF3131;
+                        font-size: 24px;
+                        text-align: right;
+                        cursor: pointer;
+                    }
+
+                    .addPrice {
+                        width: 100rx;
+                        height: 16px;
+                        color: #FF3131;
+                        font-size: 16px;
+                        text-align: right;
+                        cursor: pointer;
+                    }
+
+                    /deep/.pl-10 {
+                        padding-left: 10rx;
+                    }
+
+                    /deep/.highlight {
+                        color: #FF3A3A;
+                    }
+
+                    /deep/.discount {
+                        font-size: 12px;
+                    }
+                }
+
+                .cell5 {
+                    width: 100rx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .cell6 {
+                    width: 120rx;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .subTotal {
+                        margin-top: -10rx;
+                        font-size: 18px;
+                        color: #000000;
+                    }
+
+                    .btnDelete {
+                        margin-top: -10rx;
+                        font-size: 18px;
+                        color: #FF3131;
+                        cursor: pointer;
+                    }
+                }
+
+                .workerWrap {
+                    padding: 0 5px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .productCommon {
+                        // height: 100rx;
+                        min-height: 40rx;
+                        padding: 0 10px;
+
+                        .salerTitle {
+                            display: flex;
+                            align-items: center;
+                            height: 30rx;
+                            line-height: 30rx;
+                            color: #999999;
+
+                            .text {
+                                font-size: 12px;
+                            }
+
+                            .btnEdit {
+                                padding-left: 10rx;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .listWrap {
+                            display: flex;
+                            align-items: center;
+                            height: 70rx;
+
+                            .listItem {
+                                position: relative;
+                                width: 25%;
+                                height: 60rx;
+                                color: #333333;
+                                border-radius: 6rx;
+
+                                .itemLeft {
+                                    width: 100%;
+                                    height: 60rx;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .logo {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin-right: 8rx;
+                                        width: 40rx;
+                                        height: 40rx;
+                                        border-radius: 50%;
+                                        background-color: #E0E6EE;
+                                        overflow: hidden;
+                                    }
+
+                                    .name {
+                                        font-size: 14px;
+                                        width: calc(100% - 48rx);
+                                        overflow: hidden;
+                                    }
+                                }
+
+                                .itemRight {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 10rx;
+
+                                    .btnDelete {
+                                        color: #f56c6c;
+                                        margin-left: 15px;
+                                        width: 22px;
+                                        height: 22px;
+                                        line-height: 22px;
+                                        font-size: 22px;
+                                        text-align: center;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                .btnEdit {
+                                    padding-left: 20rx;
+                                    display: flex;
+                                    align-items: center;
+                                    width: 100%;
+                                    height: 100%;
+                                    font-size: 18px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+
+                    .productService {
+                        display: flex;
+                        flex-direction: column;
+
+                        .td1 {
+                            padding-left: 10px;
+                            width: calc(100% - 150px - 200px);
+                        }
+
+                        .td2 {
+                            width: 150px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            .status {
+                                display: flex;
+                                height: 28px;
+                                font-size: 14px;
+
+                                .statusText {
+                                    width: 60px;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: #E17F03;
+                                    background-color: #FFEDD6;
+                                    border-radius: 4px 0px 0px 4px;
+
+                                    &.isOnServer {
+                                        color: rgba(var(--main-theme-color), 1);
+                                        background-color: #E8ECFF;
+                                    }
+                                }
+
+                                .statusBtn {
+                                    width: 50px;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: #ffffff;
+                                    background-color: rgba(var(--main-theme-color), 1);
+                                    border-radius: 0px 4px 4px 0px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                        .td3 {
+                            width: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .td4 {
+                            width: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .wsheader {
+                            width: 100%;
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            font-size: 12px;
+                            border-bottom: 1px solid #F4F6FA;
+                        }
+
+                        .wsItem {
+                            width: 100%;
+                            height: 55px;
+                            display: flex;
+                        }
+
+                        .td1 {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+
+                            .logo {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 8rx;
+                                width: 40rx;
+                                height: 40rx;
+                                border-radius: 50%;
+                                background-color: #E0E6EE;
+                                overflow: hidden;
+                            }
+
+                            .name {
+                                font-size: 14px;
+                                max-width: 100rx;
+                                overflow: hidden;
+                            }
+
+                            .btnEdit {
+                                margin-left: 10px;
+                                width: 22px;
+                                height: 22px;
+                                line-height: 22px;
+                                font-size: 18px;
+                                text-align: center;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .emptyBtnEdit {
+                            padding-left: 10px;
+                            height: 55px;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .tableControl {
+        width: 100%;
+        padding: 0 16rx;
+
+        .pagesWrap {
+            height: 48rx;
+            padding: 0 5rx;
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 200rx);
+
+                .btnItem {
+                    margin-right: 10rx;
+                    width: 100rx;
+                    height: 46rx;
+                    line-height: 46rx;
+                    text-align: center;
+                    font-size: 16px;
+                    border: 1px solid #eeeeee;
+                    border-radius: 3rx;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba(#eeeeee, 0.4);
+                    }
+
+                    &.disabled {
+                        cursor: not-allowed;
+                    }
+                }
+
+                .remark {
+                    margin-left: 8rx;
+
+                    /deep/.el-input__inner {
+                        height: 46rx;
+                        max-width: 650rx;
+                        color: #999999;
+                        background-color: #F4F6F9;
+
+                        &:focus {
+                            border-color: rgba(var(--main-theme-color), 1);
+                        }
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+
+                .btn {
+                    width: 46rx;
+                    height: 46rx;
+                    color: #000000;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 46rx;
+                    border: 1px solid #eeeeee;
+                    border-radius: 3rx;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba(#eeeeee, 0.4);
+                    }
+
+                    &.disabled {
+                        cursor: not-allowed;
+                        background-color: rgba(#eeeeee, 0.2);
+
+                        &:hover {
+                            background-color: rgba(#eeeeee, 0.2);
+                        }
+                    }
+                }
+
+                .currentPage {
+                    width: 60rx;
+                    line-height: 48rx;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.orderItemHandle {
+    /deep/.dcContent {
+        top: 40%;
+        left: 20%;
+
+        .contentWrap {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .btnItem {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                width: 80px;
+                height: 80px;
+                border-radius: 8px;
+                background-color: #F4F6F9;
+                cursor: pointer;
+
+                &.isEmpty {
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+
+.orderItemChangeEmployee {
+    /deep/.dcContent {
+        top: 40%;
+        left: 20%;
+
+        .contentWrap {
+            padding: 20px 0;
+            height: 100%;
+
+            .groupName {
+                padding-left: 20px;
+                height: 30px;
+                font-size: 18px;
+            }
+
+            .listWrap {
+                height: calc(100% - 30px);
+            }
+
+            .noData {
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                color: #999999;
+            }
+
+            .employeeList {
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .employeeItem {
+                    position: relative;
+                    margin: 10px 0;
+                    width: 150px;
+                    height: 165px;
+                    border-radius: 6px;
+                    background-color: #F1F2F7;
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    .itemInfo {
+                        padding: 0 10px;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: #ffffff;
+                        background-color: rgba($color: #555555, $alpha: 0.6);
+                        user-select: none;
+
+                        .itemName {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .btnItem {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                width: 80px;
+                height: 80px;
+                border-radius: 8px;
+                background-color: #F4F6F9;
+                cursor: pointer;
+
+                &.isEmpty {
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+}

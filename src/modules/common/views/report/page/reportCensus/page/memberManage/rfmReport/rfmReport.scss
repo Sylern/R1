@@ -1,0 +1,121 @@
+.rfmReport-Main {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: #f7f8fa;
+
+    .rep_query {
+        height: 260rx;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .rep_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10rx 0;
+            background: #ffffff;
+
+            .btnItem {
+                margin-right: 16rx;
+            }
+        }
+
+        .rep_q_bottom {
+            width: 100%;
+            background: #f7f8fa;
+            position: relative;
+            padding: 10rx;
+
+            .rep_qb_from {
+                display: flex;
+                align-items: center;
+                padding: 10rx;
+
+                .rep_name {
+                    font-size: 14px;
+                    color: #000000;
+                    width: 100px;
+                }
+
+                .rep_value {
+                    display: flex;
+                    align-items: center;
+
+                    .selectItem {
+                        width: 100px;
+                        cursor: pointer;
+                        transition: 300ms;
+
+                        &.selected {
+                            font-size: 16px;
+                            color: rgba(var(--main-theme-color), 1);
+                            font-weight: bold;
+                        }
+                    }
+
+                    .customItem {
+                        display: flex;
+                        align-items: center;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        border: 1px solid #ffffff;
+
+                        &.selected {
+                            border: 1px solid rgba(var(--main-theme-color), 1);
+                        }
+
+                        .input {
+                            width: 80px;
+
+                            /deep/.el-input__inner {
+                                border: none;
+                                text-align: center;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .text {
+                            padding: 0 10px;
+                            height: 34px;
+                            line-height: 34px;
+                            background-color: #ffffff;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .req_table {
+        width: 100%;
+        height: calc(100% - 260px);
+        padding: 10rx;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        .tableBox {
+            width: 100%;
+            max-height: calc(100% - 70rx);
+            display: flex;
+        }
+
+        .pageWrap {
+            margin-top: 10rx;
+            padding: 0 35rx;
+            height: 60rx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            label {
+                color: #FF3131;
+                padding-right: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.hotkeySetting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 999;
+    font-size: 12px;
+
+    .contentWrap {
+        margin: 0;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 0 30rx;
+        height: calc(100% - 60rx);
+        border-radius: 10rx;
+
+
+        .keyboardWrap {
+            margin-top: 20rx;
+            color: #606266;
+
+
+
+            .lineWrap {
+                display: flex;
+                margin-top: 4rx;
+
+                .item {
+                    margin-right: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 60px;
+                    height: 60px;
+                    background-color: #ffffff;
+                    border: 1px solid #c3bebe;
+                    border-radius: 2px;
+                    cursor: pointer;
+
+                    &.separate {
+                        margin-right: 22px;
+                    }
+
+                    &.bg1 {
+                        background-color: rgb(255, 253, 236);
+                    }
+
+                    &.bg2 {
+                        background-color: rgb(230, 239, 226);
+                    }
+
+                    &.bg3 {
+                        background-color: rgb(223, 239, 254)
+                    }
+
+                    &.isLast {
+                        margin-right: 0;
+                    }
+
+                    .handleName {
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .lineOne {
+                padding: 0 64px;
+            }
+        }
+
+        .btnWrap {
+            position: absolute;
+            bottom: 30rx;
+            width: calc(100% - 60rx);
+            text-align: center;
+
+            .btnSure {
+                display: inline-block;
+                width: 120rx;
+                height: 40rx;
+                line-height: 40rx;
+                text-align: center;
+                color: #ffffff;
+                background-color: rgba(var(--main-theme-color), 1);
+                border-radius: 20rx;
+                cursor: pointer;
+
+                &:active {
+                    background-color: rgba(var(--main-theme-color), 0.8);
+                }
+            }
+        }
+    }
+}
