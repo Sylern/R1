@@ -21,7 +21,7 @@ const apiconfig = {
     build: {                                // 正式地址
         stockApi: buildApiUrl,                                                          // 库存管理  
         basicApi: buildApiUrl,                                                          // 基础页面接口 
-        permissionApi: '//permission.test.decerp.cc',                                   // 权限配置
+        permissionApi: '//permission.decerp.cc',                                        // 权限配置
         frontImgBase: '//ds.decerp.cc',                                                 // 前端图片路径
         imgUrl: '//res.decerp.cc',                                                      // 图片路径
     },
