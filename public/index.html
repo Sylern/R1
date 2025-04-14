@@ -11,6 +11,7 @@
     <meta name="referrer" content="no-referrer" />
     <!-- <meta name=renderer  content="ie-comp" /> -->
     <link rel="icon" href="<%= BASE_URL %>">
+    <link href="favicon.ico" rel="shortcut icon"/>
     <link rel="stylesheet" href="https://ds.decerp.cc/cdn/js/index.css">
     <script src="./config.js"></script>
     <script>
@@ -25,51 +26,7 @@
 
     <script charset=utf-8 src="https://g.alicdn.com/sd/nch5/index.js"></script>
     <script src="https://g.alicdn.com/AWSC/AWSC/awsc.js"></script>
-
-    <!-- <script src="https://map.qq.com/api/gljs?v=1.exp&key=YG3BZ-3HIWD-KZM4T-PJD2X-7PFTF-CLB5J"></script> -->
-
-    <script src="https://ds.decerp.cc/cdn/js/gljs.js?v=1.exp&key=YG3BZ-3HIWD-KZM4T-PJD2X-7PFTF-CLB5J"></script>
-
-
-    <!-- Lodop 打印服务 -->
-
-    <!-- <script src="http://localhost:8000/CLodopFuncs.js"></script>
-    <script src="https://localhost.lodop.net:8443/clodopfuncs.js"></script> -->
-    <script>
-        let printPortArray = ['http://localhost:8000/CLodopFuncs.js', 'https://localhost.lodop.net:8443/clodopfuncs.js'];
-        let printPos = 0;
-
-        function loadScript() {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = printPortArray[printPos];
-            // 当脚本且执行失败触发
-            script.onerror = function () {
-                // console.error(printPortArray[printPos] + '端口连接失败');
-                printPos++;
-                if (printPos < printPortArray.length) {
-                    loadScript();
-                }
-            };
-            // 当脚本加载完成并且执行完成后触发
-            script.onload = function () {
-                console.log(printPortArray[printPos] + ' 连接成功');
-            };
-
-            // 老的IE浏览器可能不支持onload，使用onreadystatechange和readyState代替
-            script.onreadystatechange = function () {
-                if (this.readyState === "complete") {
-                    console.log(printPortArray[printPos] + ' 连接成功');
-                }
-            };
-            document.body.appendChild(script);
-        }
-    </script>
-
-    <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script> -->
-</head>
-
-<body onload="loadScript()">
+<body>
     <noscript>
         <strong>We're sorry but 001 doesn't work properly without JavaScript enabled. Please enable it to
             continue.</strong>
