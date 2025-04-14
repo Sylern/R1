@@ -3,7 +3,6 @@ import $app from '@/utils/utils.js';
 import $print from './print.js';
 import { catering } from './cateringPrint.js';
 import $store from "../modules/common/store";
-import { priceTagList } from '@/utils/config/config.js';
 import { printLabel } from '@/utils/prin';
 
 var userInfo, printerInfo, ticketShowPhone;
@@ -155,7 +154,6 @@ function toPrintLabel(e, kitchenPrinter) {                       // 打印标签
 }
 function getTemplate(temId) {         // 获取用户标签模板
     let templateList = [];
-    templateList.unshift(...priceTagList);
     // await stockApi.getTemplateByUser().then(res => {
     //     if (!$app.isNull(res)) {
     //         // 筛选掉非本行业的系统模板

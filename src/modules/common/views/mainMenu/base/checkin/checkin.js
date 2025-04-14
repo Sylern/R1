@@ -3,7 +3,6 @@ import { stockApi } from '@/api/index.js';
 import { mapActions, mapMutations, mapState } from 'vuex';
 import { kitchenPrintMain } from '@/utils/kitchenPrint.js';
 import { printLabel } from '@/utils/prin';
-import { priceTagList } from '@/utils/config/config.js';
 import payTypeList from '@/components/vocational/payTypeList/payTypeList.vue';
 import orderSupplement from '../orderSupplement/orderSupplement.vue';
 import numberChange from '../numberChange/numberChange.vue';
@@ -1838,18 +1837,7 @@ export default {
             return tastes
         },
         async getTemplate(temId) {                                              // 获取用户标签模板
-            this.templateList = priceTagList.map(e => {
-                e.pricesTagItems = this.$app.isNull(e.pricesTagItems) ? [] : e.pricesTagItems.map(e => {
-                    switch (e.fontStyle) {
-                        case 0: e.b = false; e.u = false; break
-                        case 1: e.b = true; e.u = false; break
-                        case 4: e.u = true; e.b = false; break
-                        case 5: e.b = true; e.u = true; break
-                    }
-                    return { ...e, itemType: e.priceTagItemType, barCodeWidth: e.barCodeWidth === 2 ? 212 : e.barCodeWidth === 1 ? 141 : e.barCodeWidth }
-                });
-                return { ...e, createTime: this.$app.currentTime(new Date(e.createTime), 'yyyy-MM-dd HH:mm') }
-            });
+           
         },
         //#region  标签打印
         async printPriceTag(e, kitchenPrinter) {                                // 打印商品标签

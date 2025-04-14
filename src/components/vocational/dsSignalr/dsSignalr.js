@@ -3,9 +3,7 @@ import { stockApi } from '@/api/index';
 import { kitchenPrintMain } from '@/utils/kitchenPrint.js';
 import { onlineOrderPrint, concatSalesTicket, repaymentPrint } from '@/utils/onlineOrderPrint.js';
 import { mapMutations, mapState } from 'vuex';
-import { oggName } from "@/utils/config/config.js";
 import { printLabel } from '@/utils/prin';
-import { priceTagList } from '@/utils/config/config.js';
 
 export default {
     name: 'dsSignalr',
@@ -505,7 +503,7 @@ export default {
                 // 字符串转数组用于循环播放音频
                 money = money.split('');
                 // 金额的音频文件名称对象 {'零':'0.ogg','壹':'1.ogg'......}
-                let textList = oggName;
+                let textList = '';
 
                 let first = this.userInfo.distributor_id == 1 ? '德客到账' : '代理商到账';
                 // 把'德客提醒您到账' 语音push到音频列表
@@ -1002,18 +1000,7 @@ export default {
             this.$print.sales(printDataList);
         },
         async getTemplate() {                                           // 获取用户标签模板
-            this.templateList = priceTagList.map(e => {
-                e.pricesTagItems = this.$app.isNull(e.pricesTagItems) ? [] : e.pricesTagItems.map(e => {
-                    switch (e.fontStyle) {
-                        case 0: e.b = false; e.u = false; break
-                        case 1: e.b = true; e.u = false; break
-                        case 4: e.u = true; e.b = false; break
-                        case 5: e.b = true; e.u = true; break
-                    }
-                    return { ...e, itemType: e.priceTagItemType, barCodeWidth: e.barCodeWidth === 2 ? 212 : e.barCodeWidth === 1 ? 141 : e.barCodeWidth }
-                });
-                return { ...e, createTime: this.$app.currentTime(new Date(e.createTime), 'yyyy-MM-dd HH:mm') }
-            });
+           
         },
         getFoodTastes(e) {                                              // 获取口味
             let tastes = '';

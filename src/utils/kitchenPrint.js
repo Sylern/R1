@@ -4,7 +4,6 @@ import resetMessage from '@/utils/resetMessage.js';
 import { catering } from './cateringPrint.js';
 import $store from "../modules/common/store/index.js";
 import { printLabel } from '@/utils/prin';
-import { priceTagList } from '@/utils/config/config.js';
 
 //#endregion
 let templateList = [];                                              // 标签模板
@@ -40,18 +39,7 @@ async function printPriceTag(printList) {        // 打印商品标签
     })
 };
 async function getTemplate() {                                      // 获取用户标签模板
-    templateList = priceTagList.map(e => {
-        e.pricesTagItems = $app.isNull(e.pricesTagItems) ? [] : e.pricesTagItems.map(e => {
-            switch (e.fontStyle) {
-                case 0: e.b = false; e.u = false; break
-                case 1: e.b = true; e.u = false; break
-                case 4: e.u = true; e.b = false; break
-                case 5: e.b = true; e.u = true; break
-            }
-            return { ...e, itemType: e.priceTagItemType, barCodeWidth: e.barCodeWidth === 2 ? 212 : e.barCodeWidth === 1 ? 141 : e.barCodeWidth }
-        });
-        return { ...e, createTime: $app.currentTime(new Date(e.createTime), 'yyyy-MM-dd HH:mm') }
-    });
+    
 };
 function getFoodTastes(e) {                                         // 获取口味
     let tastes = '';
