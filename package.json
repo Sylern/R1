@@ -7,7 +7,6 @@
     "tt": "cross-env apiconfig=test vue-cli-service serve",
     "proxy": "cross-env apiconfig=proxy vue-cli-service serve",
     "build": "cross-env apiconfig=build node build/build.js",
-    "gdpe": "cross-env apiconfig=gdpe node build/build.js",
     "test": "cross-env apiconfig=test node build/build.js",
     "local": "cross-env apiconfig=local node build/build.js",
     "pack": "vue-cli-service build",
