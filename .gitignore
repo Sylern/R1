@@ -26,4 +26,3 @@ yarn-error.log*
 *.rar
 .vs
 debug.log
-src/utils/config/config.js
