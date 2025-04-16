@@ -9,226 +9,43 @@
         display: flex;
 
         .mt_left {
-            //   width: 130rx;
             height: 100%;
-            width: 150px;
-            padding: 0 0 0 5px;
+            width: 200px;
             background-color: #ffffff;
 
-            /* .mt_oneMenu {} */
             .mt_towMenu {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 height: 100%;
+                background-color: #2f4050;
 
                 .mttm_title {
-                    height: 60rx;
+                    height: 50px;
                     width: 100%;
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: #000000;
-                    flex: none;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border-bottom: 1px solid #ebedf0;
+                    color: #ffffff;
+                    font-size: 20px;
+                    background-color: #367fa9;
                     cursor: pointer;
                 }
 
                 .scrollbar {
-                    max-height: calc(100% - 60rx - 60px);
+                    max-height: calc(100% - 50px);
                     width: 100%;
-                }
-
-                .downloadItem {
-                    padding-left: 10px;
-                    margin-top: 10px;
-                    height: 50px;
-                    display: flex;
-                    align-items: center;
-                    color: rgba(var(--main-theme-color), 1);
-                    cursor: pointer;
-
-                    .itemName {
-                        padding-left: 10px;
-                    }
-                    &:hover,
-                    &.selected {
-                        background-color: #f1f2f3;
-                    }
                 }
             }
         }
 
         .mt_right {
-            position: absolute;
-            right: 0;
             height: 100%;
-            width: 224px;
-            -webkit-box-shadow: inset 1px 0 0 0 #ebedf0;
-            box-shadow: inset 1px 0 0 0 #ebedf0;
-            font-size: 14px;
-            background-color: #ffffff;
-            transform: translateX(224px);
-            -webkit-transform: translateX(224px);
-            transition: 300ms;
+            width: calc(100% - 200px);
 
-            &.show {
-                transform: translateX(0);
-                -webkit-transform: translateX(0);
-            }
-
-            .header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 16px;
-                height: 60rx;
-                text-align: center;
-                border-bottom: 1px solid #ebedf0;
-                cursor: pointer;
-
-                .btn_hideHelp {
-                    cursor: pointer;
-                }
-
-                .divFont {
-                    color: #1775fc;
-                    cursor: pointer;
-
-                    span {
-                        margin: 0 5px 0 0;
-                    }
-                }
-            }
-
-            .container {
-                height: calc(100% - 60rx);
-
-                .help_ul {
-                    display: flex;
-                    overflow: hidden;
-                    padding: 10px 0;
-                    min-height: 280px;
-                    max-height: calc(100% - 280rx);
-
-                    &.OEMHeight {
-                        max-height: calc(100% - 20rx);
-                    }
-
-                    .li {
-                        padding: 10px 16px;
-                        cursor: pointer;
-
-                        &:hover {
-                            color: #1775fc;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .schoolWrap {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-}
-
-.schoolDialog {
-    /deep/.el-dialog__headerbtn {
-        z-index: 99;
-        height: 30px;
-        width: 30px;
-        font-size: 24px;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 50%;
-
-        .el-dialog__close {
-            color: #ffffff;
-        }
-    }
-}
-
-.downloadWrap {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.4);
-    z-index: 13;
-
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        height: 560px;
-        width: 360px;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        padding: 0 80px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .close {
-            position: absolute;
-            right: -50rx;
-            top: 0rx;
-            width: 40rx;
-            height: 40rx;
-            color: #ffffff;
-            font-size: 28px;
-            cursor: pointer;
-        }
-
-        .dowloadTitle {
-            margin-top: 40px;
-            color: #000000;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .qrCode {
-            margin: 28px 0;
-            width: 180px;
-            height: 180px;
-            background-color: red;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            margin-bottom: 18px;
-            padding-left: 40px;
-            width: 200px;
-            height: 58px;
-            color: #000000;
-            border: 1px solid #000000;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: bold;
-
-            .btn_icon {
-                margin-right: 16px;
-            }
-
-            &.typewin {
-                color: #1775fc;
-                border: 1px solid #1775fc;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: rgba($color: #1775fc, $alpha: 0.1);
-                }
+            .mt_right_top {
+                height: 50px;
+                background-color: #3c8dbc;
             }
         }
     }
@@ -237,30 +54,52 @@
 //region 二级菜单导航
 .navmenu {
     width: 100%;
+    color: #a7b1c2;
     cursor: pointer;
 
     .navmenu_one {
         width: 100%;
         height: auto;
-        padding-top: 10rx;
         user-select: none;
 
+        &:hover,
+        &.selected {
+            color: #ffffff;
+            background-color: #293846;
+
+            .iconfont {
+                color: #ffffff !important;
+            }
+        }
+
+        
+        &.showChild {
+            padding-bottom: 10px;
+            color: #ffffff;
+            background-color: #293846;
+        }
+
         .nav_oneTitle {
+            padding: 14px 20px 14px 25px;
             display: flex;
             align-items: center;
-            height: 35px;
-            font-size: 14px;
-            font-weight: 400;
-            color: #333333;
+            justify-content: space-between;
             user-select: none;
+
+            .oneLeft {
+                display: flex;
+                align-items: center;
+            }
 
             .iconLeft {
                 padding-left: 5px;
                 font-size: 14px;
+                color: #a7b1c2;
                 transition-duration: 300ms;
 
                 &.show {
-                    transform: rotate(90deg);
+                    transform: rotate(-90deg);
+                    color: #ffffff;
                 }
             }
 
@@ -281,36 +120,17 @@
                     // margin: 0 0 0 15px;
                 }
             }
-
-            &:hover,
-            &.selected {
-                color: rgba(var(--main-theme-color), 1);
-                background: #f1f2f3;
-                border-radius: 4px;
-            }
         }
 
         .navmenu_tow {
             .nav_towName {
-                padding-left: 25px;
-                margin-top: 5px;
-                height: 35px;
-                display: flex;
-                align-items: center;
-                font-size: 14px;
-                font-weight: 400;
-                color: #333333;
+                padding: 7px 15px 7px 52px;
+                color: #a7b1c2;
 
-                &:hover {
-                    color: rgba(var(--main-theme-color), 1);
-                    background: #f1f2f3;
-                    border-radius: 4px;
-                    cursor: pointer;
-                }
-
+                &:hover,
                 &.selected {
-                    color: rgba(var(--main-theme-color), 1);
-                    background: #f1f2f3;
+                    color: #ffffff;
+                    background-color: #293846;
                 }
             }
         }

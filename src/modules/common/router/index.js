@@ -33,6 +33,8 @@ router.beforeEach((to, from, next) => { // 跳转之前截取
         next();
         return
     }
+    next();
+    return
     if (defaultPathArray.includes(to.path)){
         next();
         return

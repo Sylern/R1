@@ -1,6 +1,6 @@
 <template>
-    <div class="multiPage" :style="{width: pageWidth}">
-        <div class="mt_center" :class="{'isShowHelp': showHelp}">
+    <div class="multiPage">
+        <div class="mt_center">
             <div class="title">
                 <el-scrollbar ref="breadcrumbScorll" style="width: 100%; height: 100%">
                     <div class="breadcrumb">
